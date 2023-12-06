@@ -1,0 +1,4 @@
+target 'Demo' do
+    use_frameworks!
+    pod 'AliyunpanSDK', :path => '../'
+end

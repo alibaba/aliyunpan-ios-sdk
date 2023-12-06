@@ -1,0 +1,16 @@
+PODS:
+  - AliyunpanSDK (0.1.0)
+
+DEPENDENCIES:
+  - AliyunpanSDK (from `../`)
+
+EXTERNAL SOURCES:
+  AliyunpanSDK:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AliyunpanSDK: 668cfeca9fe9ed0c6d2b2f879229120bbdc81ccc
+
+PODFILE CHECKSUM: b533fec7b6e0c2634dd56f54c78568c5a4f62c29
+
+COCOAPODS: 1.11.3

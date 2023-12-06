@@ -1,0 +1,3050 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanClient.swift",
+      "line": 10,
+      "symbol": "AliyunpanClientConfig",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanClient.swift",
+      "line": 33,
+      "symbol": "AliyunpanClient",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanClient.swift",
+      "line": 55,
+      "symbol": "AliyunpanClient.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanClient.swift",
+      "line": 134,
+      "symbol": "AliyunpanClient",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanCredentials/AliyunpanCredentials.swift",
+      "line": 14,
+      "symbol": "AliyunpanCredentials",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanError.swift",
+      "line": 22,
+      "symbol": "AliyunpanServerError.Code",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanError.swift",
+      "line": 47,
+      "symbol": "AliyunpanServerError.code",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanError.swift",
+      "line": 48,
+      "symbol": "AliyunpanServerError.message",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanError.swift",
+      "line": 49,
+      "symbol": "AliyunpanServerError.requestId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanError.swift",
+      "line": 51,
+      "symbol": "AliyunpanServerError.isAccessTokenInvalidOrExpired",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanError.swift",
+      "line": 56,
+      "symbol": "AliyunpanNetworkSystemError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanError.swift",
+      "line": 57,
+      "symbol": "AliyunpanNetworkSystemError.invaildURL",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanError.swift",
+      "line": 58,
+      "symbol": "AliyunpanNetworkSystemError.httpError(statusCode:data:response:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanSDK.swift",
+      "line": 11,
+      "symbol": "AliyunpanLogLevel",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanSDK.swift",
+      "line": 12,
+      "symbol": "AliyunpanLogLevel.debug",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanSDK.swift",
+      "line": 13,
+      "symbol": "AliyunpanLogLevel.warn",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanSDK.swift",
+      "line": 14,
+      "symbol": "AliyunpanLogLevel.error",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanSDK.swift",
+      "line": 37,
+      "symbol": "Aliyunpan",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanSDK.swift",
+      "line": 38,
+      "symbol": "Aliyunpan.Environment",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanSDK.swift",
+      "line": 63,
+      "symbol": "Aliyunpan.setLogLevel(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanSDK.swift",
+      "line": 67,
+      "symbol": "Aliyunpan.env",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanSDK.swift",
+      "line": 68,
+      "symbol": "Aliyunpan.setEnvironment(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanSDK.swift",
+      "line": 73,
+      "symbol": "Aliyunpan.handleOpenURL(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanCommand.swift",
+      "line": 10,
+      "symbol": "AliyunpanCommand",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanCommand.swift",
+      "line": 11,
+      "symbol": "AliyunpanCommand.Request",
+      "symbol_kind": "source.lang.swift.decl.associatedtype",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanCommand.swift",
+      "line": 12,
+      "symbol": "AliyunpanCommand.Response",
+      "symbol_kind": "source.lang.swift.decl.associatedtype",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanCommand.swift",
+      "line": 14,
+      "symbol": "AliyunpanCommand.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanCommand.swift",
+      "line": 15,
+      "symbol": "AliyunpanCommand.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanCommand.swift",
+      "line": 17,
+      "symbol": "AliyunpanCommand.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanCommand.swift",
+      "line": 18,
+      "symbol": "AliyunpanCommand.requestData",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanCommand.swift",
+      "line": 21,
+      "symbol": "AliyunpanCommand",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanCommand.swift",
+      "line": 22,
+      "symbol": "AliyunpanCommand.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanCommand.swift",
+      "line": 23,
+      "symbol": "AliyunpanCommand.requestData",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanCommand.swift",
+      "line": 26,
+      "symbol": "AliyunpanCommand",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanCommand.swift",
+      "line": 27,
+      "symbol": "AliyunpanCommand.requestData",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 9,
+      "symbol": "AliyunpanFileScope",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 9,
+      "symbol": "AliyunpanFileScope",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 9,
+      "symbol": "AliyunpanFileScope",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 9,
+      "symbol": "AliyunpanFileScope",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 9,
+      "symbol": "AliyunpanFileScope",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 9,
+      "symbol": "AliyunpanFileScope",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 9,
+      "symbol": "AliyunpanFileScope",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 9,
+      "symbol": "AliyunpanFileScope",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 9,
+      "symbol": "AliyunpanFileScope",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 9,
+      "symbol": "AliyunpanFileScope",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 9,
+      "symbol": "AliyunpanFileScope",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 9,
+      "symbol": "AliyunpanFileScope",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 9,
+      "symbol": "AliyunpanFileScope",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 9,
+      "symbol": "AliyunpanFileScope",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 9,
+      "symbol": "AliyunpanFileScope",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 9,
+      "symbol": "AliyunpanFileScope",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 9,
+      "symbol": "AliyunpanFileScope",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 9,
+      "symbol": "AliyunpanUserScope",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 9,
+      "symbol": "AliyunpanUserScope",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 9,
+      "symbol": "AliyunpanUserScope",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 9,
+      "symbol": "AliyunpanUserScope",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 9,
+      "symbol": "AliyunpanUserScope",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 9,
+      "symbol": "AliyunpanVIPScope",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 9,
+      "symbol": "AliyunpanVIPScope",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 9,
+      "symbol": "AliyunpanVideoScope",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 9,
+      "symbol": "AliyunpanVideoScope",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 9,
+      "symbol": "AliyunpanVideoScope",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 9,
+      "symbol": "AliyunpanVideoScope",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 10,
+      "symbol": "AliyunpanScope",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 11,
+      "symbol": "AliyunpanScope.User",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 12,
+      "symbol": "AliyunpanScope.VIP",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 13,
+      "symbol": "AliyunpanScope.File",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 14,
+      "symbol": "AliyunpanScope.Video",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 18,
+      "symbol": "AliyunpanUserScope",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 20,
+      "symbol": "AliyunpanVIPScope",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 22,
+      "symbol": "AliyunpanFileScope",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 23,
+      "symbol": "AliyunpanFileScope.OrderBy",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 24,
+      "symbol": "AliyunpanFileScope.OrderBy.created_at",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 25,
+      "symbol": "AliyunpanFileScope.OrderBy.updated_at",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 26,
+      "symbol": "AliyunpanFileScope.OrderBy.name",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 27,
+      "symbol": "AliyunpanFileScope.OrderBy.size",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 28,
+      "symbol": "AliyunpanFileScope.OrderBy.name_enhanced",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 31,
+      "symbol": "AliyunpanFileScope.OrderDirection",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 32,
+      "symbol": "AliyunpanFileScope.OrderDirection.desc",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 33,
+      "symbol": "AliyunpanFileScope.OrderDirection.asc",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/AliyunpanScope.swift",
+      "line": 37,
+      "symbol": "AliyunpanVideoScope",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/BatchGet.swift",
+      "line": 12,
+      "symbol": "AliyunpanFileScope.BatchGet.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/BatchGet.swift",
+      "line": 13,
+      "symbol": "AliyunpanFileScope.BatchGet.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/BatchGet.swift",
+      "line": 17,
+      "symbol": "AliyunpanFileScope.BatchGet.Request",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/BatchGet.swift",
+      "line": 18,
+      "symbol": "AliyunpanFileScope.BatchGet.Request.Item",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/BatchGet.swift",
+      "line": 19,
+      "symbol": "AliyunpanFileScope.BatchGet.Request.Item.drive_id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/BatchGet.swift",
+      "line": 20,
+      "symbol": "AliyunpanFileScope.BatchGet.Request.Item.file_id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/BatchGet.swift",
+      "line": 22,
+      "symbol": "AliyunpanFileScope.BatchGet.Request.Item.init(drive_id:file_id:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/BatchGet.swift",
+      "line": 27,
+      "symbol": "AliyunpanFileScope.BatchGet.Request.file_list",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/BatchGet.swift",
+      "line": 29,
+      "symbol": "AliyunpanFileScope.BatchGet.Request.init(file_list:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/BatchGet.swift",
+      "line": 34,
+      "symbol": "AliyunpanFileScope.BatchGet.Response",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/BatchGet.swift",
+      "line": 35,
+      "symbol": "AliyunpanFileScope.BatchGet.Response.items",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/BatchGet.swift",
+      "line": 38,
+      "symbol": "AliyunpanFileScope.BatchGet.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/BatchGet.swift",
+      "line": 39,
+      "symbol": "AliyunpanFileScope.BatchGet.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/CompleteUpload.swift",
+      "line": 12,
+      "symbol": "AliyunpanFileScope.CompleteUpload.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/CompleteUpload.swift",
+      "line": 13,
+      "symbol": "AliyunpanFileScope.CompleteUpload.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/CompleteUpload.swift",
+      "line": 17,
+      "symbol": "AliyunpanFileScope.CompleteUpload.Request",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/CompleteUpload.swift",
+      "line": 25,
+      "symbol": "AliyunpanFileScope.CompleteUpload.Request.init(drive_id:file_id:upload_id:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/CompleteUpload.swift",
+      "line": 32,
+      "symbol": "AliyunpanFileScope.CompleteUpload.Response",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/CompleteUpload.swift",
+      "line": 34,
+      "symbol": "AliyunpanFileScope.CompleteUpload.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/CompleteUpload.swift",
+      "line": 35,
+      "symbol": "AliyunpanFileScope.CompleteUpload.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/CopyFile.swift",
+      "line": 12,
+      "symbol": "AliyunpanFileScope.CopyFile.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/CopyFile.swift",
+      "line": 13,
+      "symbol": "AliyunpanFileScope.CopyFile.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/CopyFile.swift",
+      "line": 17,
+      "symbol": "AliyunpanFileScope.CopyFile.Request",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/CopyFile.swift",
+      "line": 29,
+      "symbol": "AliyunpanFileScope.CopyFile.Request.init(drive_id:file_id:to_parent_file_id:to_drive_id:auto_rename:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/CopyFile.swift",
+      "line": 38,
+      "symbol": "AliyunpanFileScope.CopyFile.Response",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/CopyFile.swift",
+      "line": 47,
+      "symbol": "AliyunpanFileScope.CopyFile.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/CopyFile.swift",
+      "line": 48,
+      "symbol": "AliyunpanFileScope.CopyFile.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/CreateFile.swift",
+      "line": 12,
+      "symbol": "AliyunpanFileScope.CreateFile.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/CreateFile.swift",
+      "line": 13,
+      "symbol": "AliyunpanFileScope.CreateFile.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/CreateFile.swift",
+      "line": 17,
+      "symbol": "AliyunpanFileScope.CreateFile.Request",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/CreateFile.swift",
+      "line": 68,
+      "symbol": "AliyunpanFileScope.CreateFile.Response",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/CreateFile.swift",
+      "line": 69,
+      "symbol": "AliyunpanFileScope.CreateFile.Response.drive_id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/CreateFile.swift",
+      "line": 70,
+      "symbol": "AliyunpanFileScope.CreateFile.Response.file_id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/CreateFile.swift",
+      "line": 71,
+      "symbol": "AliyunpanFileScope.CreateFile.Response.status",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/CreateFile.swift",
+      "line": 72,
+      "symbol": "AliyunpanFileScope.CreateFile.Response.parent_file_id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/CreateFile.swift",
+      "line": 73,
+      "symbol": "AliyunpanFileScope.CreateFile.Response.file_name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/CreateFile.swift",
+      "line": 74,
+      "symbol": "AliyunpanFileScope.CreateFile.Response.available",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/CreateFile.swift",
+      "line": 79,
+      "symbol": "AliyunpanFileScope.CreateFile.Response.part_info_list",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/CreateFile.swift",
+      "line": 84,
+      "symbol": "AliyunpanFileScope.CreateFile.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/CreateFile.swift",
+      "line": 85,
+      "symbol": "AliyunpanFileScope.CreateFile.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/DeleteFile.swift",
+      "line": 12,
+      "symbol": "AliyunpanFileScope.DeleteFile.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/DeleteFile.swift",
+      "line": 13,
+      "symbol": "AliyunpanFileScope.DeleteFile.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/DeleteFile.swift",
+      "line": 17,
+      "symbol": "AliyunpanFileScope.DeleteFile.Request",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/DeleteFile.swift",
+      "line": 23,
+      "symbol": "AliyunpanFileScope.DeleteFile.Request.init(drive_id:file_id:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/DeleteFile.swift",
+      "line": 29,
+      "symbol": "AliyunpanFileScope.DeleteFile.Response",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/DeleteFile.swift",
+      "line": 38,
+      "symbol": "AliyunpanFileScope.DeleteFile.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/DeleteFile.swift",
+      "line": 39,
+      "symbol": "AliyunpanFileScope.DeleteFile.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetAsyncTask.swift",
+      "line": 12,
+      "symbol": "AliyunpanFileScope.GetAsyncTask.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetAsyncTask.swift",
+      "line": 13,
+      "symbol": "AliyunpanFileScope.GetAsyncTask.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetAsyncTask.swift",
+      "line": 17,
+      "symbol": "AliyunpanFileScope.GetAsyncTask.Request",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetAsyncTask.swift",
+      "line": 21,
+      "symbol": "AliyunpanFileScope.GetAsyncTask.Request.init(async_task_id:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetAsyncTask.swift",
+      "line": 26,
+      "symbol": "AliyunpanFileScope.GetAsyncTask.Response",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetAsyncTask.swift",
+      "line": 33,
+      "symbol": "AliyunpanFileScope.GetAsyncTask.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetAsyncTask.swift",
+      "line": 34,
+      "symbol": "AliyunpanFileScope.GetAsyncTask.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetFile.swift",
+      "line": 12,
+      "symbol": "AliyunpanFileScope.GetFile.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetFile.swift",
+      "line": 13,
+      "symbol": "AliyunpanFileScope.GetFile.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetFile.swift",
+      "line": 17,
+      "symbol": "AliyunpanFileScope.GetFile.Request",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetFile.swift",
+      "line": 29,
+      "symbol": "AliyunpanFileScope.GetFile.Request.init(drive_id:file_id:video_thumbnail_time:video_thumbnail_width:image_thumbnail_width:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetFile.swift",
+      "line": 38,
+      "symbol": "AliyunpanFileScope.GetFile.Response",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetFile.swift",
+      "line": 40,
+      "symbol": "AliyunpanFileScope.GetFile.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetFile.swift",
+      "line": 41,
+      "symbol": "AliyunpanFileScope.GetFile.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetFileByPath.swift",
+      "line": 12,
+      "symbol": "AliyunpanFileScope.GetFileByPath.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetFileByPath.swift",
+      "line": 13,
+      "symbol": "AliyunpanFileScope.GetFileByPath.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetFileByPath.swift",
+      "line": 17,
+      "symbol": "AliyunpanFileScope.GetFileByPath.Request",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetFileByPath.swift",
+      "line": 29,
+      "symbol": "AliyunpanFileScope.GetFileByPath.Response",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetFileByPath.swift",
+      "line": 31,
+      "symbol": "AliyunpanFileScope.GetFileByPath.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetFileByPath.swift",
+      "line": 32,
+      "symbol": "AliyunpanFileScope.GetFileByPath.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetFileDownloadUrl.swift",
+      "line": 12,
+      "symbol": "AliyunpanFileScope.GetFileDownloadUrl.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetFileDownloadUrl.swift",
+      "line": 13,
+      "symbol": "AliyunpanFileScope.GetFileDownloadUrl.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetFileDownloadUrl.swift",
+      "line": 17,
+      "symbol": "AliyunpanFileScope.GetFileDownloadUrl.Request",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetFileDownloadUrl.swift",
+      "line": 25,
+      "symbol": "AliyunpanFileScope.GetFileDownloadUrl.Request.init(drive_id:file_id:expire_sec:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetFileDownloadUrl.swift",
+      "line": 32,
+      "symbol": "AliyunpanFileScope.GetFileDownloadUrl.Response",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetFileDownloadUrl.swift",
+      "line": 41,
+      "symbol": "AliyunpanFileScope.GetFileDownloadUrl.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetFileDownloadUrl.swift",
+      "line": 42,
+      "symbol": "AliyunpanFileScope.GetFileDownloadUrl.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetFileList.swift",
+      "line": 12,
+      "symbol": "AliyunpanFileScope.GetFileList.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetFileList.swift",
+      "line": 13,
+      "symbol": "AliyunpanFileScope.GetFileList.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetFileList.swift",
+      "line": 17,
+      "symbol": "AliyunpanFileScope.GetFileList.Request",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetFileList.swift",
+      "line": 43,
+      "symbol": "AliyunpanFileScope.GetFileList.Request.init(drive_id:parent_file_id:limit:marker:order_by:order_direction:category:type:video_thumbnail_time:video_thumbnail_width:image_thumbnail_width:fields:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetFileList.swift",
+      "line": 59,
+      "symbol": "AliyunpanFileScope.GetFileList.Response",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetFileList.swift",
+      "line": 60,
+      "symbol": "AliyunpanFileScope.GetFileList.Response.items",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetFileList.swift",
+      "line": 65,
+      "symbol": "AliyunpanFileScope.GetFileList.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetFileList.swift",
+      "line": 66,
+      "symbol": "AliyunpanFileScope.GetFileList.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetStarredList.swift",
+      "line": 12,
+      "symbol": "AliyunpanFileScope.GetStarredList.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetStarredList.swift",
+      "line": 13,
+      "symbol": "AliyunpanFileScope.GetStarredList.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetStarredList.swift",
+      "line": 17,
+      "symbol": "AliyunpanFileScope.GetStarredList.Request",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetStarredList.swift",
+      "line": 37,
+      "symbol": "AliyunpanFileScope.GetStarredList.Request.init(drive_id:limit:marker:order_by:video_thumbnail_time:video_thumbnail_width:image_thumbnail_width:order_direction:type:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetStarredList.swift",
+      "line": 50,
+      "symbol": "AliyunpanFileScope.GetStarredList.Response",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetStarredList.swift",
+      "line": 51,
+      "symbol": "AliyunpanFileScope.GetStarredList.Response.items",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetStarredList.swift",
+      "line": 56,
+      "symbol": "AliyunpanFileScope.GetStarredList.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetStarredList.swift",
+      "line": 57,
+      "symbol": "AliyunpanFileScope.GetStarredList.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetUploadURL.swift",
+      "line": 12,
+      "symbol": "AliyunpanFileScope.GetUploadURL.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetUploadURL.swift",
+      "line": 13,
+      "symbol": "AliyunpanFileScope.GetUploadURL.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetUploadURL.swift",
+      "line": 17,
+      "symbol": "AliyunpanFileScope.GetUploadURL.Request",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetUploadURL.swift",
+      "line": 28,
+      "symbol": "AliyunpanFileScope.GetUploadURL.Response",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetUploadURL.swift",
+      "line": 41,
+      "symbol": "AliyunpanFileScope.GetUploadURL.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/GetUploadURL.swift",
+      "line": 42,
+      "symbol": "AliyunpanFileScope.GetUploadURL.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/ListUploadedParts.swift",
+      "line": 12,
+      "symbol": "AliyunpanFileScope.ListUploadedParts.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/ListUploadedParts.swift",
+      "line": 13,
+      "symbol": "AliyunpanFileScope.ListUploadedParts.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/ListUploadedParts.swift",
+      "line": 17,
+      "symbol": "AliyunpanFileScope.ListUploadedParts.Request",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/ListUploadedParts.swift",
+      "line": 24,
+      "symbol": "AliyunpanFileScope.ListUploadedParts.Request.part_number_marker",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/ListUploadedParts.swift",
+      "line": 26,
+      "symbol": "AliyunpanFileScope.ListUploadedParts.Request.init(drive_id:file_id:upload_id:part_number_marker:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/ListUploadedParts.swift",
+      "line": 34,
+      "symbol": "AliyunpanFileScope.ListUploadedParts.Response",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/ListUploadedParts.swift",
+      "line": 47,
+      "symbol": "AliyunpanFileScope.ListUploadedParts.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/ListUploadedParts.swift",
+      "line": 48,
+      "symbol": "AliyunpanFileScope.ListUploadedParts.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/MoveFile.swift",
+      "line": 12,
+      "symbol": "AliyunpanFileScope.MoveFile.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/MoveFile.swift",
+      "line": 13,
+      "symbol": "AliyunpanFileScope.MoveFile.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/MoveFile.swift",
+      "line": 17,
+      "symbol": "AliyunpanFileScope.MoveFile.Request",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/MoveFile.swift",
+      "line": 31,
+      "symbol": "AliyunpanFileScope.MoveFile.Request.init(drive_id:file_id:to_parent_file_id:to_drive_id:check_name_mode:new_name:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/MoveFile.swift",
+      "line": 41,
+      "symbol": "AliyunpanFileScope.MoveFile.Response",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/MoveFile.swift",
+      "line": 52,
+      "symbol": "AliyunpanFileScope.MoveFile.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/MoveFile.swift",
+      "line": 53,
+      "symbol": "AliyunpanFileScope.MoveFile.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/SearchFile.swift",
+      "line": 12,
+      "symbol": "AliyunpanFileScope.SearchFile.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/SearchFile.swift",
+      "line": 13,
+      "symbol": "AliyunpanFileScope.SearchFile.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/SearchFile.swift",
+      "line": 17,
+      "symbol": "AliyunpanFileScope.SearchFile.Request",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/SearchFile.swift",
+      "line": 37,
+      "symbol": "AliyunpanFileScope.SearchFile.Request.init(drive_id:limit:marker:query:order_by:video_thumbnail_time:video_thumbnail_width:image_thumbnail_width:return_total_count:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/SearchFile.swift",
+      "line": 50,
+      "symbol": "AliyunpanFileScope.SearchFile.Response",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/SearchFile.swift",
+      "line": 51,
+      "symbol": "AliyunpanFileScope.SearchFile.Response.items",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/SearchFile.swift",
+      "line": 54,
+      "symbol": "AliyunpanFileScope.SearchFile.Response.total_count",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/SearchFile.swift",
+      "line": 57,
+      "symbol": "AliyunpanFileScope.SearchFile.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/SearchFile.swift",
+      "line": 58,
+      "symbol": "AliyunpanFileScope.SearchFile.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/TrashFileToRecyclebin.swift",
+      "line": 12,
+      "symbol": "AliyunpanFileScope.TrashFileToRecyclebin.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/TrashFileToRecyclebin.swift",
+      "line": 13,
+      "symbol": "AliyunpanFileScope.TrashFileToRecyclebin.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/TrashFileToRecyclebin.swift",
+      "line": 17,
+      "symbol": "AliyunpanFileScope.TrashFileToRecyclebin.Request",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/TrashFileToRecyclebin.swift",
+      "line": 23,
+      "symbol": "AliyunpanFileScope.TrashFileToRecyclebin.Request.init(drive_id:file_id:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/TrashFileToRecyclebin.swift",
+      "line": 29,
+      "symbol": "AliyunpanFileScope.TrashFileToRecyclebin.Response",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/TrashFileToRecyclebin.swift",
+      "line": 38,
+      "symbol": "AliyunpanFileScope.TrashFileToRecyclebin.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/TrashFileToRecyclebin.swift",
+      "line": 39,
+      "symbol": "AliyunpanFileScope.TrashFileToRecyclebin.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/UpdateFile.swift",
+      "line": 12,
+      "symbol": "AliyunpanFileScope.UpdateFile.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/UpdateFile.swift",
+      "line": 13,
+      "symbol": "AliyunpanFileScope.UpdateFile.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/UpdateFile.swift",
+      "line": 17,
+      "symbol": "AliyunpanFileScope.UpdateFile.Request",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/UpdateFile.swift",
+      "line": 29,
+      "symbol": "AliyunpanFileScope.UpdateFile.Request.init(drive_id:file_id:name:check_name_mode:starred:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/UpdateFile.swift",
+      "line": 38,
+      "symbol": "AliyunpanFileScope.UpdateFile.Response",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/UpdateFile.swift",
+      "line": 40,
+      "symbol": "AliyunpanFileScope.UpdateFile.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/File/UpdateFile.swift",
+      "line": 41,
+      "symbol": "AliyunpanFileScope.UpdateFile.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Internal/Authorize.swift",
+      "line": 12,
+      "symbol": "AliyunpanInternalScope.Authorize.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Internal/Authorize.swift",
+      "line": 13,
+      "symbol": "AliyunpanInternalScope.Authorize.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Internal/Authorize.swift",
+      "line": 17,
+      "symbol": "AliyunpanInternalScope.Authorize.Request",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Internal/Authorize.swift",
+      "line": 26,
+      "symbol": "AliyunpanInternalScope.Authorize.Request.bundle_id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Internal/Authorize.swift",
+      "line": 27,
+      "symbol": "AliyunpanInternalScope.Authorize.Request.code_challenge",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Internal/Authorize.swift",
+      "line": 28,
+      "symbol": "AliyunpanInternalScope.Authorize.Request.code_challenge_method",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Internal/Authorize.swift",
+      "line": 33,
+      "symbol": "AliyunpanInternalScope.Authorize.Request.source",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Internal/Authorize.swift",
+      "line": 35,
+      "symbol": "AliyunpanInternalScope.Authorize.Request.init(client_id:redirect_uri:scope:response_type:code_challenge:code_challenge_method:state:relogin:bundle_id:source:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Internal/Authorize.swift",
+      "line": 49,
+      "symbol": "AliyunpanInternalScope.Authorize.Response",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Internal/Authorize.swift",
+      "line": 50,
+      "symbol": "AliyunpanInternalScope.Authorize.Response.redirectUri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Internal/Authorize.swift",
+      "line": 53,
+      "symbol": "AliyunpanInternalScope.Authorize.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Internal/Authorize.swift",
+      "line": 54,
+      "symbol": "AliyunpanInternalScope.Authorize.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Internal/GetAccessToken.swift",
+      "line": 12,
+      "symbol": "AliyunpanInternalScope.GetAccessToken.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Internal/GetAccessToken.swift",
+      "line": 13,
+      "symbol": "AliyunpanInternalScope.GetAccessToken.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Internal/GetAccessToken.swift",
+      "line": 17,
+      "symbol": "AliyunpanInternalScope.GetAccessToken.Request",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Internal/GetAccessToken.swift",
+      "line": 31,
+      "symbol": "AliyunpanInternalScope.GetAccessToken.Request.init(client_id:grant_type:code:client_secret:refresh_token:code_verifier:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Internal/GetAccessToken.swift",
+      "line": 41,
+      "symbol": "AliyunpanInternalScope.GetAccessToken.Response",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Internal/GetAccessToken.swift",
+      "line": 43,
+      "symbol": "AliyunpanInternalScope.GetAccessToken.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Internal/GetAccessToken.swift",
+      "line": 44,
+      "symbol": "AliyunpanInternalScope.GetAccessToken.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/User/GetDriveInfo.swift",
+      "line": 12,
+      "symbol": "AliyunpanUserScope.GetDriveInfo.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/User/GetDriveInfo.swift",
+      "line": 13,
+      "symbol": "AliyunpanUserScope.GetDriveInfo.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/User/GetDriveInfo.swift",
+      "line": 17,
+      "symbol": "AliyunpanUserScope.GetDriveInfo.Request",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/User/GetDriveInfo.swift",
+      "line": 19,
+      "symbol": "AliyunpanUserScope.GetDriveInfo.Response",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/User/GetDriveInfo.swift",
+      "line": 34,
+      "symbol": "AliyunpanUserScope.GetDriveInfo.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/User/GetSpaceInfo.swift",
+      "line": 12,
+      "symbol": "AliyunpanUserScope.GetSpaceInfo.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/User/GetSpaceInfo.swift",
+      "line": 13,
+      "symbol": "AliyunpanUserScope.GetSpaceInfo.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/User/GetSpaceInfo.swift",
+      "line": 17,
+      "symbol": "AliyunpanUserScope.GetSpaceInfo.Request",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/User/GetSpaceInfo.swift",
+      "line": 19,
+      "symbol": "AliyunpanUserScope.GetSpaceInfo.Response",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/User/GetSpaceInfo.swift",
+      "line": 20,
+      "symbol": "AliyunpanUserScope.GetSpaceInfo.Response.personal_space_info",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/User/GetSpaceInfo.swift",
+      "line": 23,
+      "symbol": "AliyunpanUserScope.GetSpaceInfo.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/User/GetUsersInfo.swift",
+      "line": 12,
+      "symbol": "AliyunpanUserScope.GetUsersInfo.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/User/GetUsersInfo.swift",
+      "line": 13,
+      "symbol": "AliyunpanUserScope.GetUsersInfo.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/User/GetUsersInfo.swift",
+      "line": 17,
+      "symbol": "AliyunpanUserScope.GetUsersInfo.Request",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/User/GetUsersInfo.swift",
+      "line": 19,
+      "symbol": "AliyunpanUserScope.GetUsersInfo.Response",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/User/GetUsersInfo.swift",
+      "line": 30,
+      "symbol": "AliyunpanUserScope.GetUsersInfo.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/User/GetUsersScopes.swift",
+      "line": 12,
+      "symbol": "AliyunpanUserScope.GetUsersScopes.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/User/GetUsersScopes.swift",
+      "line": 13,
+      "symbol": "AliyunpanUserScope.GetUsersScopes.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/User/GetUsersScopes.swift",
+      "line": 17,
+      "symbol": "AliyunpanUserScope.GetUsersScopes.Request",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/User/GetUsersScopes.swift",
+      "line": 19,
+      "symbol": "AliyunpanUserScope.GetUsersScopes.Response",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/User/GetUsersScopes.swift",
+      "line": 20,
+      "symbol": "AliyunpanUserScope.GetUsersScopes.Response.ScopeItem",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/User/GetUsersScopes.swift",
+      "line": 29,
+      "symbol": "AliyunpanUserScope.GetUsersScopes.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/User/GetVipInfo.swift",
+      "line": 12,
+      "symbol": "AliyunpanUserScope.GetVipInfo.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/User/GetVipInfo.swift",
+      "line": 13,
+      "symbol": "AliyunpanUserScope.GetVipInfo.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/User/GetVipInfo.swift",
+      "line": 17,
+      "symbol": "AliyunpanUserScope.GetVipInfo.Request",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/User/GetVipInfo.swift",
+      "line": 19,
+      "symbol": "AliyunpanUserScope.GetVipInfo.Response",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/User/GetVipInfo.swift",
+      "line": 28,
+      "symbol": "AliyunpanUserScope.GetVipInfo.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoPreviewPlayInfo.swift",
+      "line": 12,
+      "symbol": "AliyunpanVideoScope.GetVideoPreviewPlayInfo.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoPreviewPlayInfo.swift",
+      "line": 13,
+      "symbol": "AliyunpanVideoScope.GetVideoPreviewPlayInfo.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoPreviewPlayInfo.swift",
+      "line": 17,
+      "symbol": "AliyunpanVideoScope.GetVideoPreviewPlayInfo.Request",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoPreviewPlayInfo.swift",
+      "line": 35,
+      "symbol": "AliyunpanVideoScope.GetVideoPreviewPlayInfo.Request.init(drive_id:file_id:category:get_subtitle_info:template_id:url_expire_sec:only_vip:with_play_cursor:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoPreviewPlayInfo.swift",
+      "line": 47,
+      "symbol": "AliyunpanVideoScope.GetVideoPreviewPlayInfo.Response",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoPreviewPlayInfo.swift",
+      "line": 48,
+      "symbol": "AliyunpanVideoScope.GetVideoPreviewPlayInfo.Response.domain_id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoPreviewPlayInfo.swift",
+      "line": 49,
+      "symbol": "AliyunpanVideoScope.GetVideoPreviewPlayInfo.Response.drive_id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoPreviewPlayInfo.swift",
+      "line": 50,
+      "symbol": "AliyunpanVideoScope.GetVideoPreviewPlayInfo.Response.file_id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoPreviewPlayInfo.swift",
+      "line": 51,
+      "symbol": "AliyunpanVideoScope.GetVideoPreviewPlayInfo.Response.video_preview_play_info",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoPreviewPlayInfo.swift",
+      "line": 54,
+      "symbol": "AliyunpanVideoScope.GetVideoPreviewPlayInfo.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoPreviewPlayInfo.swift",
+      "line": 55,
+      "symbol": "AliyunpanVideoScope.GetVideoPreviewPlayInfo.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoPreviewPlayMeta.swift",
+      "line": 12,
+      "symbol": "AliyunpanVideoScope.GetVideoPreviewPlayMeta.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoPreviewPlayMeta.swift",
+      "line": 13,
+      "symbol": "AliyunpanVideoScope.GetVideoPreviewPlayMeta.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoPreviewPlayMeta.swift",
+      "line": 17,
+      "symbol": "AliyunpanVideoScope.GetVideoPreviewPlayMeta.Request",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoPreviewPlayMeta.swift",
+      "line": 27,
+      "symbol": "AliyunpanVideoScope.GetVideoPreviewPlayMeta.Request.init(drive_id:file_id:category:template_id:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoPreviewPlayMeta.swift",
+      "line": 35,
+      "symbol": "AliyunpanVideoScope.GetVideoPreviewPlayMeta.Response",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoPreviewPlayMeta.swift",
+      "line": 36,
+      "symbol": "AliyunpanVideoScope.GetVideoPreviewPlayMeta.Response.domain_id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoPreviewPlayMeta.swift",
+      "line": 37,
+      "symbol": "AliyunpanVideoScope.GetVideoPreviewPlayMeta.Response.drive_id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoPreviewPlayMeta.swift",
+      "line": 38,
+      "symbol": "AliyunpanVideoScope.GetVideoPreviewPlayMeta.Response.file_id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoPreviewPlayMeta.swift",
+      "line": 39,
+      "symbol": "AliyunpanVideoScope.GetVideoPreviewPlayMeta.Response.video_preview_play_meta",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoPreviewPlayMeta.swift",
+      "line": 42,
+      "symbol": "AliyunpanVideoScope.GetVideoPreviewPlayMeta.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoPreviewPlayMeta.swift",
+      "line": 43,
+      "symbol": "AliyunpanVideoScope.GetVideoPreviewPlayMeta.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoRecentList.swift",
+      "line": 12,
+      "symbol": "AliyunpanVideoScope.GetVideoRecentList.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoRecentList.swift",
+      "line": 13,
+      "symbol": "AliyunpanVideoScope.GetVideoRecentList.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoRecentList.swift",
+      "line": 17,
+      "symbol": "AliyunpanVideoScope.GetVideoRecentList.Request",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoRecentList.swift",
+      "line": 21,
+      "symbol": "AliyunpanVideoScope.GetVideoRecentList.Request.init(video_thumbnail_width:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoRecentList.swift",
+      "line": 26,
+      "symbol": "AliyunpanVideoScope.GetVideoRecentList.Response",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoRecentList.swift",
+      "line": 27,
+      "symbol": "AliyunpanVideoScope.GetVideoRecentList.Response.items",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoRecentList.swift",
+      "line": 30,
+      "symbol": "AliyunpanVideoScope.GetVideoRecentList.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/GetVideoRecentList.swift",
+      "line": 31,
+      "symbol": "AliyunpanVideoScope.GetVideoRecentList.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/UpdateVideoRecord.swift",
+      "line": 12,
+      "symbol": "AliyunpanVideoScope.UpdateVideoRecord.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/UpdateVideoRecord.swift",
+      "line": 13,
+      "symbol": "AliyunpanVideoScope.UpdateVideoRecord.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/UpdateVideoRecord.swift",
+      "line": 17,
+      "symbol": "AliyunpanVideoScope.UpdateVideoRecord.Request",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/UpdateVideoRecord.swift",
+      "line": 27,
+      "symbol": "AliyunpanVideoScope.UpdateVideoRecord.Request.init(drive_id:file_id:play_cursor:duration:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/UpdateVideoRecord.swift",
+      "line": 35,
+      "symbol": "AliyunpanVideoScope.UpdateVideoRecord.Response",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/UpdateVideoRecord.swift",
+      "line": 36,
+      "symbol": "AliyunpanVideoScope.UpdateVideoRecord.Response.domain_id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/UpdateVideoRecord.swift",
+      "line": 37,
+      "symbol": "AliyunpanVideoScope.UpdateVideoRecord.Response.drive_id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/UpdateVideoRecord.swift",
+      "line": 38,
+      "symbol": "AliyunpanVideoScope.UpdateVideoRecord.Response.file_id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/UpdateVideoRecord.swift",
+      "line": 39,
+      "symbol": "AliyunpanVideoScope.UpdateVideoRecord.Response.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/UpdateVideoRecord.swift",
+      "line": 42,
+      "symbol": "AliyunpanVideoScope.UpdateVideoRecord.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Video/UpdateVideoRecord.swift",
+      "line": 43,
+      "symbol": "AliyunpanVideoScope.UpdateVideoRecord.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Vip/GetVipFeatureList.swift",
+      "line": 12,
+      "symbol": "AliyunpanVIPScope.GetVipFeatureList.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Vip/GetVipFeatureList.swift",
+      "line": 13,
+      "symbol": "AliyunpanVIPScope.GetVipFeatureList.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Vip/GetVipFeatureList.swift",
+      "line": 17,
+      "symbol": "AliyunpanVIPScope.GetVipFeatureList.Request",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Vip/GetVipFeatureList.swift",
+      "line": 19,
+      "symbol": "AliyunpanVIPScope.GetVipFeatureList.Response",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Vip/GetVipFeatureList.swift",
+      "line": 20,
+      "symbol": "AliyunpanVIPScope.GetVipFeatureList.Response.FeatureItem",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Vip/GetVipFeatureList.swift",
+      "line": 39,
+      "symbol": "AliyunpanVIPScope.GetVipFeatureList.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Vip/GetVipFeatureTrial.swift",
+      "line": 12,
+      "symbol": "AliyunpanVIPScope.GetVipFeatureTrial.httpMethod",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Vip/GetVipFeatureTrial.swift",
+      "line": 13,
+      "symbol": "AliyunpanVIPScope.GetVipFeatureTrial.uri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Vip/GetVipFeatureTrial.swift",
+      "line": 17,
+      "symbol": "AliyunpanVIPScope.GetVipFeatureTrial.Request",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Vip/GetVipFeatureTrial.swift",
+      "line": 21,
+      "symbol": "AliyunpanVIPScope.GetVipFeatureTrial.Request.init(featureCode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Vip/GetVipFeatureTrial.swift",
+      "line": 26,
+      "symbol": "AliyunpanVIPScope.GetVipFeatureTrial.Response",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Vip/GetVipFeatureTrial.swift",
+      "line": 35,
+      "symbol": "AliyunpanVIPScope.GetVipFeatureTrial.request",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanScope/Vip/GetVipFeatureTrial.swift",
+      "line": 36,
+      "symbol": "AliyunpanVIPScope.GetVipFeatureTrial.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/AliyunpanDownloader.swift",
+      "line": 10,
+      "symbol": "DownloadResult",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/AliyunpanDownloader.swift",
+      "line": 11,
+      "symbol": "DownloadResult.progress",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/AliyunpanDownloader.swift",
+      "line": 12,
+      "symbol": "DownloadResult.url",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/AliyunpanDownloader.swift",
+      "line": 14,
+      "symbol": "DownloadResult.completed(url:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/AliyunpanDownloader.swift",
+      "line": 18,
+      "symbol": "DownloadResult.progressing(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/AliyunpanDownloader.swift",
+      "line": 23,
+      "symbol": "AliyunpanDownloader",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/AliyunpanDownloader.swift",
+      "line": 140,
+      "symbol": "AliyunpanDownloader",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/AliyunpanDownloader.swift",
+      "line": 241,
+      "symbol": "AliyunpanDownloader",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/AliyunpanDownloader.swift",
+      "line": 242,
+      "symbol": "AliyunpanDownloader.urlSession(_:task:didCompleteWithError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/AliyunpanDownloader.swift",
+      "line": 254,
+      "symbol": "AliyunpanDownloader.urlSession(_:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/AliyunpanDownloader.swift",
+      "line": 259,
+      "symbol": "AliyunpanDownloader.urlSession(_:downloadTask:didFinishDownloadingTo:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/HTTPHeaders.swift",
+      "line": 30,
+      "symbol": "HTTPHeader",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/HTTPHeaders.swift",
+      "line": 125,
+      "symbol": "HTTPHeaders",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/HTTPHeaders.swift",
+      "line": 138,
+      "symbol": "HTTPHeaders.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/HTTPHeaders.swift",
+      "line": 195,
+      "symbol": "HTTPHeaders",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/HTTPHeaders.swift",
+      "line": 201,
+      "symbol": "HTTPHeaders",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/HTTPHeaders.swift",
+      "line": 219,
+      "symbol": "HTTPHeaders",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/HTTPHeaders.swift",
+      "line": 225,
+      "symbol": "HTTPHeaders",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/HTTPMethod.swift",
+      "line": 10,
+      "symbol": "HTTPMethod",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/HTTPMethod.swift",
+      "line": 11,
+      "symbol": "HTTPMethod.get",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/HTTPMethod.swift",
+      "line": 12,
+      "symbol": "HTTPMethod.post",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/HTTPMethod.swift",
+      "line": 13,
+      "symbol": "HTTPMethod.put",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/HTTPMethod.swift",
+      "line": 14,
+      "symbol": "HTTPMethod.delete",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/HTTPMethod.swift",
+      "line": 15,
+      "symbol": "HTTPMethod.head",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 10,
+      "symbol": "AliyunpanFile",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 11,
+      "symbol": "AliyunpanFile.drive_id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 12,
+      "symbol": "AliyunpanFile.file_id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 17,
+      "symbol": "AliyunpanFile.size",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 18,
+      "symbol": "AliyunpanFile.file_extension",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 21,
+      "symbol": "AliyunpanFile.category",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 22,
+      "symbol": "AliyunpanFile.type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 27,
+      "symbol": "AliyunpanFile.created_at",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 28,
+      "symbol": "AliyunpanFile.updated_at",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 39,
+      "symbol": "AliyunpanFile",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 64,
+      "symbol": "AliyunpanFile",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 71,
+      "symbol": "AliyunpanFile",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 72,
+      "symbol": "AliyunpanFile.FileCategory",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 73,
+      "symbol": "AliyunpanFile.FileCategory.video",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 74,
+      "symbol": "AliyunpanFile.FileCategory.doc",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 75,
+      "symbol": "AliyunpanFile.FileCategory.audio",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 76,
+      "symbol": "AliyunpanFile.FileCategory.zip",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 77,
+      "symbol": "AliyunpanFile.FileCategory.others",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 78,
+      "symbol": "AliyunpanFile.FileCategory.image",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 81,
+      "symbol": "AliyunpanFile.FileType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 82,
+      "symbol": "AliyunpanFile.FileType.all",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 83,
+      "symbol": "AliyunpanFile.FileType.file",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 84,
+      "symbol": "AliyunpanFile.FileType.folder",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 87,
+      "symbol": "AliyunpanFile.Template",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 88,
+      "symbol": "AliyunpanFile.Template.template_id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 89,
+      "symbol": "AliyunpanFile.Template.status",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 90,
+      "symbol": "AliyunpanFile.Template.url",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 91,
+      "symbol": "AliyunpanFile.Template.preview_url",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 94,
+      "symbol": "AliyunpanFile.MediaMetadata",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 95,
+      "symbol": "AliyunpanFile.MediaMetadata.VideoStream",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 108,
+      "symbol": "AliyunpanFile.MediaMetadata.AudioStream",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 123,
+      "symbol": "AliyunpanFile.MediaMetadata.duration",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 124,
+      "symbol": "AliyunpanFile.MediaMetadata.width",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 125,
+      "symbol": "AliyunpanFile.MediaMetadata.height",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 126,
+      "symbol": "AliyunpanFile.MediaMetadata.time",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 127,
+      "symbol": "AliyunpanFile.MediaMetadata.location",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 128,
+      "symbol": "AliyunpanFile.MediaMetadata.country",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 129,
+      "symbol": "AliyunpanFile.MediaMetadata.province",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 130,
+      "symbol": "AliyunpanFile.MediaMetadata.city",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 131,
+      "symbol": "AliyunpanFile.MediaMetadata.district",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 132,
+      "symbol": "AliyunpanFile.MediaMetadata.township",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 133,
+      "symbol": "AliyunpanFile.MediaMetadata.exif",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 134,
+      "symbol": "AliyunpanFile.MediaMetadata.video_media_video_stream",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 135,
+      "symbol": "AliyunpanFile.MediaMetadata.video_media_audio_stream",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 138,
+      "symbol": "AliyunpanFile.AudioMetaData",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 139,
+      "symbol": "AliyunpanFile.AudioMetaData.AudioMeta",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 140,
+      "symbol": "AliyunpanFile.AudioMetaData.AudioMeta.duration",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 141,
+      "symbol": "AliyunpanFile.AudioMetaData.AudioMeta.bitrate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 142,
+      "symbol": "AliyunpanFile.AudioMetaData.AudioMeta.sample_rate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 143,
+      "symbol": "AliyunpanFile.AudioMetaData.AudioMeta.channels",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 146,
+      "symbol": "AliyunpanFile.AudioMetaData.MusicMeta",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 147,
+      "symbol": "AliyunpanFile.AudioMetaData.MusicMeta.title",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 148,
+      "symbol": "AliyunpanFile.AudioMetaData.MusicMeta.artist",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 149,
+      "symbol": "AliyunpanFile.AudioMetaData.MusicMeta.album",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 150,
+      "symbol": "AliyunpanFile.AudioMetaData.MusicMeta.cover_url",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 159,
+      "symbol": "AliyunpanFile.AudioMetaData.audio_sample_rate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 160,
+      "symbol": "AliyunpanFile.AudioMetaData.audio_channels",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 161,
+      "symbol": "AliyunpanFile.AudioMetaData.audio_meta",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 162,
+      "symbol": "AliyunpanFile.AudioMetaData.audio_music_meta",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 163,
+      "symbol": "AliyunpanFile.AudioMetaData.template_list",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 166,
+      "symbol": "AliyunpanFile.PartInfo",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 173,
+      "symbol": "AliyunpanFile.PartInfo.upload_url",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 175,
+      "symbol": "AliyunpanFile.PartInfo.init(part_number:part_size:etag:upload_url:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 183,
+      "symbol": "AliyunpanFile.StreamsInfo",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 184,
+      "symbol": "AliyunpanFile.StreamsInfo.content_hash",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 185,
+      "symbol": "AliyunpanFile.StreamsInfo.content_hash_name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 186,
+      "symbol": "AliyunpanFile.StreamsInfo.proof_version",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 187,
+      "symbol": "AliyunpanFile.StreamsInfo.content_md5",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 188,
+      "symbol": "AliyunpanFile.StreamsInfo.pre_hash",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 189,
+      "symbol": "AliyunpanFile.StreamsInfo.size",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 190,
+      "symbol": "AliyunpanFile.StreamsInfo.part_info_list",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 192,
+      "symbol": "AliyunpanFile.StreamsInfo.init(content_hash:content_hash_name:proof_version:content_md5:pre_hash:size:part_info_list:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 203,
+      "symbol": "AliyunpanFile.VideoPreviewPlayInfo",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 204,
+      "symbol": "AliyunpanFile.VideoPreviewPlayInfo.Status",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 213,
+      "symbol": "AliyunpanFile.VideoPreviewPlayInfo.Meta",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 214,
+      "symbol": "AliyunpanFile.VideoPreviewPlayInfo.Meta.duration",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 215,
+      "symbol": "AliyunpanFile.VideoPreviewPlayInfo.Meta.width",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 216,
+      "symbol": "AliyunpanFile.VideoPreviewPlayInfo.Meta.height",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 219,
+      "symbol": "AliyunpanFile.VideoPreviewPlayInfo.LiveTranscodingTask",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 220,
+      "symbol": "AliyunpanFile.VideoPreviewPlayInfo.LiveTranscodingTask.template_id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 221,
+      "symbol": "AliyunpanFile.VideoPreviewPlayInfo.LiveTranscodingTask.template_name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 222,
+      "symbol": "AliyunpanFile.VideoPreviewPlayInfo.LiveTranscodingTask.template_width",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 223,
+      "symbol": "AliyunpanFile.VideoPreviewPlayInfo.LiveTranscodingTask.template_height",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 226,
+      "symbol": "AliyunpanFile.VideoPreviewPlayInfo.LiveTranscodingTask.stage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 227,
+      "symbol": "AliyunpanFile.VideoPreviewPlayInfo.LiveTranscodingTask.status",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 228,
+      "symbol": "AliyunpanFile.VideoPreviewPlayInfo.LiveTranscodingTask.url",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 231,
+      "symbol": "AliyunpanFile.VideoPreviewPlayInfo.LiveTranscodingSubtitleTask",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 234,
+      "symbol": "AliyunpanFile.VideoPreviewPlayInfo.LiveTranscodingSubtitleTask.status",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanFile.swift",
+      "line": 235,
+      "symbol": "AliyunpanFile.VideoPreviewPlayInfo.LiveTranscodingSubtitleTask.url",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanSpaceInfo.swift",
+      "line": 10,
+      "symbol": "AliyunpanSpaceInfo",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanSpaceInfo.swift",
+      "line": 11,
+      "symbol": "AliyunpanSpaceInfo.used_size",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanSpaceInfo.swift",
+      "line": 12,
+      "symbol": "AliyunpanSpaceInfo.total_size",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanSpaceInfo.swift",
+      "line": 15,
+      "symbol": "AliyunpanSpaceInfo",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanToken.swift",
+      "line": 10,
+      "symbol": "AliyunpanToken",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanToken.swift",
+      "line": 26,
+      "symbol": "AliyunpanToken",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/Model/AliyunpanToken.swift",
+      "line": 35,
+      "symbol": "AliyunpanToken",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/zhaixian/Desktop/AliyunpanSDK"
+}

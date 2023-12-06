@@ -1,0 +1,42 @@
+disabled_rules: # rule identifiers to exclude from running
+  - line_length
+  - nesting
+  - cyclomatic_complexity
+  - shorthand_operator
+  - large_tuple
+  - private_over_fileprivate
+  - fallthrough
+  - multiple_closures_with_trailing_closure
+  - block_based_kvo
+  - unused_setter_value
+  - no_space_in_method_call
+  - inclusive_language
+included: # paths to include during linting. `--path` is ignored if present. takes precendence over `excluded`.
+excluded: # paths to ignore during linting. overridden by `included`.
+  - Tests
+type_name:
+  min_length: 2 # only warning
+  max_length: # warning and error
+    warning: 100
+    error: 200
+  excluded:
+    - iPhone
+
+function_parameter_count: 10
+function_body_length:
+  - 200
+  - 300
+type_body_length:
+  - 400 # warning
+  - 500 # error
+file_length:
+  - 1000 # warning
+  - 1500 # error
+identifier_name:
+  min_length: 1
+  max_length: 40
+  allowed_symbols: "_"
+
+trailing_whitespace:
+  ignores_empty_lines: true
+  ignores_comments: true

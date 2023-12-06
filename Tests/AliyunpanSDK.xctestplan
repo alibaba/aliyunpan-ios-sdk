@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "793A1A9C-6D23-48AD-A8EF-A521CC2C8924",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:AliyunpanSDK.xcodeproj",
+        "identifier" : "F4C6F22F2B060C4B003A06B3",
+        "name" : "AliyunpanSDKTests"
+      }
+    }
+  ],
+  "version" : 1
+}
