@@ -91,7 +91,7 @@ downloader.download { progress in
 #### Swift Package Manager
 
 - File > Swift Packages > Add Package Dependency
-- Add `https://github.com/alibaba/AliyunpanSDK.git`
+- Add `https://github.com/alibaba/aliyunpan-ios-sdk.git`
 
 #### CocoaPods
 
