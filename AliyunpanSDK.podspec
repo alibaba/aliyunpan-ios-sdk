@@ -1,13 +1,21 @@
-Pod::Spec.new do |s|
-    s.name = 'AliyunpanSDK'
-    s.version = '0.1.0'
-    s.license = 'MIT'
-    s.summary = 'Aliyunpan iOS SDK'
-    s.homepage = 'https://github.com/alibaba/aliyunpan-ios-sdk'
-    s.authors = { 'zhaixian' => 'zixuan.wzx@alibaba-inc.com' }
-    s.source = { :git => 'https://github.com/alibaba/aliyunpan-ios-sdk.git', :tag => s.version }
-    s.ios.deployment_target = '13.0'
-    s.swift_versions = ['5']
-    s.source_files = 'Sources/**/*.swift'
-  end
-  
+Pod::Spec.new do |spec|
+  spec.name         = "AliyunpanSDK"
+  spec.version      = "0.1.1"
+  spec.summary      = "Aliyunpan OpenSDK-iOS"
+
+  spec.description  = <<-DESC
+  Aliyunpan OpenSDK-iOS
+                   DESC
+  spec.homepage     = "https://github.com/alibaba/aliyunpan-ios-sdk"
+  spec.license      = "MIT"
+  spec.author       = { "zhaixian" => "zixuan.wzx@alibaba-inc.com" }
+
+  spec.platform     = :ios, "13.0"
+  spec.swift_versions = '5.0'
+
+  spec.source       = { :git => "https://github.com/alibaba/aliyunpan-ios-sdk.git", :tag => "#{spec.version}" }
+
+  spec.source_files  = "Sources/**/*.swift"
+  spec.
+  spec.ios.framework  = 'UIKit'
+end
