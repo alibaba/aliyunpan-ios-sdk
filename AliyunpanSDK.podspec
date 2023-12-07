@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "AliyunpanSDK"
-  spec.version      = "0.1.1"
+  spec.version      = "0.1.2"
   spec.summary      = "Aliyunpan OpenSDK-iOS"
 
   spec.description  = <<-DESC
@@ -16,6 +16,5 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/alibaba/aliyunpan-ios-sdk.git", :tag => "#{spec.version}" }
 
   spec.source_files  = "Sources/**/*.swift"
-  spec.
   spec.ios.framework  = 'UIKit'
 end
