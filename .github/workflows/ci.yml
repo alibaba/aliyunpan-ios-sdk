@@ -1,0 +1,38 @@
+name: AliyunpanSDK CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  iOS:
+    name: ${{ matrix.name }}
+    runs-on: ${{ matrix.runsOn }}
+    env:
+      DEVELOPER_DIR: "/Applications/${{ matrix.xcode }}.app/Contents/Developer"
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - destination: "OS=17.0,name=iPhone 14 Pro"
+            name: "iOS 17.0"
+            testPlan: "AliyunpanSDK"
+            xcode: "Xcode_15.0"
+            runsOn: firebreak
+          - destination: "OS=16.4,name=iPhone 14 Pro"
+            name: "iOS 16.4"
+            testPlan: "AliyunpanSDK"
+            xcode: "Xcode_14.3.1"
+            runsOn: firebreak
+          - destination: "OS=15.5,name=iPhone 13 Pro"
+            name: "iOS 15.5"
+            testPlan: "AliyunpanSDK"
+            xcode: "Xcode_14.3.1"
+            runsOn: macOS-13
+    steps:
+      - uses: actions/checkout@v4
+      - name: ${{ matrix.name }}
+        run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild -project "AliyunpanSDK.xcodeproj" -scheme "AliyunpanSDK" -destination "${{ matrix.destination }}" -testPlan "${{ matrix.testPlan }}" clean test 2>&1 | xcpretty
