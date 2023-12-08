@@ -1,5 +1,5 @@
 # AliyunpanSDK
-![pod version](https://img.shields.io/cocoapods/v/AliyunpanSDK?color=%23526efa)
+[![pod version](https://img.shields.io/cocoapods/v/AliyunpanSDK?color=%23526efa)](https://cocoapods.org/pods/AliyunpanSDK)
 
 This is the open-source SDK for Aliyunpan OpenAPI. 
 
