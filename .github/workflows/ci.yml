@@ -35,4 +35,4 @@ jobs:
       - name: Install xcpretty
         run: gem install xcpretty
       - name: ${{ matrix.name }}
-        run: set -o pipefail && xcodebuild clean test -project AliyunpanSDK.xcodeproj -scheme AliyunpanSDK -sdk iphonesimulator -destination "${{ matrix.destination }}" 2>&1 | xcpretty
+        run: set -o pipefail && xcodebuild clean test -project AliyunpanSDK.xcodeproj -scheme AliyunpanSDK -sdk iphonesimulator -destination "${{ matrix.destination }}" | xcpretty
