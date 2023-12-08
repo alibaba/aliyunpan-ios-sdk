@@ -18,18 +18,15 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - destination: "OS=17.0,name=iPhone 14 Pro"
+          - destination: "OS=17.0.1,name=iPhone 14 Pro"
             name: "iOS 17.0"
-            xcode: "Xcode_15.0"
             runsOn: macOS-13
           - destination: "OS=16.4,name=iPhone 14 Pro"
             name: "iOS 16.4"
-            xcode: "Xcode_14.3.1"
-            runsOn: macOS-12
+            runsOn: macOS-13
           - destination: "OS=15.5,name=iPhone 13 Pro"
             name: "iOS 15.5"
-            xcode: "Xcode_14.3.1"
-            runsOn: macOS-12
+            runsOn: macOS-11
     steps:
       - uses: actions/checkout@v4
       - name: Install xcpretty
