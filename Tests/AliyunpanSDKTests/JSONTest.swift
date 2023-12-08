@@ -121,7 +121,12 @@ class JSONTests: XCTestCase {
         let data = try JSONParameterEncoder().encode(bar)
         let json = try JSONSerialization.jsonObject(with: data) as! [String: String]
         
-        XCTAssertEqual(json["created_at"], "2023-06-28T18:00:20.022+08:00")
-        XCTAssertEqual(json["updated_at"], "2023-06-28T20:00:20.022+08:00")
+        XCTAssertEqual(
+            ISO8601DateFormatter().date(from: json["created_at"]!),
+            ISO8601DateFormatter().date(from: "2023-06-28T18:00:20.022+08:00"))
+        
+        XCTAssertEqual(
+            ISO8601DateFormatter().date(from: json["updated_at"]!),
+            ISO8601DateFormatter().date(from: "2023-06-28T20:00:20.022+08:00"))
     }
 }
