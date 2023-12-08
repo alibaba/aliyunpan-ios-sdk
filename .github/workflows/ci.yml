@@ -20,17 +20,14 @@ jobs:
         include:
           - destination: "OS=17.0,name=iPhone 14 Pro"
             name: "iOS 17.0"
-            testPlan: "AliyunpanSDK"
             xcode: "Xcode_15.0"
             runsOn: macOS-13
           - destination: "OS=16.4,name=iPhone 14 Pro"
             name: "iOS 16.4"
-            testPlan: "AliyunpanSDK"
             xcode: "Xcode_14.3.1"
             runsOn: macOS-12
           - destination: "OS=15.5,name=iPhone 13 Pro"
             name: "iOS 15.5"
-            testPlan: "AliyunpanSDK"
             xcode: "Xcode_14.3.1"
             runsOn: macOS-12
     steps:
@@ -38,4 +35,4 @@ jobs:
       - name: Install xcpretty
         run: gem install xcpretty
       - name: ${{ matrix.name }}
-        run: set -o pipefail && xcodebuild clean test -project AliyunpanSDK.xcodeproj -scheme AliyunpanSDK -destination "${{ matrix.destination }}" -testPlan "${{ matrix.testPlan }}" clean test 2>&1 | xcpretty
+        run: set -o pipefail && xcodebuild clean test -project AliyunpanSDK.xcodeproj -scheme AliyunpanSDK -sdk iphonesimulator -destination "${{ matrix.destination }}" | xcpretty
