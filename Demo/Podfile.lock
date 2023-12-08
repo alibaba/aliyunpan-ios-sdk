@@ -1,16 +1,16 @@
 PODS:
-  - AliyunpanSDK (0.1.0)
+  - AliyunpanSDK (0.1.2)
 
 DEPENDENCIES:
-  - AliyunpanSDK (from `../`)
+  - AliyunpanSDK (~> 0.1.0)
 
-EXTERNAL SOURCES:
-  AliyunpanSDK:
-    :path: "../"
+SPEC REPOS:
+  trunk:
+    - AliyunpanSDK
 
 SPEC CHECKSUMS:
-  AliyunpanSDK: 668cfeca9fe9ed0c6d2b2f879229120bbdc81ccc
+  AliyunpanSDK: fbdb63b117708634ec2f38f4517726e99d64ee20
 
-PODFILE CHECKSUM: b533fec7b6e0c2634dd56f54c78568c5a4f62c29
+PODFILE CHECKSUM: 942caf2eb2f3a2dbfd055c7e6af7f2a9d26ef01b
 
 COCOAPODS: 1.11.3

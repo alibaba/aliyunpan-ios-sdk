@@ -11,9 +11,9 @@ disabled_rules: # rule identifiers to exclude from running
   - unused_setter_value
   - no_space_in_method_call
   - inclusive_language
-included: # paths to include during linting. `--path` is ignored if present. takes precendence over `excluded`.
+included: 
+  - Sources
 excluded: # paths to ignore during linting. overridden by `included`.
-  - Tests
 type_name:
   min_length: 2 # only warning
   max_length: # warning and error
