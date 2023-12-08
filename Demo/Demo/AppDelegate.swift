@@ -17,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             credentials: .pkce))
     
     func applicationDidFinishLaunching(_ application: UIApplication) {
-        Aliyunpan.setEnvironment(.pre)
         Aliyunpan.setLogLevel(.error)
     }
     

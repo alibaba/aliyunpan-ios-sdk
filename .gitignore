@@ -130,7 +130,7 @@ iOSInjectionProject/
 ### SwiftPM ###
 Packages
 xcuserdata
-*.xcodeproj
+# *.xcodeproj
 .swiftpm
 
 # End of https://www.toptal.com/developers/gitignore/api/cocoapods,swift,swiftpm,macos
