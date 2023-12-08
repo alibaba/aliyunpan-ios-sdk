@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [ "main" ]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   iOS:
     name: ${{ matrix.name }}
@@ -21,17 +24,17 @@ jobs:
             name: "iOS 17.0"
             testPlan: "AliyunpanSDK"
             xcode: "Xcode_15.0"
-            runsOn: firebreak
+            runsOn: macOS-13
           - destination: "OS=16.4,name=iPhone 14 Pro"
             name: "iOS 16.4"
             testPlan: "AliyunpanSDK"
             xcode: "Xcode_14.3.1"
-            runsOn: firebreak
+            runsOn: macOS-12
           - destination: "OS=15.5,name=iPhone 13 Pro"
             name: "iOS 15.5"
             testPlan: "AliyunpanSDK"
             xcode: "Xcode_14.3.1"
-            runsOn: macOS-13
+            runsOn: macOS-12
     steps:
       - uses: actions/checkout@v4
       - name: Install xcpretty
