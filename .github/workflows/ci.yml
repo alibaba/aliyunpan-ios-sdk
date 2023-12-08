@@ -37,4 +37,4 @@ jobs:
       - name: Install xcpretty
         run: gem install xcpretty
       - name: ${{ matrix.name }}
-        run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild clean test -project AliyunpanSDK.xcodeproj -scheme AliyunpanSDK -destination "${{ matrix.destination }}" -testPlan "${{ matrix.testPlan }}" clean test 2>&1 | xcpretty
+        run: xcodebuild clean test -project AliyunpanSDK.xcodeproj -scheme AliyunpanSDK -destination "${{ matrix.destination }}" -testPlan "${{ matrix.testPlan }}" clean test 2>&1 | xcpretty
