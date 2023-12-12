@@ -17,7 +17,7 @@
     <a title="AliyunpanDownloader Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">AliyunpanSDK 0.1.0 Docs</a> (41% documented)</p>
+        <p><a href="../index.html">AliyunpanSDK 1.0 Docs</a> (41% documented)</p>
         <div class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -170,6 +170,9 @@
                 <a href="../Enums/AliyunpanNetworkSystemError.html">AliyunpanNetworkSystemError</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/DownloadState.html">DownloadState</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/HTTPMethod.html">HTTPMethod</a>
               </li>
             </ul>
@@ -198,6 +201,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Structs/AliyunpanClientConfig.html">AliyunpanClientConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AliyunpanDownloadResult.html">AliyunpanDownloadResult</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/AliyunpanFile.html">AliyunpanFile</a>
@@ -245,9 +251,6 @@
                 <a href="../Structs/AliyunpanToken.html">AliyunpanToken</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/DownloadResult.html">DownloadResult</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Structs/HTTPHeader.html">HTTPHeader</a>
               </li>
               <li class="nav-group-task">
@@ -278,9 +281,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12AliyunpanSDK0A10DownloaderC8download8continueScsyAA14DownloadResultVs5Error_pGSb_tF"></a>
-                    <a name="//apple_ref/swift/Method/download(continue:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12AliyunpanSDK0A10DownloaderC8download8continueScsyAA14DownloadResultVs5Error_pGSb_tF">download(continue:<wbr>)</a>
+                    <a name="/s:12AliyunpanSDK0A10DownloaderC5stateAA13DownloadStateOvp"></a>
+                    <a name="//apple_ref/swift/Property/state" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12AliyunpanSDK0A10DownloaderC5stateAA13DownloadStateOvp">state</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -288,35 +291,43 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>下载文件</p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">download</span><span class="p">(</span><span class="nv">continue</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AsyncThrowingStream</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/DownloadResult.html">DownloadResult</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">state</span><span class="p">:</span> <span class="kt"><a href="../Enums/DownloadState.html">DownloadState</a></span></code></pre>
 
                         </div>
                       </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>continue</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>是否继续上一次未完成的下载，如 false，则会重新下载</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12AliyunpanSDK0A10DownloaderC19networkSpeedMonitorys5Int64VcSgvp"></a>
+                    <a name="//apple_ref/swift/Property/networkSpeedMonitor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12AliyunpanSDK0A10DownloaderC19networkSpeedMonitorys5Int64VcSgvp">networkSpeedMonitor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>每秒传输的字节数</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">networkSpeedMonitor</span><span class="p">:</span> <span class="p">((</span><span class="kt">Int64</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -538,7 +549,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="https://github.com/alibaba/AliyunpanSDK" target="_blank" rel="external noopener">zixuan.wzx@alibaba-inc.com</a>. All rights reserved. (Last updated: 2023-12-06)</p>
+          <p>&copy; 2023 <a class="link" href="https://github.com/alibaba/aliyunpan-ios-sdk" target="_blank" rel="external noopener">zhaixian</a>. All rights reserved. (Last updated: 2023-12-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
