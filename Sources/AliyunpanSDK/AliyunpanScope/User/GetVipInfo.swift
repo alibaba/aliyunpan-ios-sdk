@@ -20,7 +20,7 @@ extension AliyunpanUserScope {
 			/// 枚举：member, vip, svip
 			public let identity: String
 			/// 过期时间，时间戳，单位秒
-			public let expire: TimeInterval
+			public let expire: TimeInterval?
 			/// 20t、8t
 			public var level: String?
 		}
