@@ -18,20 +18,20 @@ extension AliyunpanFile: Hashable {
     }
 }
 
-extension DownloadResult: Hashable {
+extension AliyunpanDownloadResult: Hashable {
     public func hash(into hasher: inout Hasher) {
         hasher.combine(progress)
         hasher.combine(url)
     }
     
-    public static func == (lhs: DownloadResult, rhs: DownloadResult) -> Bool {
+    public static func == (lhs: AliyunpanDownloadResult, rhs: AliyunpanDownloadResult) -> Bool {
         lhs.hashValue == rhs.hashValue
     }
 }
 
 struct DisplayItem: Hashable {
     let file: AliyunpanFile
-    let downloadResult: DownloadResult?
+    let downloadResult: AliyunpanDownloadResult?
     
     public func hash(into hasher: inout Hasher) {
         hasher.combine(file)
@@ -42,7 +42,7 @@ struct DisplayItem: Hashable {
         lhs.hashValue == rhs.hashValue
     }
     
-    init(file: AliyunpanFile, downloadResult: DownloadResult?) {
+    init(file: AliyunpanFile, downloadResult: AliyunpanDownloadResult?) {
         self.file = file
         self.downloadResult = downloadResult
     }
