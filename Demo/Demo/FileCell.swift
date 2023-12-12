@@ -11,7 +11,7 @@ import AliyunpanSDK
 protocol FileCellDelegate: AnyObject {
     func getDownloader(for item: DisplayItem) -> AliyunpanDownloader?
     
-    func fileCell(_ cell: FileCell, didUpdateDownloadResult result: DownloadResult, for item: DisplayItem)
+    func fileCell(_ cell: FileCell, didUpdateDownloadResult result: AliyunpanDownloadResult, for item: DisplayItem)
     func fileCell(_ cell: FileCell, willOpen item: DisplayItem)
 }
 

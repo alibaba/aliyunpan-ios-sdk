@@ -79,7 +79,7 @@ class FileListViewController: UIViewController {
         dataSource.apply(snapshot)
     }
     
-    private func updateDownloadResult(_ result: DownloadResult, for item: DisplayItem) {
+    private func updateDownloadResult(_ result: AliyunpanDownloadResult, for item: DisplayItem) {
         guard let index = displayItems.firstIndex(where: { $0.file == item.file }) else {
             return
         }
@@ -210,7 +210,7 @@ extension FileListViewController: FileCellDelegate {
         }
     }
     
-    func fileCell(_ cell: FileCell, didUpdateDownloadResult result: DownloadResult, for item: DisplayItem) {
+    func fileCell(_ cell: FileCell, didUpdateDownloadResult result: AliyunpanDownloadResult, for item: DisplayItem) {
         updateDownloadResult(result, for: item)
     }
 }
