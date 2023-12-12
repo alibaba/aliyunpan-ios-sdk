@@ -141,33 +141,12 @@ extension AliyunpanClient {
     public func downloader(
         _ file: AliyunpanFile,
         to destination: URL,
-        maxConcurrentOperationCount: Int = 10) async throws -> AliyunpanDownloader {
-        let result = try await send(
-            AliyunpanScope.File.GetFileDownloadUrl(
-                .init(drive_id: file.drive_id, file_id: file.file_id)))
-        return downloader(
-            downloadURL: result.url,
-            fileSize: file.size ?? 0,
-            to: destination,
-            maxConcurrentOperationCount: maxConcurrentOperationCount)
-    }
-    
-    /// 下载文件，会根据 4_000_000 字节自动分片
-    /// - Parameters:
-    ///   - downloadURL: getFileDownloadUrl 获取的下载地址
-    ///   - fileSize: 文件 size
-    ///   - destination: 期望目标地址
-    ///   - maxConcurrentOperationCount: 最大并发数，必须小于等于 10，默认 10
-    ///
-    public func downloader(
-        downloadURL: URL,
-        fileSize: Int64,
-        to destination: URL,
         maxConcurrentOperationCount: Int = 10) -> AliyunpanDownloader {
-        AliyunpanDownloader(
-            url: downloadURL,
-            size: fileSize,
+        let downloader = AliyunpanDownloader(
+            file: file,
             destination: destination,
             maxConcurrentOperationCount: maxConcurrentOperationCount)
+        downloader.client = self
+        return downloader
     }
 }

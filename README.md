@@ -41,7 +41,7 @@ With this SDK, you can easily interface all openAPIs and their request/response 
 ```swift
 // Concurrency
 try await client.send(
-    AliyunpanScope.User.GetUserInfo()) // -> GetUserInfo.Response
+    AliyunpanScope.User.GetUsersInfo()) // -> GetUsersInfo.Response
 
 try await client.send(
     AliyunpanScope.File.GetFileList(
@@ -49,7 +49,7 @@ try await client.send(
         
 // Closure
 client.send(
-    AliyunpanScope.User.GetUserInfo()) { result in
+    AliyunpanScope.User.GetUsersInfo()) { result in
     /// do something
 }
 ```
@@ -61,17 +61,8 @@ This SDK also provides advanced functionalities to make your development faster 
 ### Download
 
 ```swift
-// Concurrency
-let downloader = try await client.downloader(file, to: destination)
-for try await result in downloader.download() {
-    if let url = result.url {
-        // File is downloaded, process the file
-    } else {
-        // Handle other cases
-    }
-}
+let downloader = client.downloader(file, to: destination)
 
-// Closure
 downloader.download { progress in
     // do something..
 } completionHandle: { result in
@@ -80,6 +71,11 @@ downloader.download { progress in
     } else {
         // Handle other cases
     }
+}
+
+downloader.networkSpeedMonitor = { bytesReceived in
+    // This closure is called with the number of bytes downloaded in the last second.
+    // You can use `bytesReceived` to update the UI or perform other actions based on the current network speed.
 }
 ```
 

@@ -10,6 +10,7 @@ import UIKit
 
 public enum AliyunpanLogLevel: Int {
     case debug
+    case info
     case warn
     case error
     
@@ -17,6 +18,8 @@ public enum AliyunpanLogLevel: Int {
         switch self {
         case .debug:
             return "DEBUG"
+        case .info:
+            return "INFO"
         case .warn:
             return "⚠️"
         case .error:
@@ -27,10 +30,10 @@ public enum AliyunpanLogLevel: Int {
 
 class Logger {
     static func log(_ level: AliyunpanLogLevel, msg: String) {
-        guard level.rawValue <= Aliyunpan.logLevel.rawValue else {
+        guard level.rawValue >= Aliyunpan.logLevel.rawValue else {
             return
         }
-        print("[AliyunpanSDK] [\(level.msg)] \(msg)")
+        print("[AliyunpanSDK][\(level.msg)]\(msg)")
     }
 }
 
