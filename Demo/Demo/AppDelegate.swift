@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             credentials: .pkce))
     
     func applicationDidFinishLaunching(_ application: UIApplication) {
-        Aliyunpan.setLogLevel(.error)
+        Aliyunpan.setLogLevel(.info)
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {

@@ -9,92 +9,28 @@ import UIKit
 import AliyunpanSDK
 import AVKit
 
-extension AliyunpanFile: Hashable {
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(name)
-    }
-    
-    public static func == (lhs: AliyunpanFile, rhs: AliyunpanFile) -> Bool {
-        lhs.hashValue == rhs.hashValue
-    }
-}
-
-extension DownloadResult: Hashable {
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(progress)
-        hasher.combine(url)
-    }
-    
-    public static func == (lhs: DownloadResult, rhs: DownloadResult) -> Bool {
-        lhs.hashValue == rhs.hashValue
-    }
-}
-
-struct DisplayFile: Hashable {
-    let originFile: AliyunpanFile
-    let downloadResult: DownloadResult?
-    
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(originFile)
-        hasher.combine(downloadResult)
-    }
-    
-    public static func == (lhs: DisplayFile, rhs: DisplayFile) -> Bool {
-        lhs.hashValue == rhs.hashValue
-    }
-}
-
 class FileListViewController: UIViewController {
-    // swiftlint:disable force_cast
     private var client: AliyunpanClient {
         return (UIApplication.shared.delegate as! AppDelegate).client
     }
-    
-    private lazy var dataSource: UICollectionViewDiffableDataSource<Int, DisplayFile> = {
-        let cellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, DisplayFile> { cell, indexPath, file in
+        
+    private lazy var dataSource: UICollectionViewDiffableDataSource<Int, DisplayItem> = {
+        let cellRegistration = UICollectionView.CellRegistration<FileCell, DisplayItem> { [weak self] cell, indexPath, item in
+            guard let self else {
+                return
+            }
             var contentConfiguration = UIListContentConfiguration.sidebarCell()
-            contentConfiguration.text = file.originFile.name
+            contentConfiguration.text = item.file.name
+            let fileSize = item.file.size ?? 0
+            if fileSize > 0 {
+                contentConfiguration.secondaryText = "\(String(format: "%.2f", Double(fileSize) / 1_000_000))MB"
+            } else {
+                contentConfiguration.secondaryText = nil
+            }
             cell.contentConfiguration = contentConfiguration
             
-            let downloadButton = UIButton()
-            downloadButton.addTarget(self, action: #selector(self.download(_:)), for: .touchUpInside)
-            downloadButton.tag = 10000 + indexPath.row
-            downloadButton.setTitleColor(.black, for: .normal)
-            downloadButton.titleLabel?.font = .monospacedDigitSystemFont(ofSize: 12, weight: .regular)
-            downloadButton.titleLabel?.adjustsFontSizeToFitWidth = true
-            
-            let openFileButton = UIButton()
-            openFileButton.addTarget(self, action: #selector(self.openFile(with:)), for: .touchUpInside)
-            openFileButton.setImage(.actions, for: .normal)
-            openFileButton.tag = 10000 + indexPath.row
-
-            if file.originFile.isFolder {
-                cell.accessories = [.disclosureIndicator()]
-            } else if file.downloadResult?.url != nil {
-                cell.accessories = [
-                    .customView(
-                        configuration:
-                                .init(
-                                    customView: openFileButton,
-                                    placement: .trailing())),
-                    .disclosureIndicator()]
-            } else {
-                if let downloadResult = file.downloadResult {
-                    downloadButton.setTitle("\(String.init(format: "%.2f", downloadResult.progress * 100))%", for: .normal)
-                    downloadButton.setImage(nil, for: .normal)
-                } else {
-                    downloadButton.setTitle(nil, for: .normal)
-                    downloadButton.setImage(.add, for: .normal)
-                }
-                
-                cell.accessories = [
-                    .customView(
-                        configuration:
-                                .init(
-                                    customView: downloadButton,
-                                    placement: .trailing())),
-                    .disclosureIndicator()]
-            }
+            cell.fill(item)
+            cell.delegate = self
         }
         
         return UICollectionViewDiffableDataSource(collectionView: collectionView) { collectionView, indexPath, itemIdentifier in
@@ -111,13 +47,25 @@ class FileListViewController: UIViewController {
     
     var files: [AliyunpanFile] {
         get {
-            displayFiles.map { $0.originFile }
+            displayItems.map { $0.file }
         }
         set {
-            displayFiles = newValue.map { DisplayFile(originFile: $0, downloadResult: nil) }
+            displayItems = newValue.map { DisplayItem($0) }
         }
     }
-    private var displayFiles: [DisplayFile] = []
+    
+    private var displayItems: [DisplayItem] = []
+    
+    private var downloaderMap: [AliyunpanFile: AliyunpanDownloader] = [:]
+    private var downloadSpeedMap: [AliyunpanFile: Int64] = [:] {
+        didSet {
+            let totalSpeed = downloadSpeedMap.values.reduce(0, +)
+            let label = UILabel()
+            label.text = "\(String(format: "%.2f", Double(totalSpeed) / 1_000_000))MB/s"
+            label.font = UIFont.monospacedSystemFont(ofSize: 12, weight: .regular)
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: label)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -125,69 +73,21 @@ class FileListViewController: UIViewController {
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view.addSubview(collectionView)
         
-        var snapshot = NSDiffableDataSourceSnapshot<Int, DisplayFile>()
+        var snapshot = NSDiffableDataSourceSnapshot<Int, DisplayItem>()
         snapshot.appendSections([0])
-        snapshot.appendItems(displayFiles)
+        snapshot.appendItems(displayItems)
         dataSource.apply(snapshot)
     }
     
-    @MainActor
-    func updateDownloadResult(_ result: DownloadResult, for file: AliyunpanFile) {
-        guard let index = displayFiles.firstIndex(where: { $0.originFile == file }) else {
+    private func updateDownloadResult(_ result: DownloadResult, for item: DisplayItem) {
+        guard let index = displayItems.firstIndex(where: { $0.file == item.file }) else {
             return
         }
-        displayFiles[index] = DisplayFile(originFile: file, downloadResult: result)
-        var snapshot = NSDiffableDataSourceSnapshot<Int, DisplayFile>()
+        displayItems[index] = DisplayItem(file: item.file, downloadResult: result)
+        var snapshot = NSDiffableDataSourceSnapshot<Int, DisplayItem>()
         snapshot.appendSections([0])
-        snapshot.appendItems(displayFiles)
+        snapshot.appendItems(displayItems)
         dataSource.apply(snapshot, animatingDifferences: false)
-    }
-       
-    @objc private func download(_ sender: UIButton) {
-        let index = sender.tag - 10000
-        let file = dataSource.snapshot().itemIdentifiers[index].originFile
-        downloadFile(file)
-    }
-    
-    @objc private func openFile(with sender: UIButton) {
-        let index = sender.tag - 10000
-        let file = dataSource.snapshot().itemIdentifiers[index]
-        guard let url = file.downloadResult?.url else {
-            return
-        }
-        if file.originFile.category == .video {
-            playMedia(url)
-        } else {
-            let viewController = UIDocumentInteractionController(url: url)
-            viewController.delegate = self
-            viewController.presentPreview(animated: true)
-        }
-    }
-    
-    private func downloadFile(_ file: AliyunpanFile) {
-        guard let url = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first else {
-            return
-        }
-        let filename = file.name.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? ""
-        let destination = url.appendingPathComponent(filename)
-        if FileManager.default.fileExists(atPath: destination.path) {
-            updateDownloadResult(.completed(url: destination), for: file)
-        } else {
-            Task {
-                let downloader = try await client.downloader(file, to: destination)
-                downloader.download { [weak self] progress in
-                    DispatchQueue.main.async { [weak self] in
-                        self?.updateDownloadResult(.progressing(progress), for: file)
-                    }
-                } completionHandle: { [weak self] result in
-                    if let url = try? result.get() {
-                        DispatchQueue.main.async { [weak self] in
-                            self?.updateDownloadResult(.completed(url: url), for: file)
-                        }
-                    }
-                }
-            }
-        }
     }
     
     /// 播放音频
@@ -227,11 +127,12 @@ extension FileListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         
-        let file = dataSource.snapshot().itemIdentifiers[indexPath.row].originFile
+        let file = dataSource.snapshot().itemIdentifiers[indexPath.row].file
         
         /// 文件夹
         if file.isFolder {
             navigateToFolder(file)
+            return
         }
         
         switch file.category ?? .others {
@@ -272,8 +173,45 @@ extension FileListViewController: UICollectionViewDelegate {
                 }
             }
         default:
-            downloadFile(file)
+            break
         }
+    }
+}
+
+extension FileListViewController: FileCellDelegate {
+    func getDownloader(for item: DisplayItem) -> AliyunpanDownloader? {
+        if let downloader = downloaderMap[item.file] {
+            return downloader
+        }
+        guard let url = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first else {
+            return nil
+        }
+        let file = item.file
+        let filename = file.name.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? ""
+        let destination = url.appendingPathComponent(filename)
+        let downloader = client.downloader(file, to: destination)
+        downloader.networkSpeedMonitor = { [weak self] bytes in
+            self?.downloadSpeedMap[item.file] = bytes
+        }
+        downloaderMap[item.file] = downloader
+        return downloader
+    }
+    
+    func fileCell(_ cell: FileCell, willOpen item: DisplayItem) {
+        guard let url = item.downloadResult?.url else {
+            return
+        }
+        if item.file.category == .video {
+            playMedia(url)
+        } else {
+            let viewController = UIDocumentInteractionController(url: url)
+            viewController.delegate = self
+            viewController.presentPreview(animated: true)
+        }
+    }
+    
+    func fileCell(_ cell: FileCell, didUpdateDownloadResult result: DownloadResult, for item: DisplayItem) {
+        updateDownloadResult(result, for: item)
     }
 }
 

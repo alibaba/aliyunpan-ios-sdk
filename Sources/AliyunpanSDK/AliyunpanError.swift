@@ -55,5 +55,6 @@ public struct AliyunpanServerError: Error, Decodable {
 
 public enum AliyunpanNetworkSystemError: Error {
     case invaildURL
+    case invaildClient
     case httpError(statusCode: Int, data: Data, response: HTTPURLResponse)
 }
