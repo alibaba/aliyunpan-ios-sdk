@@ -17,7 +17,7 @@
     <a title="Code Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html">AliyunpanSDK 0.1.0 Docs</a> (41% documented)</p>
+        <p><a href="../../index.html">AliyunpanSDK 1.0 Docs</a> (41% documented)</p>
         <div class="header-right">
           <form role="search" action="../../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -170,6 +170,9 @@
                 <a href="../../Enums/AliyunpanNetworkSystemError.html">AliyunpanNetworkSystemError</a>
               </li>
               <li class="nav-group-task">
+                <a href="../../Enums/DownloadState.html">DownloadState</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../../Enums/HTTPMethod.html">HTTPMethod</a>
               </li>
             </ul>
@@ -198,6 +201,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../../Structs/AliyunpanClientConfig.html">AliyunpanClientConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/AliyunpanDownloadResult.html">AliyunpanDownloadResult</a>
               </li>
               <li class="nav-group-task">
                 <a href="../../Structs/AliyunpanFile.html">AliyunpanFile</a>
@@ -243,9 +249,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../../Structs/AliyunpanToken.html">AliyunpanToken</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../../Structs/DownloadResult.html">DownloadResult</a>
               </li>
               <li class="nav-group-task">
                 <a href="../../Structs/HTTPHeader.html">HTTPHeader</a>
@@ -571,12 +574,201 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12AliyunpanSDK0A11ServerErrorV4CodeO12appNotExistsyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/appNotExists" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12AliyunpanSDK0A11ServerErrorV4CodeO12appNotExistsyA2EmF">appNotExists</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>应用不存在</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">appNotExists</span> <span class="o">=</span> <span class="s">"AppNotExists"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12AliyunpanSDK0A11ServerErrorV4CodeO19invalidClientSecretyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidClientSecret" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12AliyunpanSDK0A11ServerErrorV4CodeO19invalidClientSecretyA2EmF">invalidClientSecret</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>应用密钥不对</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidClientSecret</span> <span class="o">=</span> <span class="s">"InvalidClientSecret"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12AliyunpanSDK0A11ServerErrorV4CodeO07invalidE0yA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidCode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12AliyunpanSDK0A11ServerErrorV4CodeO07invalidE0yA2EmF">invalidCode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>授权码为空或过期</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidCode</span> <span class="o">=</span> <span class="s">"InvalidCode"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12AliyunpanSDK0A11ServerErrorV4CodeO15invalidClientIdyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidClientId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12AliyunpanSDK0A11ServerErrorV4CodeO15invalidClientIdyA2EmF">invalidClientId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>应用ID和构造授权链接时填的不一致</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidClientId</span> <span class="o">=</span> <span class="s">"InvalidClientId"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12AliyunpanSDK0A11ServerErrorV4CodeO16invalidGrantTypeyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidGrantType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12AliyunpanSDK0A11ServerErrorV4CodeO16invalidGrantTypeyA2EmF">invalidGrantType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>无效的担保类型，目前仅支持 authorization_code 和 refresh_token</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidGrantType</span> <span class="o">=</span> <span class="s">"InvalidGrantType"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12AliyunpanSDK0A11ServerErrorV4CodeO20forbiddenDriveLockedyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/forbiddenDriveLocked" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12AliyunpanSDK0A11ServerErrorV4CodeO20forbiddenDriveLockedyA2EmF">forbiddenDriveLocked</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>文件drive被锁，操作无法执行</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">forbiddenDriveLocked</span> <span class="o">=</span> <span class="s">"ForbiddenDriveLocked"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12AliyunpanSDK0A11ServerErrorV4CodeO22forbiddenDriveNotValidyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/forbiddenDriveNotValid" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12AliyunpanSDK0A11ServerErrorV4CodeO22forbiddenDriveNotValidyA2EmF">forbiddenDriveNotValid</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>非法访问drive</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">forbiddenDriveNotValid</span> <span class="o">=</span> <span class="s">"ForbiddenDriveNotValid"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="https://github.com/alibaba/AliyunpanSDK" target="_blank" rel="external noopener">zixuan.wzx@alibaba-inc.com</a>. All rights reserved. (Last updated: 2023-12-06)</p>
+          <p>&copy; 2023 <a class="link" href="https://github.com/alibaba/aliyunpan-ios-sdk" target="_blank" rel="external noopener">zhaixian</a>. All rights reserved. (Last updated: 2023-12-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>

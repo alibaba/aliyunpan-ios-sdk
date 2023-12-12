@@ -44,49 +44,56 @@
     },
     {
       "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanError.swift",
-      "line": 47,
+      "line": 61,
       "symbol": "AliyunpanServerError.code",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanError.swift",
-      "line": 48,
+      "line": 62,
       "symbol": "AliyunpanServerError.message",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanError.swift",
-      "line": 49,
+      "line": 63,
       "symbol": "AliyunpanServerError.requestId",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanError.swift",
-      "line": 51,
+      "line": 65,
       "symbol": "AliyunpanServerError.isAccessTokenInvalidOrExpired",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanError.swift",
-      "line": 56,
+      "line": 70,
       "symbol": "AliyunpanNetworkSystemError",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanError.swift",
-      "line": 57,
+      "line": 71,
       "symbol": "AliyunpanNetworkSystemError.invaildURL",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanError.swift",
-      "line": 58,
+      "line": 72,
+      "symbol": "AliyunpanNetworkSystemError.invaildClient",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanError.swift",
+      "line": 73,
       "symbol": "AliyunpanNetworkSystemError.httpError(statusCode:data:response:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
@@ -108,55 +115,62 @@
     {
       "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanSDK.swift",
       "line": 13,
-      "symbol": "AliyunpanLogLevel.warn",
+      "symbol": "AliyunpanLogLevel.info",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanSDK.swift",
       "line": 14,
+      "symbol": "AliyunpanLogLevel.warn",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanSDK.swift",
+      "line": 15,
       "symbol": "AliyunpanLogLevel.error",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanSDK.swift",
-      "line": 37,
+      "line": 40,
       "symbol": "Aliyunpan",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanSDK.swift",
-      "line": 38,
+      "line": 41,
       "symbol": "Aliyunpan.Environment",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanSDK.swift",
-      "line": 63,
+      "line": 66,
       "symbol": "Aliyunpan.setLogLevel(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanSDK.swift",
-      "line": 67,
+      "line": 70,
       "symbol": "Aliyunpan.env",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanSDK.swift",
-      "line": 68,
+      "line": 71,
       "symbol": "Aliyunpan.setEnvironment(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/AliyunpanSDK.swift",
-      "line": 73,
+      "line": 76,
       "symbol": "Aliyunpan.handleOpenURL(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
@@ -2215,76 +2229,111 @@
     {
       "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/AliyunpanDownloader.swift",
       "line": 10,
-      "symbol": "DownloadResult",
+      "symbol": "AliyunpanDownloadResult",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/AliyunpanDownloader.swift",
       "line": 11,
-      "symbol": "DownloadResult.progress",
+      "symbol": "AliyunpanDownloadResult.progress",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/AliyunpanDownloader.swift",
       "line": 12,
-      "symbol": "DownloadResult.url",
+      "symbol": "AliyunpanDownloadResult.url",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/AliyunpanDownloader.swift",
       "line": 14,
-      "symbol": "DownloadResult.completed(url:)",
+      "symbol": "AliyunpanDownloadResult.completed(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/AliyunpanDownloader.swift",
       "line": 18,
-      "symbol": "DownloadResult.progressing(_:)",
+      "symbol": "AliyunpanDownloadResult.progressing(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/AliyunpanDownloader.swift",
       "line": 23,
+      "symbol": "DownloadState",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/AliyunpanDownloader.swift",
+      "line": 24,
+      "symbol": "DownloadState.idle",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/AliyunpanDownloader.swift",
+      "line": 25,
+      "symbol": "DownloadState.downloading",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/AliyunpanDownloader.swift",
+      "line": 26,
+      "symbol": "DownloadState.pause",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/AliyunpanDownloader.swift",
+      "line": 55,
       "symbol": "AliyunpanDownloader",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/AliyunpanDownloader.swift",
-      "line": 140,
+      "line": 115,
+      "symbol": "AliyunpanDownloader.state",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/AliyunpanDownloader.swift",
+      "line": 198,
       "symbol": "AliyunpanDownloader",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/AliyunpanDownloader.swift",
-      "line": 241,
+      "line": 348,
       "symbol": "AliyunpanDownloader",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/AliyunpanDownloader.swift",
-      "line": 242,
+      "line": 349,
       "symbol": "AliyunpanDownloader.urlSession(_:task:didCompleteWithError:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/AliyunpanDownloader.swift",
-      "line": 254,
+      "line": 366,
       "symbol": "AliyunpanDownloader.urlSession(_:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/zhaixian/Desktop/AliyunpanSDK/Sources/AliyunpanSDK/HTTPRequest/AliyunpanDownloader.swift",
-      "line": 259,
+      "line": 371,
       "symbol": "AliyunpanDownloader.urlSession(_:downloadTask:didFinishDownloadingTo:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

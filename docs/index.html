@@ -16,7 +16,7 @@
     <a title="AliyunpanSDK  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">AliyunpanSDK 0.1.0 Docs</a> (41% documented)</p>
+        <p><a href="index.html">AliyunpanSDK 1.0 Docs</a> (41% documented)</p>
         <div class="header-right">
           <form role="search" action="search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -169,6 +169,9 @@
                 <a href="Enums/AliyunpanNetworkSystemError.html">AliyunpanNetworkSystemError</a>
               </li>
               <li class="nav-group-task">
+                <a href="Enums/DownloadState.html">DownloadState</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Enums/HTTPMethod.html">HTTPMethod</a>
               </li>
             </ul>
@@ -197,6 +200,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Structs/AliyunpanClientConfig.html">AliyunpanClientConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AliyunpanDownloadResult.html">AliyunpanDownloadResult</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/AliyunpanFile.html">AliyunpanFile</a>
@@ -244,9 +250,6 @@
                 <a href="Structs/AliyunpanToken.html">AliyunpanToken</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/DownloadResult.html">DownloadResult</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Structs/HTTPHeader.html">HTTPHeader</a>
               </li>
               <li class="nav-group-task">
@@ -261,6 +264,8 @@
           <section class="section">
             
             <h1 id='aliyunpansdk' class='heading'>AliyunpanSDK</h1>
+
+<p><a href="https://cocoapods.org/pods/AliyunpanSDK"><img src="https://img.shields.io/cocoapods/v/AliyunpanSDK?color=%23526efa" alt="pod version"></a></p>
 
 <p>This is the open-source SDK for Aliyunpan OpenAPI. </p>
 <h2 id='getting-started' class='heading'>Getting Started</h2>
@@ -292,17 +297,17 @@
 <h3 id='2-send-commands' class='heading'>2. Send Commands</h3>
 
 <p>With this SDK, you can easily interface all openAPIs and their request/response models.</p>
-<pre class="highlight swift"><code><span class="c1">/// Concurrency</span>
+<pre class="highlight swift"><code><span class="c1">// Concurrency</span>
 <span class="k">try</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="nf">send</span><span class="p">(</span>
-    <span class="kt">AliyunpanScope</span><span class="o">.</span><span class="kt">User</span><span class="o">.</span><span class="kt">GetUserInfo</span><span class="p">())</span> <span class="c1">// -&gt; GetUserInfo.Response</span>
+    <span class="kt">AliyunpanScope</span><span class="o">.</span><span class="kt">User</span><span class="o">.</span><span class="kt">GetUsersInfo</span><span class="p">())</span> <span class="c1">// -&gt; GetUsersInfo.Response</span>
 
 <span class="k">try</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="nf">send</span><span class="p">(</span>
     <span class="kt">AliyunpanScope</span><span class="o">.</span><span class="kt">File</span><span class="o">.</span><span class="kt">GetFileList</span><span class="p">(</span>
         <span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">drive_id</span><span class="p">:</span> <span class="n">driveId</span><span class="p">,</span> <span class="nv">parent_file_id</span><span class="p">:</span> <span class="s">"root"</span><span class="p">))))</span> <span class="c1">// -&gt; GetFileList.Response</span>
 
-<span class="c1">/// Closure</span>
+<span class="c1">// Closure</span>
 <span class="n">client</span><span class="o">.</span><span class="nf">send</span><span class="p">(</span>
-    <span class="kt">AliyunpanScope</span><span class="o">.</span><span class="kt">User</span><span class="o">.</span><span class="kt">GetUserInfo</span><span class="p">())</span> <span class="p">{</span> <span class="n">result</span> <span class="k">in</span>
+    <span class="kt">AliyunpanScope</span><span class="o">.</span><span class="kt">User</span><span class="o">.</span><span class="kt">GetUsersInfo</span><span class="p">())</span> <span class="p">{</span> <span class="n">result</span> <span class="k">in</span>
     <span class="c1">/// do something</span>
 <span class="p">}</span>
 </code></pre>
@@ -310,17 +315,8 @@
 
 <p>This SDK also provides advanced functionalities to make your development faster and smoother.</p>
 <h3 id='download' class='heading'>Download</h3>
-<pre class="highlight swift"><code><span class="c1">/// Concurrency</span>
-<span class="k">let</span> <span class="nv">downloader</span> <span class="o">=</span> <span class="k">try</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="nf">downloader</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="n">destination</span><span class="p">)</span>
-<span class="k">for</span> <span class="k">try</span> <span class="k">await</span> <span class="n">result</span> <span class="k">in</span> <span class="n">downloader</span><span class="o">.</span><span class="nf">download</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="k">let</span> <span class="nv">url</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">url</span> <span class="p">{</span>
-        <span class="c1">// File is downloaded, process the file</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="c1">// Handle other cases</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">downloader</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="nf">downloader</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="n">destination</span><span class="p">)</span>
 
-<span class="c1">/// Closure</span>
 <span class="n">downloader</span><span class="o">.</span><span class="n">download</span> <span class="p">{</span> <span class="n">progress</span> <span class="k">in</span>
     <span class="c1">// do something..</span>
 <span class="p">}</span> <span class="nv">completionHandle</span><span class="p">:</span> <span class="p">{</span> <span class="n">result</span> <span class="k">in</span>
@@ -329,6 +325,11 @@
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
         <span class="c1">// Handle other cases</span>
     <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">downloader</span><span class="o">.</span><span class="n">networkSpeedMonitor</span> <span class="o">=</span> <span class="p">{</span> <span class="n">bytesReceived</span> <span class="k">in</span>
+    <span class="c1">// This closure is called with the number of bytes downloaded in the last second.</span>
+    <span class="c1">// You can use `bytesReceived` to update the UI or perform other actions based on the current network speed.</span>
 <span class="p">}</span>
 </code></pre>
 <h2 id='requirements' class='heading'>Requirements</h2>
@@ -342,7 +343,7 @@
 
 <ul>
 <li>File &gt; Swift Packages &gt; Add Package Dependency</li>
-<li>Add <code>https://github.com/alibaba/AliyunpanSDK.git</code></li>
+<li>Add <code>https://github.com/alibaba/aliyunpan-ios-sdk.git</code></li>
 </ul>
 <h4 id='cocoapods' class='heading'>CocoaPods</h4>
 <pre class="highlight ruby"><code><span class="n">target</span> <span class="s1">'MyApp'</span> <span class="k">do</span>
@@ -351,7 +352,7 @@
 </code></pre>
 <h2 id='documents' class='heading'>Documents</h2>
 
-<p><a href="docs/index.html">👉 Documents</a></p>
+<p><a href="https://alibaba.github.io/aliyunpan-ios-sdk/">👉 Documents</a></p>
 <h2 id='license' class='heading'>License</h2>
 
 <p>This project is licensed under the <a href="LICENSE">MIT License</a>.</p>
@@ -359,7 +360,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="https://github.com/alibaba/AliyunpanSDK" target="_blank" rel="external noopener">zixuan.wzx@alibaba-inc.com</a>. All rights reserved. (Last updated: 2023-12-06)</p>
+          <p>&copy; 2023 <a class="link" href="https://github.com/alibaba/aliyunpan-ios-sdk" target="_blank" rel="external noopener">zhaixian</a>. All rights reserved. (Last updated: 2023-12-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
