@@ -42,6 +42,20 @@ public struct AliyunpanServerError: Error, Decodable {
         case notFound = "NotFound.FileId"
         /// 请求过快
         case tooManyRequests = "TooManyRequests"
+        /// 应用不存在
+        case appNotExists = "AppNotExists"
+        /// 应用密钥不对
+        case invalidClientSecret = "InvalidClientSecret"
+        /// 授权码为空或过期
+        case invalidCode = "InvalidCode"
+        /// 应用ID和构造授权链接时填的不一致
+        case invalidClientId = "InvalidClientId"
+        /// 无效的担保类型，目前仅支持 authorization_code 和 refresh_token
+        case invalidGrantType = "InvalidGrantType"
+        /// 文件drive被锁，操作无法执行
+        case forbiddenDriveLocked = "ForbiddenDriveLocked"
+        /// 非法访问drive
+        case forbiddenDriveNotValid = "ForbiddenDriveNotValid"
     }
     
     public let code: Code?
