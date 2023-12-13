@@ -61,6 +61,7 @@
 		F498215E2B188A6D006559CC /* GetVipFeatureTrial.swift in Sources */ = {isa = PBXBuildFile; fileRef = F498213F2B188A6D006559CC /* GetVipFeatureTrial.swift */; };
 		F49821602B188C4C006559CC /* AliyunpanSpaceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F498215F2B188C4C006559CC /* AliyunpanSpaceInfo.swift */; };
 		F4B3F7152B202CB500D9E122 /* DownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3F7142B202CB500D9E122 /* DownloaderTests.swift */; };
+		F4B3F7332B29859100D9E122 /* CredentialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3F7322B29859100D9E122 /* CredentialTests.swift */; };
 		F4C6F2312B060C4B003A06B3 /* AliyunpanSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C6F2262B060C4B003A06B3 /* AliyunpanSDK.framework */; };
 		F4E9F9692B148ABA00DC8DBF /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E9F9672B148ABA00DC8DBF /* Crypto.swift */; };
 		F4E9F96A2B148ABA00DC8DBF /* URL+AliyunpanSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E9F9682B148ABA00DC8DBF /* URL+AliyunpanSDK.swift */; };
@@ -137,6 +138,7 @@
 		F498213F2B188A6D006559CC /* GetVipFeatureTrial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetVipFeatureTrial.swift; sourceTree = "<group>"; };
 		F498215F2B188C4C006559CC /* AliyunpanSpaceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliyunpanSpaceInfo.swift; sourceTree = "<group>"; };
 		F4B3F7142B202CB500D9E122 /* DownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloaderTests.swift; sourceTree = "<group>"; };
+		F4B3F7322B29859100D9E122 /* CredentialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialTests.swift; sourceTree = "<group>"; };
 		F4C6F2262B060C4B003A06B3 /* AliyunpanSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AliyunpanSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C6F2302B060C4B003A06B3 /* AliyunpanSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AliyunpanSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4E9F9672B148ABA00DC8DBF /* Crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 			children = (
 				F47FADDC2B14767D00EC0D8D /* AliyunpanSDKTests.swift */,
 				F49745FE2B1F100C0043A4D7 /* AliyunpanClientTests.swift */,
+				F4B3F7322B29859100D9E122 /* CredentialTests.swift */,
 				F47FADDB2B14767D00EC0D8D /* CryptoTests.swift */,
 				F47FADDD2B14767D00EC0D8D /* HTTPRequestTests.swift */,
 				F4B3F7142B202CB500D9E122 /* DownloaderTests.swift */,
@@ -552,6 +555,7 @@
 				F47FADFD2B14779200EC0D8D /* CryptoTests.swift in Sources */,
 				F4EE794A2B1F06A80061DB13 /* JSONTest.swift in Sources */,
 				F47FADFF2B14779900EC0D8D /* HTTPRequestTests.swift in Sources */,
+				F4B3F7332B29859100D9E122 /* CredentialTests.swift in Sources */,
 				F4B3F7152B202CB500D9E122 /* DownloaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

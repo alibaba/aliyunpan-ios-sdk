@@ -38,7 +38,7 @@ public class AliyunpanClient {
     }
     
     @MainActor
-    private var token: AliyunpanToken? {
+    var token: AliyunpanToken? {
         willSet {
             if token != newValue,
                let data = try? JSONParameterEncoder().encode(newValue) {
