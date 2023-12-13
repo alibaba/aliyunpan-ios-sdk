@@ -24,7 +24,7 @@ extension AliyunpanFileScope {
 			/// 查询语句，样例：固定目录搜索，只搜索一级 parent_file_id = '123' 精确查询 name = '123' 模糊匹配 name match '123' 搜索指定后缀文件 file_extension = 'apk'  范围查询 created_at < '2019-01-14T00:00:00' 复合查询： type = 'folder' or name = '123' parent_file_id = 'root' and name = '123' and category = 'video'
 			public let query: String?
 			/// created_at ASC | DESC updated_at ASC | DESC name ASC | DESC size ASC | DESC
-			public let order_by: String?
+			public let order_by: OrderBy?
 			/// 生成的视频缩略图截帧时间，单位ms，默认120000ms
 			public let video_thumbnail_time: Int?
 			/// 生成的视频缩略图宽度，默认480px
@@ -34,7 +34,7 @@ extension AliyunpanFileScope {
 			/// 是否返回总数
 			public let return_total_count: Bool?
             
-            public init(drive_id: String, limit: Int? = nil, marker: String? = nil, query: String? = nil, order_by: String? = nil, video_thumbnail_time: Int? = nil, video_thumbnail_width: Int? = nil, image_thumbnail_width: Int? = nil, return_total_count: Bool? = nil) {
+            public init(drive_id: String, limit: Int?, marker: String?, query: String?, order_by: OrderBy?, video_thumbnail_time: Int?, video_thumbnail_width: Int?, image_thumbnail_width: Int?, return_total_count: Bool?) {
                 self.drive_id = drive_id
                 self.limit = limit
                 self.marker = marker
