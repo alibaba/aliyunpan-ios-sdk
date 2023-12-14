@@ -15,6 +15,8 @@ public enum AliyunpanAuthorizeError: Error {
     case notInstalledApp
     /// 授权错误
     case authorizeFailed(error: String?, errorMsg: String?)
+    /// 验证码授权超时
+    case qrCodeAuthorizeTimeout
 }
 
 /// 网络层错误

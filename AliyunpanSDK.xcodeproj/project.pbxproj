@@ -62,6 +62,12 @@
 		F49821602B188C4C006559CC /* AliyunpanSpaceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F498215F2B188C4C006559CC /* AliyunpanSpaceInfo.swift */; };
 		F4B3F7152B202CB500D9E122 /* DownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3F7142B202CB500D9E122 /* DownloaderTests.swift */; };
 		F4B3F7332B29859100D9E122 /* CredentialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3F7322B29859100D9E122 /* CredentialTests.swift */; };
+		F4BD1B642B29A11B002BEA2A /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD1B632B29A11B002BEA2A /* Platform.swift */; };
+		F4BD1C322B2AAB07002BEA2A /* AliyunpanQRCodeCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD1C312B2AAB07002BEA2A /* AliyunpanQRCodeCredentials.swift */; };
+		F4BD1C342B2AAB84002BEA2A /* GetAuthorizeQRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD1C332B2AAB84002BEA2A /* GetAuthorizeQRCode.swift */; };
+		F4BD1C362B2AD8E1002BEA2A /* Task+AliyunpanSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD1C352B2AD8E1002BEA2A /* Task+AliyunpanSDK.swift */; };
+		F4BD1C382B2BF075002BEA2A /* GetAuthorizeQRCodeStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD1C372B2BF075002BEA2A /* GetAuthorizeQRCodeStatus.swift */; };
+		F4BD1C412B2C47E9002BEA2A /* TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD1C3F2B2C47C2002BEA2A /* TaskTests.swift */; };
 		F4C6F2312B060C4B003A06B3 /* AliyunpanSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C6F2262B060C4B003A06B3 /* AliyunpanSDK.framework */; };
 		F4E9F9692B148ABA00DC8DBF /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E9F9672B148ABA00DC8DBF /* Crypto.swift */; };
 		F4E9F96A2B148ABA00DC8DBF /* URL+AliyunpanSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E9F9682B148ABA00DC8DBF /* URL+AliyunpanSDK.swift */; };
@@ -139,6 +145,12 @@
 		F498215F2B188C4C006559CC /* AliyunpanSpaceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliyunpanSpaceInfo.swift; sourceTree = "<group>"; };
 		F4B3F7142B202CB500D9E122 /* DownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloaderTests.swift; sourceTree = "<group>"; };
 		F4B3F7322B29859100D9E122 /* CredentialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialTests.swift; sourceTree = "<group>"; };
+		F4BD1B632B29A11B002BEA2A /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
+		F4BD1C312B2AAB07002BEA2A /* AliyunpanQRCodeCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliyunpanQRCodeCredentials.swift; sourceTree = "<group>"; };
+		F4BD1C332B2AAB84002BEA2A /* GetAuthorizeQRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAuthorizeQRCode.swift; sourceTree = "<group>"; };
+		F4BD1C352B2AD8E1002BEA2A /* Task+AliyunpanSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+AliyunpanSDK.swift"; sourceTree = "<group>"; };
+		F4BD1C372B2BF075002BEA2A /* GetAuthorizeQRCodeStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAuthorizeQRCodeStatus.swift; sourceTree = "<group>"; };
+		F4BD1C3F2B2C47C2002BEA2A /* TaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTests.swift; sourceTree = "<group>"; };
 		F4C6F2262B060C4B003A06B3 /* AliyunpanSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AliyunpanSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C6F2302B060C4B003A06B3 /* AliyunpanSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AliyunpanSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4E9F9672B148ABA00DC8DBF /* Crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
@@ -188,6 +200,7 @@
 				F47FADD62B14767D00EC0D8D /* AliyunpanClient.swift */,
 				F47FADB72B14767D00EC0D8D /* AliyunpanSDK.swift */,
 				F47FADBE2B14767D00EC0D8D /* AliyunpanSDK.h */,
+				F4BD1B632B29A11B002BEA2A /* Platform.swift */,
 				F47FADD72B14767D00EC0D8D /* Info.plist */,
 			);
 			path = AliyunpanSDK;
@@ -201,6 +214,7 @@
 				F47FADBC2B14767D00EC0D8D /* AliyunpanCredentials.swift */,
 				F47FADBD2B14767D00EC0D8D /* AliyunpanServerCredentials.swift */,
 				F47FADB92B14767D00EC0D8D /* AliyunpanPKCECredentials.swift */,
+				F4BD1C312B2AAB07002BEA2A /* AliyunpanQRCodeCredentials.swift */,
 			);
 			path = AliyunpanCredentials;
 			sourceTree = "<group>";
@@ -263,6 +277,7 @@
 				F4B3F7142B202CB500D9E122 /* DownloaderTests.swift */,
 				F4EE79472B1EFE780061DB13 /* MessageTests.swift */,
 				F4EE79492B1F06A80061DB13 /* JSONTest.swift */,
+				F4BD1C3F2B2C47C2002BEA2A /* TaskTests.swift */,
 			);
 			path = AliyunpanSDKTests;
 			sourceTree = "<group>";
@@ -295,6 +310,8 @@
 			children = (
 				F49821282B188A6D006559CC /* GetAccessToken.swift */,
 				F49821292B188A6D006559CC /* Authorize.swift */,
+				F4BD1C332B2AAB84002BEA2A /* GetAuthorizeQRCode.swift */,
+				F4BD1C372B2BF075002BEA2A /* GetAuthorizeQRCodeStatus.swift */,
 			);
 			path = Internal;
 			sourceTree = "<group>";
@@ -355,6 +372,7 @@
 			children = (
 				F4E9F9672B148ABA00DC8DBF /* Crypto.swift */,
 				F4E9F9682B148ABA00DC8DBF /* URL+AliyunpanSDK.swift */,
+				F4BD1C352B2AD8E1002BEA2A /* Task+AliyunpanSDK.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -490,6 +508,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4BD1C322B2AAB07002BEA2A /* AliyunpanQRCodeCredentials.swift in Sources */,
 				F47FADEA2B14767D00EC0D8D /* JSON+Codable.swift in Sources */,
 				F49821592B188A6D006559CC /* UpdateFile.swift in Sources */,
 				F49821562B188A6D006559CC /* GetFileDownloadUrl.swift in Sources */,
@@ -509,6 +528,7 @@
 				F4F3D4BE2B1D7D82000E465E /* AliyunpanDownloader.swift in Sources */,
 				F49821572B188A6D006559CC /* SearchFile.swift in Sources */,
 				F49821502B188A6D006559CC /* GetStarredList.swift in Sources */,
+				F4BD1C382B2BF075002BEA2A /* GetAuthorizeQRCodeStatus.swift in Sources */,
 				F49821462B188A6D006559CC /* GetUsersInfo.swift in Sources */,
 				F49821422B188A6D006559CC /* UpdateVideoRecord.swift in Sources */,
 				F49821582B188A6D006559CC /* GetFileList.swift in Sources */,
@@ -527,10 +547,13 @@
 				F498215A2B188A6D006559CC /* GetAsyncTask.swift in Sources */,
 				F49821542B188A6D006559CC /* GetUploadURL.swift in Sources */,
 				F47FADF42B14767D00EC0D8D /* AliyunpanFile.swift in Sources */,
+				F4BD1C342B2AAB84002BEA2A /* GetAuthorizeQRCode.swift in Sources */,
 				F498215E2B188A6D006559CC /* GetVipFeatureTrial.swift in Sources */,
 				F498215C2B188A6D006559CC /* GetVipFeatureList.swift in Sources */,
 				F49821412B188A6D006559CC /* GetVideoPreviewPlayInfo.swift in Sources */,
 				F49821512B188A6D006559CC /* GetFile.swift in Sources */,
+				F4BD1C362B2AD8E1002BEA2A /* Task+AliyunpanSDK.swift in Sources */,
+				F4BD1B642B29A11B002BEA2A /* Platform.swift in Sources */,
 				F49821432B188A6D006559CC /* GetVideoRecentList.swift in Sources */,
 				F498214C2B188A6D006559CC /* MoveFile.swift in Sources */,
 				F47FADE62B14767D00EC0D8D /* URLConvertible.swift in Sources */,
@@ -551,6 +574,7 @@
 			files = (
 				F49745FF2B1F100C0043A4D7 /* AliyunpanClientTests.swift in Sources */,
 				F47FADFE2B14779600EC0D8D /* AliyunpanSDKTests.swift in Sources */,
+				F4BD1C412B2C47E9002BEA2A /* TaskTests.swift in Sources */,
 				F4EE79482B1EFE780061DB13 /* MessageTests.swift in Sources */,
 				F47FADFD2B14779200EC0D8D /* CryptoTests.swift in Sources */,
 				F4EE794A2B1F06A80061DB13 /* JSONTest.swift in Sources */,
@@ -622,9 +646,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvos appletvsimulator macosx";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -677,8 +704,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvos appletvsimulator macosx";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -713,16 +743,16 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.smartdrive.AliyunpanSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
+				SDKROOT = "";
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvos appletvsimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -759,16 +789,16 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.smartdrive.AliyunpanSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
+				SDKROOT = "";
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvos appletvsimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -789,12 +819,12 @@
 				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.smartdrive.AliyunpanSDKTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SDKROOT = "";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvos appletvsimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -815,12 +845,12 @@
 				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.smartdrive.AliyunpanSDKTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SDKROOT = "";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvos appletvsimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

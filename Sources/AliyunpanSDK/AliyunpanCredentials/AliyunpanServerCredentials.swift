@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 
 /// 三方业务 Server 抽象协议
 public protocol AliyunpanBizServer {

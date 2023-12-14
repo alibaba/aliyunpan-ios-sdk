@@ -17,6 +17,8 @@ extension AliyunpanAuthorizeError: Equatable {
             return "notInstalledApp"
         case .authorizeFailed(let error, let errorMsg):
             return "authorizeFailed_\(error ?? "")_\(errorMsg ?? "")"
+        case .qrCodeAuthorizeTimeout:
+            return "qrCodeAuthorizeTimeout"
         }
     }
     
