@@ -13,7 +13,7 @@ concurrency:
 jobs:
   test:
     name: ${{ matrix.name }}
-    runs-on: macos-12
+    runs-on: macos-13
     timeout-minutes: 10
     strategy:
       fail-fast: false
@@ -22,11 +22,9 @@ jobs:
           - destination: "platform=macOS"
             name: "macOS"
             sdk: "macosx"
-            install: ""
           - destination: "platform=iOS Simulator,name=iPhone 14"
             name: "iOS"
             sdk: "iphonesimulator"
-            install: ""
           - destination: "platform=tvOS Simulator"
             name: "tvOS"
             sdk: "appletvsimulator"
