@@ -182,7 +182,7 @@ public class AliyunpanDownloader: NSObject {
     }
     
     @objc private func updateNetworkSpeed() {
-        let offset = min(totalWritedSize - lastTotalWritedSize, 0)
+        let offset = max(totalWritedSize - lastTotalWritedSize, 0)
         networkSpeedMonitor?(offset)
         lastTotalWritedSize = totalWritedSize
     }
