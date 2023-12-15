@@ -18,17 +18,16 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        destination:
-          include:
-            - destination: "platform=macOS"
-              name: "macOS"
-              sdk: "macosx"
-            - destination: "platform=iOS Simulator,name=iPhone 14"
-              name: "iOS"
-              sdk: "iphonesimulator"
-            - destination: "platform=tvOS Simulator"
-              name: "tvOS"
-              sdk: "appletvsimulator"
+        include:
+          - destination: "platform=macOS"
+            name: "macOS"
+            sdk: "macosx"
+          - destination: "platform=iOS Simulator,name=iPhone 14"
+            name: "iOS"
+            sdk: "iphonesimulator"
+          - destination: "platform=tvOS Simulator"
+            name: "tvOS"
+            sdk: "appletvsimulator"
     steps:
       - uses: actions/checkout@v4
       - name: Install xcpretty
