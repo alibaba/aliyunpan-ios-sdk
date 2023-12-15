@@ -2,31 +2,35 @@ name: AliyunpanSDK CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 jobs:
-  iOS:
+  test:
     name: ${{ matrix.name }}
-    runs-on: ${{ matrix.runsOn }}
+    runs-on: macos-12
     timeout-minutes: 10
     strategy:
       fail-fast: false
       matrix:
-        include:
-          - destination: "OS=17.0.1,name=iPhone 14 Pro"
-            name: "iOS 17.0"
-            runsOn: macOS-13
-          - destination: "OS=16.4,name=iPhone 14 Pro"
-            name: "iOS 16.4"
-            runsOn: macOS-13
+        destination:
+          include:
+            - destination: "platform=macOS"
+              name: "macOS"
+              sdk: "macosx"
+            - destination: "platform=iOS Simulator,name=iPhone 14"
+              name: "iOS"
+              sdk: "iphonesimulator"
+            - destination: "platform=tvOS Simulator"
+              name: "tvOS"
+              sdk: "appletvsimulator"
     steps:
       - uses: actions/checkout@v4
       - name: Install xcpretty
         run: gem install xcpretty
       - name: ${{ matrix.name }}
-        run: set -o pipefail && xcodebuild clean test -project AliyunpanSDK.xcodeproj -scheme AliyunpanSDK -sdk iphonesimulator -destination "${{ matrix.destination }}" | xcpretty
+        run: set -o pipefail && xcodebuild clean test -project AliyunpanSDK.xcodeproj -scheme AliyunpanSDK -sdk "${{ matrix.sdk }}" -destination "${{ matrix.destination }}" | xcpretty
