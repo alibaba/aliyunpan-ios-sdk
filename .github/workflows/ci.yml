@@ -13,7 +13,7 @@ concurrency:
 jobs:
   test:
     name: ${{ matrix.name }}
-    runs-on: macos-13
+    runs-on: macos-12
     timeout-minutes: 10
     strategy:
       fail-fast: false
@@ -28,10 +28,9 @@ jobs:
           - destination: "platform=tvOS Simulator"
             name: "tvOS"
             sdk: "appletvsimulator"
-            install: "-downloadPlatform appletvos"
     steps:
       - uses: actions/checkout@v4
       - name: Install xcpretty
         run: gem install xcpretty
       - name: ${{ matrix.name }}
-        run: set -o pipefail && xcodebuild clean test -project AliyunpanSDK.xcodeproj -scheme AliyunpanSDK "${{ matrix.install }}" -sdk "${{ matrix.sdk }}" -destination "${{ matrix.destination }}" | xcpretty
+        run: set -o pipefail && xcodebuild clean test -project AliyunpanSDK.xcodeproj -scheme AliyunpanSDK -sdk "${{ matrix.sdk }}" -destination "${{ matrix.destination }}" | xcpretty
