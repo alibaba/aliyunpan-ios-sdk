@@ -36,4 +36,4 @@ jobs:
         run: sudo xcode-select --switch /Applications/Xcode_${{ matrix.xcode }}.app
         shell: bash
       - name: ${{ matrix.name }}
-        run: set -o pipefail && xcodebuild clean test -project AliyunpanSDK.xcodeproj -scheme AliyunpanSDK -destination ${{ matrix.destination }} | xcpretty
+        run: set -o pipefail && xcodebuild clean test -project AliyunpanSDK.xcodeproj -scheme AliyunpanSDK -destination "${{ matrix.destination }}" | xcpretty
