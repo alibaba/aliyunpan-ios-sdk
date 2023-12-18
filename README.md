@@ -13,25 +13,23 @@ To begin using the sdk, visit our guide that will walk you through the setup pro
 
 ### 1. Create a client
 
-You can create a client either by using PKCE or server credentials.
+You can create a client either by using a credentials.
+#### Credentials
+- .pkce
+serverless authorization, require AliyunDrive client.
+- .server(AliyunpanBizServer)
+server authorization, require AliyunDrive client.
+- .qrCode(AliyunpanQRCodeContainer)
+serverless authorization and does not require AliyunDrive client.
+
+[👉 Know more](https://alibaba.github.io/aliyunpan-ios-sdk/Enums/AliyunpanCredentials.html)
 
 ```swift
-// Using PKCE
 let client: AliyunpanClient = AliyunpanClient(
     .init(
         appId: "YOUR_APP_ID",
         scope: "YOUR_SCOPE", // e.g. user:base,file:all:read
-        credentials: .pkce))
-
-// Using server credentials
-class YOUR_SERVER_CLASS: AliyunpanBizServer {
-    ...
-}
-let client: AliyunpanClient = AliyunpanClient(
-    .init(
-        appId: "YOUR_APP_ID",
-        scope: "YOUR_SCOPE", // e.g. user:base,file:all:read
-        credentials: .server(YOUR_SERVER_CLASS())))
+        credentials: SOMEONE_CREDENTIALS))
 ``` 
 
 ### 2. Send Commands
