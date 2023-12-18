@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 
 public enum AliyunpanLogLevel: Int {
     case debug
@@ -59,7 +58,7 @@ public class Aliyunpan {
         guard let url = URL(string: "smartdrive://") else {
             return false
         }
-        return UIApplication.shared.canOpenURL(url)
+        return Platform.canOpenURL(url)
     }
     
     private(set) static var logLevel: AliyunpanLogLevel = .warn

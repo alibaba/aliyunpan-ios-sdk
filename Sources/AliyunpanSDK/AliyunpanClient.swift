@@ -37,8 +37,7 @@ public class AliyunpanClient {
         "com.smartdrive.AliyunpanSDK.accessToken_\(config.appId)_\(config.identifier ?? "-")"
     }
     
-    @MainActor
-    var token: AliyunpanToken? {
+    @MainActor var token: AliyunpanToken? {
         willSet {
             if token != newValue,
                let data = try? JSONParameterEncoder().encode(newValue) {
@@ -66,8 +65,9 @@ public class AliyunpanClient {
     }
     
     /// 授权
-    /// 如本地持久化有效会取持久化，否则会唤端授权
+    /// 如本地持久化有效会取持久化，否则会开始授权
     /// send 方法中会自动调用，通常无需主动调用该方法
+    @discardableResult
     public func authorize() async throws -> AliyunpanToken {
         if let token = await token, !token.isExpired {
             return token

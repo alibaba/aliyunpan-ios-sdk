@@ -1,4 +1,14 @@
-target 'Demo' do
+target 'Demo-iOS' do
+    use_frameworks!
+    pod 'AliyunpanSDK', :path => "../"
+end
+
+target 'Demo-MacOS' do
+    use_frameworks!
+    pod 'AliyunpanSDK', :path => "../"
+end
+
+target 'Demo-TVOS' do
     use_frameworks!
     pod 'AliyunpanSDK', :path => "../"
 end

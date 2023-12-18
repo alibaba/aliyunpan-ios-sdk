@@ -1,7 +1,23 @@
-# AliyunpanSDK
-[![pod version](https://img.shields.io/cocoapods/v/AliyunpanSDK?color=%23526efa)](https://cocoapods.org/pods/AliyunpanSDK)
+<div align="center">
+  <h3 align="center">AliyunpanSDK</h3>
+  <p align="center">
+    <a href="https://cocoapods.org/pods/AliyunpanSDK"><img src="https://img.shields.io/cocoapods/v/AliyunpanSDK?color=%23526efa"/></a>
+    <a><img src="https://img.shields.io/badge/Platforms-macOS_iOS_tvOS-Green"/></a>
+  </p>
 
-This is the open-source SDK for Aliyunpan OpenAPI. 
+  <p align="center">
+  This is the open-source SDK for Aliyunpan OpenAPI. 
+  </p>
+  <p align="center">
+    <a href="https://github.com/alibaba/aliyunpan-ios-sdk/tree/main/Demo">Examples</a>
+    ·
+    <a href="https://github.com/alibaba/aliyunpan-ios-sdk/issues/new?labels=bug">Report Bug</a>
+    ·
+    <a href="https://github.com/alibaba/aliyunpan-ios-sdk/issues/new?labels=feature">Request Feature</a>
+    ·
+    <a href="https://github.com/alibaba/aliyunpan-ios-sdk/tree/main/README.zh.md">简体中文</a>
+  </p>
+</div>
 
 ## Getting Started
 
@@ -13,25 +29,24 @@ To begin using the sdk, visit our guide that will walk you through the setup pro
 
 ### 1. Create a client
 
-You can create a client either by using PKCE or server credentials.
+You can create a client either by using a credentials.
+#### [Credentials](https://alibaba.github.io/aliyunpan-ios-sdk/Enums/AliyunpanCredentials.html)
+- .pkce
+
+    serverless authorization, require AliyunDrive client.
+- .server(AliyunpanBizServer)
+
+    server authorization, require AliyunDrive client.
+- .qrCode(AliyunpanQRCodeContainer)
+
+    serverless authorization and does not require AliyunDrive client.
 
 ```swift
-// Using PKCE
 let client: AliyunpanClient = AliyunpanClient(
     .init(
         appId: "YOUR_APP_ID",
         scope: "YOUR_SCOPE", // e.g. user:base,file:all:read
-        credentials: .pkce))
-
-// Using server credentials
-class YOUR_SERVER_CLASS: AliyunpanBizServer {
-    ...
-}
-let client: AliyunpanClient = AliyunpanClient(
-    .init(
-        appId: "YOUR_APP_ID",
-        scope: "YOUR_SCOPE", // e.g. user:base,file:all:read
-        credentials: .server(YOUR_SERVER_CLASS())))
+        credentials: YOUR_CREDENTIALS))
 ``` 
 
 ### 2. Send Commands

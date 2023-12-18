@@ -6,19 +6,19 @@
 //
 
 import Foundation
-import UIKit
 
 extension Notification.Name {
     static let hasReceivedMessage = Notification.Name("AliyunpanSDK.Notification.hasReceivedMessage")
 }
 
+/// 用于应用之间跳转
 class AliyunpanAppJumper {
     @MainActor private func openURL(_ url: URL) async {
-        await UIApplication.shared.open(url)
+        await Platform.open(url)
     }
     
     func jump(to url: URL) async throws -> String {
-        guard await UIApplication.shared.canOpenURL(url) else {
+        guard Platform.canOpenURL(url) else {
             throw AliyunpanAuthorizeError.notInstalledApp
         }
         

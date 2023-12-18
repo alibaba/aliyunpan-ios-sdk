@@ -12,11 +12,13 @@ protocol AliyunpanCredentialsProtocol {
 }
 
 public enum AliyunpanCredentials {
-    /// PKCE 授权
+    /// PKCE 授权，无需服务端，需要安装阿里云盘客户端
     /// https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-proof-key-for-code-exchange-pkce
     case pkce
-    /// 标准授权，有 Server 的业务才可使用
+    /// 标准授权，需要服务端，需要安装阿里云盘客户端
     case server(AliyunpanBizServer)
+    /// 二维码授权，无需服务端，无需安装阿里云盘客户端
+    case qrCode(AliyunpanQRCodeContainer)
     
     var implement: AliyunpanCredentialsProtocol {
         switch self {
@@ -24,6 +26,8 @@ public enum AliyunpanCredentials {
             return AliyunpanPKCECredentials()
         case .server(let server):
             return AliyunpanServerCredentials(server)
+        case .qrCode(let container):
+            return AliyunpanQRCodeCredentials(container)
         }
     }
 }

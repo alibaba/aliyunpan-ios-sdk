@@ -16,9 +16,16 @@ class TestBizServer: AliyunpanBizServer {
     }
 }
 
+class TestQRCodeContainer: AliyunpanQRCodeContainer {
+    func authorizeQRCodeStatusUpdated(_ status: AliyunpanSDK.AliyunpanAuthorizeQRCodeStatus) {}
+    
+    func showAliyunpanAuthorizeQRCode(with url: URL) {}
+}
+
 class CredentialTests: XCTestCase {
     func testCredential() throws {
         XCTAssertTrue(AliyunpanCredentials.pkce.implement is AliyunpanPKCECredentials)
         XCTAssertTrue(AliyunpanCredentials.server(TestBizServer()).implement is AliyunpanServerCredentials)
+        XCTAssertTrue(AliyunpanCredentials.qrCode(TestQRCodeContainer()).implement is AliyunpanQRCodeCredentials)
     }
 }
