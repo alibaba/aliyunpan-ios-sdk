@@ -19,13 +19,13 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - destination: "generic/platform=macOS"
+          - destination: "platform=macOS"
             name: "macOS"
             xcode: "15.0"
-          - destination: "generic/platform=iOS"
+          - destination: "platform=iOS Simulator,name=iPhone 14"
             name: "iOS"
             xcode: "15.0"
-          - destination: "generic/platform=tvOS"
+          - destination: "platform=tvOS Simulator"
             name: "tvOS"
             xcode: "15.0"
     steps:
