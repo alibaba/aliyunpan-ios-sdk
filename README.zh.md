@@ -9,35 +9,37 @@
   This is the open-source SDK for Aliyunpan OpenAPI. 
   </p>
   <p align="center">
-    <a href="https://github.com/alibaba/aliyunpan-ios-sdk/tree/main/Demo">Examples</a>
+    <a href="https://github.com/alibaba/aliyunpan-ios-sdk/tree/main/Demo">示例</a>
     ·
-    <a href="https://github.com/alibaba/aliyunpan-ios-sdk/issues/new?labels=bug">Report Bug</a>
+    <a href="https://github.com/alibaba/aliyunpan-ios-sdk/issues/new?labels=bug">反馈 Bug</a>
     ·
-    <a href="https://github.com/alibaba/aliyunpan-ios-sdk/issues/new?labels=feature">Request Feature</a>
+    <a href="https://github.com/alibaba/aliyunpan-ios-sdk/issues/new?labels=feature">提交需求</a>
+    ·
+    <a href="https://github.com/alibaba/aliyunpan-ios-sdk/tree/main/README.md">English</a>
   </p>
 </div>
 
-## Getting Started
+## 准备工作
 
-To begin using the sdk, visit our guide that will walk you through the setup process:
+在开始前，请查看阿里云盘开放平台接入指南：
 
-[👉 Guide](https://www.yuque.com/aliyundrive/zpfszx/tyzl591kxmft4e81)
+[👉 接入指南](https://www.yuque.com/aliyundrive/zpfszx/tyzl591kxmft4e81)
 
-## Quick start
+## 快速开始
 
-### 1. Create a client
+### 1. 创建 Client
 
-You can create a client either by using a credentials.
+你可以使用 SDK 提供的任意授权方式创建 Client
 #### [Credentials](https://alibaba.github.io/aliyunpan-ios-sdk/Enums/AliyunpanCredentials.html)
 - .pkce
 
-    serverless authorization, require AliyunDrive client.
+    无需服务端，需要已安装阿里云盘客户端
 - .server(AliyunpanBizServer)
 
-    server authorization, require AliyunDrive client.
+    需要有服务端，需要已安装阿里云盘客户端
 - .qrCode(AliyunpanQRCodeContainer)
-
-    serverless authorization and does not require AliyunDrive client.
+    二维码授权，无需服务端，无需安装阿里云盘客户端
+   
 
 ```swift
 let client: AliyunpanClient = AliyunpanClient(
@@ -47,9 +49,9 @@ let client: AliyunpanClient = AliyunpanClient(
         credentials: YOUR_CREDENTIALS))
 ``` 
 
-### 2. Send Commands
+### 2. 发送命令
 
-With this SDK, you can easily interface all openAPIs and their request/response models.
+使用 SDK，你可以轻松使用所有已提供的 OpenAPI 和它们的请求体、返回体模型
 
 ```swift
 // Concurrency
@@ -67,11 +69,11 @@ client.send(
 }
 ```
 
-## Advanced Usage
+## 高级使用
 
-This SDK also provides advanced functionalities to make your development faster and smoother.
+SDK 封装了命令集合来使你的开发更快、更好
 
-### Download
+### 下载
 
 ```swift
 let downloader = client.downloader(file, to: destination)
@@ -92,17 +94,17 @@ downloader.networkSpeedMonitor = { bytesReceived in
 }
 ```
 
-## Requirements
+## 要求
 
 - iOS 13.0+
 - Swift 5.0+ 
 
-## Installation
+## 安装方式
 
 #### Swift Package Manager
 
 - File > Swift Packages > Add Package Dependency
-- Add `https://github.com/alibaba/aliyunpan-ios-sdk.git`
+- 添加 `https://github.com/alibaba/aliyunpan-ios-sdk.git`
 
 #### CocoaPods
 
@@ -112,9 +114,9 @@ target 'MyApp' do
 end
 ```
 
-## Documents
+## 文档
 
-[👉 Documents](https://alibaba.github.io/aliyunpan-ios-sdk/)
+[👉 文档](https://alibaba.github.io/aliyunpan-ios-sdk/)
 
 ## License
 
