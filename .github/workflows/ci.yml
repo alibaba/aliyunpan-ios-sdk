@@ -36,8 +36,15 @@ jobs:
       - name: Select Xcode
         run: sudo xcode-select --switch /Applications/Xcode_${{ matrix.xcode }}.app
         shell: bash
+      - name: Get xcodebuild build command
+        uses: haya14busa/action-cond@v1
+        id: getBuildCommand
+        with:
+          cond: ${{ matrix.skipTest }}
+          if_true: 'build'
+          if_false: 'build-for-testing'
       - name: Build ${{ matrix.name }}
-        run: set -o pipefail && xcodebuild clean build-for-testing -project AliyunpanSDK.xcodeproj -scheme AliyunpanSDK -destination ${{ matrix.destination }} | xcpretty
+        run: set -o pipefail && xcodebuild clean ${{ steps.getBuildCommand.outputs.value }} -project AliyunpanSDK.xcodeproj -scheme AliyunpanSDK -destination ${{ matrix.destination }} | xcpretty
       - name: Test ${{ matrix.name }}
         run: set -o pipefail && xcodebuild test-without-building -project AliyunpanSDK.xcodeproj -scheme AliyunpanSDK -destination ${{ matrix.destination }} | xcpretty
         if: ${{ !matrix.skipTest }}
