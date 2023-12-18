@@ -40,7 +40,7 @@ jobs:
         uses: haya14busa/action-cond@v1
         id: getBuildCommand
         with:
-          cond: ${{ matrix.skipTest }}
+          cond: ${{ matrix.skipTest == true }}
           if_true: 'build'
           if_false: 'build-for-testing'
       - name: Build ${{ matrix.name }}
