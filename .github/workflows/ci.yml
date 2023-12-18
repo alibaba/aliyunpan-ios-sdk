@@ -19,18 +19,21 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - destination: "platform=macOS"
+          - destination: "generic/platform=macOS"
             name: "macOS"
-            sdk: "macosx"
-          - destination: "platform=iOS Simulator,name=iPhone 14"
+            xcode: "15.0"
+          - destination: "generic/platform=iOS"
             name: "iOS"
-            sdk: "iphonesimulator"
-          - destination: "platform=tvOS Simulator"
+            xcode: "15.0"
+          - destination: "generic/platform=tvOS"
             name: "tvOS"
-            sdk: "appletvsimulator"
+            xcode: "15.0"
     steps:
       - uses: actions/checkout@v4
       - name: Install xcpretty
         run: gem install xcpretty
+      - name: Select Xcode
+        run: sudo xcode-select --switch /Applications/Xcode_${{ matrix.xcode }}.app
+        shell: bash
       - name: ${{ matrix.name }}
-        run: set -o pipefail && xcodebuild clean test -project AliyunpanSDK.xcodeproj -scheme AliyunpanSDK -sdk "${{ matrix.sdk }}" -destination "${{ matrix.destination }}" | xcpretty
+        run: set -o pipefail && xcodebuild clean test -project AliyunpanSDK.xcodeproj -scheme AliyunpanSDK -destination ${{ matrix.destination }} | xcpretty
