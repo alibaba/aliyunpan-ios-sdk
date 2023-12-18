@@ -14,15 +14,16 @@ To begin using the sdk, visit our guide that will walk you through the setup pro
 ### 1. Create a client
 
 You can create a client either by using a credentials.
-#### Credentials
+#### [Credentials](https://alibaba.github.io/aliyunpan-ios-sdk/Enums/AliyunpanCredentials.html)
 - .pkce
-serverless authorization, require AliyunDrive client.
-- .server(AliyunpanBizServer)
-server authorization, require AliyunDrive client.
-- .qrCode(AliyunpanQRCodeContainer)
-serverless authorization and does not require AliyunDrive client.
 
-[👉 Know more](https://alibaba.github.io/aliyunpan-ios-sdk/Enums/AliyunpanCredentials.html)
+    serverless authorization, require AliyunDrive client.
+- .server(AliyunpanBizServer)
+
+    server authorization, require AliyunDrive client.
+- .qrCode(AliyunpanQRCodeContainer)
+
+    serverless authorization and does not require AliyunDrive client.
 
 ```swift
 let client: AliyunpanClient = AliyunpanClient(
