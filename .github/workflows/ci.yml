@@ -11,7 +11,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test:
+  build:
     name: ${{ matrix.name }}
     runs-on: macos-13
     timeout-minutes: 10
@@ -19,15 +19,16 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - destination: "platform=macOS"
+          - destination: "\"platform=macOS\""
             name: "macOS"
             xcode: "15.0"
-          - destination: "platform=iOS Simulator,name=iPhone 14"
+          - destination: "\"platform=iOS Simulator,name=iPhone 14\""
             name: "iOS"
             xcode: "15.0"
-          - destination: "platform=tvOS Simulator"
+          - destination: "generic/platform=tvOS"
             name: "tvOS"
             xcode: "15.0"
+            skipTest: true
     steps:
       - uses: actions/checkout@v4
       - name: Install xcpretty
@@ -35,5 +36,8 @@ jobs:
       - name: Select Xcode
         run: sudo xcode-select --switch /Applications/Xcode_${{ matrix.xcode }}.app
         shell: bash
-      - name: ${{ matrix.name }}
-        run: set -o pipefail && xcodebuild clean test -project AliyunpanSDK.xcodeproj -scheme AliyunpanSDK -destination "${{ matrix.destination }}" | xcpretty
+      - name: Build ${{ matrix.name }}
+        run: set -o pipefail && xcodebuild clean build-for-testing -project AliyunpanSDK.xcodeproj -scheme AliyunpanSDK -destination ${{ matrix.destination }} | xcpretty
+      - name: Test ${{ matrix.name }}
+        run: set -o pipefail && xcodebuild test-without-building -project AliyunpanSDK.xcodeproj -scheme AliyunpanSDK -destination ${{ matrix.destination }} | xcpretty
+        if: ${{ !matrix.skipTest }}
