@@ -31,7 +31,7 @@ let client: AliyunpanClient = AliyunpanClient(
     .init(
         appId: "YOUR_APP_ID",
         scope: "YOUR_SCOPE", // e.g. user:base,file:all:read
-        credentials: SOMEONE_CREDENTIALS))
+        credentials: YOUR_CREDENTIALS))
 ``` 
 
 ### 2. Send Commands
