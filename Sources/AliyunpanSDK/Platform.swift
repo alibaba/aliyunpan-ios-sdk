@@ -31,6 +31,7 @@ class Platform {
 #if canImport(TVUIKit)
         return UIApplication.shared.canOpenURL(url)
 #endif
+        return false
     }
     
     static func open(_ url: URL) async {
