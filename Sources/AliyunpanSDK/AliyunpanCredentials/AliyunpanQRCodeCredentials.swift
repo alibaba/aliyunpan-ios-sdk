@@ -57,7 +57,7 @@ class AliyunpanQRCodeCredentials: AliyunpanCredentialsProtocol {
                         continuation.finish()
                     }
                 } catch is CancellationError {
-                    continuation.finish(throwing: AliyunpanAuthorizeError.qrCodeAuthorizeTimeout)
+                    continuation.finish(throwing: AliyunpanError.AuthorizeError.qrCodeAuthorizeTimeout)
                 } catch {
                     continuation.finish(throwing: error)
                 }
@@ -102,7 +102,7 @@ class AliyunpanQRCodeCredentials: AliyunpanCredentialsProtocol {
             return token
         } else {
             // 实际不会走到
-            throw AliyunpanAuthorizeError.qrCodeAuthorizeTimeout
+            throw AliyunpanError.AuthorizeError.qrCodeAuthorizeTimeout
         }
     }
 }

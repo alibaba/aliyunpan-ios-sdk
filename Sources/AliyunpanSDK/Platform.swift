@@ -20,31 +20,22 @@ import TVUIKit
 class Platform {
     
     static func canOpenURL(_ url: URL) -> Bool {
-#if canImport(UIKit)
+#if canImport(UIKit) || canImport(TVUIKit)
         return UIApplication.shared.canOpenURL(url)
 #endif
         
 #if canImport(AppKit) && !targetEnvironment(macCatalyst)
         return NSWorkspace.shared.open(url)
 #endif
-        
-#if canImport(TVUIKit)
-        return UIApplication.shared.canOpenURL(url)
-#endif
-        return false
     }
     
     static func open(_ url: URL) async {
-#if canImport(UIKit)
+#if canImport(UIKit) || canImport(TVUIKit)
         await UIApplication.shared.open(url)
 #endif
         
 #if canImport(AppKit) && !targetEnvironment(macCatalyst)
         NSWorkspace.shared.open(url)
-#endif
-        
-#if canImport(TVUIKit)
-        await UIApplication.shared.open(url)
 #endif
     }
 }

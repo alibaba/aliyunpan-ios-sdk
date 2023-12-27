@@ -8,11 +8,11 @@
 import XCTest
 @testable import AliyunpanSDK
 
-extension AliyunpanAuthorizeError: Equatable {
+extension AliyunpanError.AuthorizeError: Equatable {
     var stringValue: String {
         switch self {
-        case .invaildAuthorizeURL:
-            return "invaildAuthorizeURL"
+        case .invalidAuthorizeURL:
+            return "invalidAuthorizeURL"
         case .notInstalledApp:
             return "notInstalledApp"
         case .authorizeFailed(let error, let errorMsg):
@@ -22,7 +22,7 @@ extension AliyunpanAuthorizeError: Equatable {
         }
     }
     
-    public static func == (lhs: AliyunpanAuthorizeError, rhs: AliyunpanAuthorizeError) -> Bool {
+    public static func == (lhs: AliyunpanError.AuthorizeError, rhs: AliyunpanError.AuthorizeError) -> Bool {
         lhs.stringValue == rhs.stringValue
     }
 }
@@ -40,7 +40,7 @@ class MessageTests: XCTestCase {
         
         let url2 = URL(string: "abcd://authorize?state=\(state)")!
         XCTAssertThrowsError(try AliyunpanMessage(url2)) { error in
-            XCTAssertEqual(error as! AliyunpanAuthorizeError, AliyunpanAuthorizeError.invaildAuthorizeURL)
+            XCTAssertEqual(error as! AliyunpanError.AuthorizeError, AliyunpanError.AuthorizeError.invalidAuthorizeURL)
         }
     }
     
@@ -58,7 +58,7 @@ class MessageTests: XCTestCase {
         
         let url2 = URL(string: "abcd://authorize?state=\(state)&code=\(code)")!
         XCTAssertThrowsError(try AliyunpanAuthorizeMessage(url2)) { error in
-            XCTAssertEqual(error as! AliyunpanAuthorizeError, AliyunpanAuthorizeError.invaildAuthorizeURL)
+            XCTAssertEqual(error as! AliyunpanError.AuthorizeError, AliyunpanError.AuthorizeError.invalidAuthorizeURL)
         }
     }
 }

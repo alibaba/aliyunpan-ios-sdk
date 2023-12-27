@@ -18,6 +18,13 @@
         "identifier" : "F4C6F22F2B060C4B003A06B3",
         "name" : "AliyunpanSDKTests"
       }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "AliyunpanSDKTests",
+        "name" : "AliyunpanSDKTests"
+      }
     }
   ],
   "version" : 1

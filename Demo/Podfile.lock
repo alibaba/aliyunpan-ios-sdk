@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AliyunpanSDK: 50ec1a24e175833e55a8029ddb0a8d059eadab3d
+  AliyunpanSDK: 4ebb89bb2d27c2ed94e1b700d32220bc942f5f6e
 
 PODFILE CHECKSUM: e82420c5d47daad41bcef90410d3046b609d0c2a
 

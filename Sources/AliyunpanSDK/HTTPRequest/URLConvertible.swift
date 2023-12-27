@@ -14,7 +14,7 @@ protocol URLConvertible {
 extension String: URLConvertible {
     func asURL() throws -> URL {
         guard let url = URL(string: self) else {
-            throw AliyunpanNetworkSystemError.invaildURL
+            throw AliyunpanError.NetworkSystemError.invalidURL
         }
         return url
     }

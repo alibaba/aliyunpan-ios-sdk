@@ -14,7 +14,7 @@ class AliyunpanMessage {
     
     init(_ url: URL) throws {
         guard url.scheme?.lowercased().starts(with: "smartdrive") == true else {
-            throw AliyunpanAuthorizeError.invaildAuthorizeURL
+            throw AliyunpanError.AuthorizeError.invalidAuthorizeURL
         }
         let queryItems = url.queryItems
         self.originalURL = url

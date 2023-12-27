@@ -9,10 +9,10 @@ import UIKit
 import AliyunpanSDK
 
 protocol FileCellDelegate: AnyObject {
-    func getDownloader(for item: DisplayItem) -> AliyunpanDownloader?
-    
-    func fileCell(_ cell: FileCell, didUpdateDownloadResult result: AliyunpanDownloadResult, for item: DisplayItem)
     func fileCell(_ cell: FileCell, willOpen item: DisplayItem)
+    func fileCell(_ cell: FileCell, willDownload item: DisplayItem)
+    func fileCell(_ cell: FileCell, willPause item: DisplayItem)
+    func fileCell(_ cell: FileCell, willResume item: DisplayItem)
 }
 
 class FileCell: UICollectionViewListCell {
@@ -20,13 +20,6 @@ class FileCell: UICollectionViewListCell {
     weak var client: AliyunpanClient?
     
     private var item: DisplayItem?
-
-    private var downloader: AliyunpanDownloader? {
-        guard let item else {
-            return nil
-        }
-        return delegate?.getDownloader(for: item)
-    }
     
     private lazy var pauseButton: UIButton = {
         let pauseButton = UIButton()
@@ -62,37 +55,14 @@ class FileCell: UICollectionViewListCell {
         guard let item else {
             return
         }
-        
-        if downloader?.state == .pause {
-            downloader?.resume()
-            return
-        }
-    
-        downloader?.download { [weak self] progress in
-            DispatchQueue.main.async { [weak self] in
-                guard let self else {
-                    return
-                }
-                self.delegate?.fileCell(self, didUpdateDownloadResult: .progressing(progress), for: item)
-            }
-        } completionHandle: { [weak self] result in
-            if let url = try? result.get() {
-                DispatchQueue.main.async { [weak self] in
-                    guard let self else {
-                        return
-                    }
-                    self.delegate?.fileCell(self, didUpdateDownloadResult: .completed(url), for: item)
-                }
-            }
-        }
+        delegate?.fileCell(self, willDownload: item)
     }
     
     @objc private func pause() {
-        downloader?.pause()
-        
-        if let item {
-            fill(item)
+        guard let item else {
+            return
         }
+        delegate?.fileCell(self, willPause: item)
     }
     
     @objc private func openFile() {
@@ -109,22 +79,33 @@ class FileCell: UICollectionViewListCell {
             return
         }
         
-        if let progress = item.downloadResult?.progress {
-            progressLabel.text = "\(String(format: "%.2f", progress * 100))%"
+        var views: [UIView] = [progressLabel]
+        
+        if let downloadState = item.downloadState {
+            switch downloadState {
+            case .waiting:
+                progressLabel.text = "等待下载"
+                
+                views.append(pauseButton)
+            case .downloading(let progress):
+                progressLabel.text = "\(String(format: "%.2f", progress * 100))%"
+                
+                views.append(pauseButton)
+            case .pause(let progress):
+                progressLabel.text = "\(String(format: "%.2f", progress * 100))%"
+                
+                views.append(downloadButton)
+            case .finished:
+                progressLabel.text = nil
+                
+                views.append(openButton)
+            case .failed:
+                progressLabel.text = nil
+            }
         } else {
-            progressLabel.text = nil
+            views.append(downloadButton)
         }
         
-        var views: [UIView] = [progressLabel]
-        if item.downloadResult?.url != nil {
-            views.append(openButton)
-        } else {
-            if downloader?.state == .downloading {
-                views.append(pauseButton)
-            } else {
-                views.append(downloadButton)
-            }
-        }
         accessories = views.map {
             UICellAccessory.customView(
                 configuration: .init(customView: $0, placement: .trailing()))
