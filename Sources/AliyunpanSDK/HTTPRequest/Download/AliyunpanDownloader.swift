@@ -28,7 +28,6 @@ public protocol AliyunpanDownloadDelegate: AnyObject {
 }
 
 /// 下载器
-/// 请不要主动初始化，而是应该使用 client.downloader 获取每个 client 对应的唯一下载器
 public class AliyunpanDownloader: NSObject {
     /// 最大并发数，默认为10
     public var maxConcurrentOperationCount: Int {
@@ -79,6 +78,10 @@ public class AliyunpanDownloader: NSObject {
     
     deinit {
         networkSpeedTimer.invalidate()
+    }
+    
+    override init() {
+        super.init()
     }
 }
 

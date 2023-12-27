@@ -33,12 +33,6 @@ public struct AliyunpanClientConfig {
 public class AliyunpanClient {
     private let config: AliyunpanClientConfig
     
-    public lazy var downloader: AliyunpanDownloader = {
-        let downloader = AliyunpanDownloader()
-        downloader.client = self
-        return downloader
-    }()
-    
     private var tokenStorageKey: String {
         "com.aliyunpanSDK.accessToken_\(config.appId)_\(config.identifier ?? "-")"
     }
@@ -56,6 +50,13 @@ public class AliyunpanClient {
     @MainActor public var accessToken: String? {
         token?.access_token
     }
+    
+    /// 下载器
+    public lazy var downloader: AliyunpanDownloader = {
+        let downloader = AliyunpanDownloader()
+        downloader.client = self
+        return downloader
+    }()
     
     public init(_ config: AliyunpanClientConfig) {
         self.config = config

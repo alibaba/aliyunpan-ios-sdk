@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// 
 public struct AliyunpanDownloadChunk: Equatable {
     public let start: Int64
     public let end: Int64

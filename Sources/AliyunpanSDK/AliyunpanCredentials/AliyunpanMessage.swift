@@ -13,7 +13,7 @@ class AliyunpanMessage {
     let originalURL: URL
     
     init(_ url: URL) throws {
-        guard urgl.scheme?.lowercased().starts(with: "smartdrive") == true else {
+        guard url.scheme?.lowercased().starts(with: "smartdrive") == true else {
             throw AliyunpanError.AuthorizeError.invalidAuthorizeURL
         }
         let queryItems = url.queryItems
