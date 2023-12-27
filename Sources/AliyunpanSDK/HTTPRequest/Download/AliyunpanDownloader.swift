@@ -54,8 +54,8 @@ public class AliyunpanDownloader: NSObject {
             guard let self else {
                 return
             }
-            let offset = currentWritedSize - lastWritedSize
-            lastWritedSize = currentWritedSize
+            let offset = self.currentWritedSize - self.lastWritedSize
+            self.lastWritedSize = self.currentWritedSize
             self.delegates.compactMap { $0.value as? AliyunpanDownloadDelegate }
                 .forEach { delegate in
                     DispatchQueue.main.async { [weak self] in
