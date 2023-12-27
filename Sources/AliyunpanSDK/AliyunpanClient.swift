@@ -33,8 +33,14 @@ public struct AliyunpanClientConfig {
 public class AliyunpanClient {
     private let config: AliyunpanClientConfig
     
+    public lazy var downloader: AliyunpanDownloader = {
+        let downloader = AliyunpanDownloader()
+        downloader.client = self
+        return downloader
+    }()
+    
     private var tokenStorageKey: String {
-        "com.smartdrive.AliyunpanSDK.accessToken_\(config.appId)_\(config.identifier ?? "-")"
+        "com.aliyunpanSDK.accessToken_\(config.appId)_\(config.identifier ?? "-")"
     }
     
     @MainActor var token: AliyunpanToken? {
@@ -98,7 +104,7 @@ public class AliyunpanClient {
             return result
         } catch {
             /// 授权过期重试
-            if let error = error as? AliyunpanServerError,
+            if let error = error as? AliyunpanError.ServerError,
                error.isAccessTokenInvalidOrExpired {
                 await MainActor.run { [weak self] in
                     self?.token = nil
@@ -128,25 +134,5 @@ public class AliyunpanClient {
                 completionHandle(.failure(error))
             }
         }
-    }
-}
-
-extension AliyunpanClient {
-    /// 下载文件，会根据 4_000_000 字节自动分片
-    /// - Parameters:
-    ///   - file: 文件模型
-    ///   - destination: 期望目标地址
-    ///   - maxConcurrentOperationCount: 最大并发数，必须小于等于 10，默认 10
-    ///
-    public func downloader(
-        _ file: AliyunpanFile,
-        to destination: URL,
-        maxConcurrentOperationCount: Int = 10) -> AliyunpanDownloader {
-        let downloader = AliyunpanDownloader(
-            file: file,
-            destination: destination,
-            maxConcurrentOperationCount: maxConcurrentOperationCount)
-        downloader.client = self
-        return downloader
     }
 }

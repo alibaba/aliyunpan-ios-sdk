@@ -18,36 +18,49 @@ extension AliyunpanFile: Hashable {
     }
 }
 
-extension AliyunpanDownloadResult: Hashable {
+extension AliyunpanDownloadTask.State: Hashable {
     public func hash(into hasher: inout Hasher) {
-        hasher.combine(progress)
-        hasher.combine(url)
+        switch self {
+        case .waiting:
+            hasher.combine("waiting")
+        case .downloading(let progress):
+            hasher.combine("downloading")
+            hasher.combine(progress)
+        case .pause(let progress):
+            hasher.combine("pause")
+            hasher.combine(progress)
+        case .finished(let url):
+            hasher.combine("finished")
+            hasher.combine(url)
+        case .failed:
+            hasher.combine("failed")
+        }
     }
     
-    public static func == (lhs: AliyunpanDownloadResult, rhs: AliyunpanDownloadResult) -> Bool {
+    public static func == (lhs: AliyunpanSDK.AliyunpanDownloadTask.State, rhs: AliyunpanSDK.AliyunpanDownloadTask.State) -> Bool {
         lhs.hashValue == rhs.hashValue
     }
 }
 
 struct DisplayItem: Hashable {
     let file: AliyunpanFile
-    let downloadResult: AliyunpanDownloadResult?
+    let downloadState: AliyunpanDownloadTask.State?
     
     public func hash(into hasher: inout Hasher) {
         hasher.combine(file)
-        hasher.combine(downloadResult)
+        hasher.combine(downloadState)
     }
     
     public static func == (lhs: DisplayItem, rhs: DisplayItem) -> Bool {
         lhs.hashValue == rhs.hashValue
     }
     
-    init(file: AliyunpanFile, downloadResult: AliyunpanDownloadResult?) {
+    init(file: AliyunpanFile, downloadState: AliyunpanDownloadTask.State?) {
         self.file = file
-        self.downloadResult = downloadResult
+        self.downloadState = downloadState
     }
     
     init(_ file: AliyunpanFile) {
-        self.init(file: file, downloadResult: nil)
+        self.init(file: file, downloadState: nil)
     }
 }

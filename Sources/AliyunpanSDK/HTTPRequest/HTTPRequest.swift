@@ -37,7 +37,7 @@ extension OperationQueue {
 }
 
 extension OperationQueue {
-    static let rootQueue = OperationQueue(name: "com.smartdrive.AliyunpanSDK.session.rootQueue")
+    static let rootQueue = OperationQueue(name: "com.aliyunpanSDK.session.rootQueue")
 }
 
 extension URLSession {
@@ -63,7 +63,7 @@ class HTTPRequest<Command: AliyunpanCommand> {
     
     func asURLRequest() throws -> URLRequest {
         guard let url = try? AliyunpanURL(uri: command.uri).asURL() else {
-            throw AliyunpanNetworkSystemError.invaildURL
+            throw AliyunpanError.NetworkSystemError.invalidURL
         }
         var urlRequest = URLRequest(url: url)
         // set httpMethod
@@ -94,10 +94,10 @@ class HTTPRequest<Command: AliyunpanCommand> {
         Logger.log(.debug, msg: DebugDescription.description(of: response, data: data))
                 
         if let response = response as? HTTPURLResponse, response.statusCode != 200 {
-            if let error = try? decoder.decode(AliyunpanServerError.self, from: data) {
+            if let error = try? decoder.decode(AliyunpanError.ServerError.self, from: data) {
                 throw error
             } else {
-                throw AliyunpanNetworkSystemError.httpError(statusCode: response.statusCode, data: data, response: response)
+                throw AliyunpanError.NetworkSystemError.httpError(statusCode: response.statusCode, data: data, response: response)
             }
         }
         return data

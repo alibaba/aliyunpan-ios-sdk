@@ -60,7 +60,6 @@
 		F498215C2B188A6D006559CC /* GetVipFeatureList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F498213D2B188A6D006559CC /* GetVipFeatureList.swift */; };
 		F498215E2B188A6D006559CC /* GetVipFeatureTrial.swift in Sources */ = {isa = PBXBuildFile; fileRef = F498213F2B188A6D006559CC /* GetVipFeatureTrial.swift */; };
 		F49821602B188C4C006559CC /* AliyunpanSpaceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F498215F2B188C4C006559CC /* AliyunpanSpaceInfo.swift */; };
-		F4B3F7152B202CB500D9E122 /* DownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3F7142B202CB500D9E122 /* DownloaderTests.swift */; };
 		F4B3F7332B29859100D9E122 /* CredentialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3F7322B29859100D9E122 /* CredentialTests.swift */; };
 		F4BD1B642B29A11B002BEA2A /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD1B632B29A11B002BEA2A /* Platform.swift */; };
 		F4BD1C322B2AAB07002BEA2A /* AliyunpanQRCodeCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD1C312B2AAB07002BEA2A /* AliyunpanQRCodeCredentials.swift */; };
@@ -68,13 +67,22 @@
 		F4BD1C362B2AD8E1002BEA2A /* Task+AliyunpanSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD1C352B2AD8E1002BEA2A /* Task+AliyunpanSDK.swift */; };
 		F4BD1C382B2BF075002BEA2A /* GetAuthorizeQRCodeStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD1C372B2BF075002BEA2A /* GetAuthorizeQRCodeStatus.swift */; };
 		F4BD1C412B2C47E9002BEA2A /* TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD1C3F2B2C47C2002BEA2A /* TaskTests.swift */; };
+		F4BD1C482B304757002BEA2A /* AliyunpanDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD1C472B304757002BEA2A /* AliyunpanDownloader.swift */; };
+		F4BD1C4A2B304B3A002BEA2A /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD1C492B304B3A002BEA2A /* Weak.swift */; };
+		F4BD1C4C2B304F3F002BEA2A /* AliyunpanDownloadTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD1C452B303A6B002BEA2A /* AliyunpanDownloadTask.swift */; };
+		F4BD1C4E2B3136B1002BEA2A /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD1C4D2B3136B1002BEA2A /* AsyncOperation.swift */; };
+		F4BD1C542B3150B9002BEA2A /* AliyunpanDownloadChunk.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD1C532B3150B9002BEA2A /* AliyunpanDownloadChunk.swift */; };
+		F4BD1C552B3151AE002BEA2A /* DownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3F7142B202CB500D9E122 /* DownloaderTests.swift */; };
+		F4BD1C572B317DE1002BEA2A /* DownloadChunkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD1C562B317DE1002BEA2A /* DownloadChunkOperation.swift */; };
+		F4BD1C5F2B32BFD9002BEA2A /* ThreadSafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD1C5E2B32BFD9002BEA2A /* ThreadSafe.swift */; };
+		F4BD1C622B34366E002BEA2A /* DownloaderOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD1C602B343423002BEA2A /* DownloaderOperationTests.swift */; };
+		F4BD1C652B34403F002BEA2A /* DownloaderTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD1C632B343FD6002BEA2A /* DownloaderTaskTests.swift */; };
 		F4C6F2312B060C4B003A06B3 /* AliyunpanSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C6F2262B060C4B003A06B3 /* AliyunpanSDK.framework */; };
 		F4E9F9692B148ABA00DC8DBF /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E9F9672B148ABA00DC8DBF /* Crypto.swift */; };
 		F4E9F96A2B148ABA00DC8DBF /* URL+AliyunpanSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E9F9682B148ABA00DC8DBF /* URL+AliyunpanSDK.swift */; };
 		F4E9F96C2B148AEE00DC8DBF /* AliyunpanMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E9F96B2B148AEE00DC8DBF /* AliyunpanMessage.swift */; };
 		F4EE79482B1EFE780061DB13 /* MessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EE79472B1EFE780061DB13 /* MessageTests.swift */; };
 		F4EE794A2B1F06A80061DB13 /* JSONTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EE79492B1F06A80061DB13 /* JSONTest.swift */; };
-		F4F3D4BE2B1D7D82000E465E /* AliyunpanDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F3D4BD2B1D7D82000E465E /* AliyunpanDownloader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +159,15 @@
 		F4BD1C352B2AD8E1002BEA2A /* Task+AliyunpanSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+AliyunpanSDK.swift"; sourceTree = "<group>"; };
 		F4BD1C372B2BF075002BEA2A /* GetAuthorizeQRCodeStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAuthorizeQRCodeStatus.swift; sourceTree = "<group>"; };
 		F4BD1C3F2B2C47C2002BEA2A /* TaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTests.swift; sourceTree = "<group>"; };
+		F4BD1C452B303A6B002BEA2A /* AliyunpanDownloadTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliyunpanDownloadTask.swift; sourceTree = "<group>"; };
+		F4BD1C472B304757002BEA2A /* AliyunpanDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliyunpanDownloader.swift; sourceTree = "<group>"; };
+		F4BD1C492B304B3A002BEA2A /* Weak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
+		F4BD1C4D2B3136B1002BEA2A /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
+		F4BD1C532B3150B9002BEA2A /* AliyunpanDownloadChunk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliyunpanDownloadChunk.swift; sourceTree = "<group>"; };
+		F4BD1C562B317DE1002BEA2A /* DownloadChunkOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadChunkOperation.swift; sourceTree = "<group>"; };
+		F4BD1C5E2B32BFD9002BEA2A /* ThreadSafe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadSafe.swift; sourceTree = "<group>"; };
+		F4BD1C602B343423002BEA2A /* DownloaderOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloaderOperationTests.swift; sourceTree = "<group>"; };
+		F4BD1C632B343FD6002BEA2A /* DownloaderTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloaderTaskTests.swift; sourceTree = "<group>"; };
 		F4C6F2262B060C4B003A06B3 /* AliyunpanSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AliyunpanSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C6F2302B060C4B003A06B3 /* AliyunpanSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AliyunpanSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4E9F9672B148ABA00DC8DBF /* Crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
@@ -158,7 +175,6 @@
 		F4E9F96B2B148AEE00DC8DBF /* AliyunpanMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliyunpanMessage.swift; sourceTree = "<group>"; };
 		F4EE79472B1EFE780061DB13 /* MessageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTests.swift; sourceTree = "<group>"; };
 		F4EE79492B1F06A80061DB13 /* JSONTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONTest.swift; sourceTree = "<group>"; };
-		F4F3D4BD2B1D7D82000E465E /* AliyunpanDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliyunpanDownloader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,13 +238,13 @@
 		F47FADC02B14767D00EC0D8D /* HTTPRequest */ = {
 			isa = PBXGroup;
 			children = (
+				F4BD1C422B302EF0002BEA2A /* Download */,
 				F49821192B1742B6006559CC /* DebugDescription.swift */,
 				F47FADC12B14767D00EC0D8D /* URLConvertible.swift */,
 				F47FADC22B14767D00EC0D8D /* HTTPRequest.swift */,
 				F47FADC32B14767D00EC0D8D /* HTTPMethod.swift */,
 				F47FADC42B14767D00EC0D8D /* HTTPHeaders.swift */,
 				F47FADC52B14767D00EC0D8D /* JSON+Codable.swift */,
-				F4F3D4BD2B1D7D82000E465E /* AliyunpanDownloader.swift */,
 			);
 			path = HTTPRequest;
 			sourceTree = "<group>";
@@ -275,6 +291,8 @@
 				F47FADDB2B14767D00EC0D8D /* CryptoTests.swift */,
 				F47FADDD2B14767D00EC0D8D /* HTTPRequestTests.swift */,
 				F4B3F7142B202CB500D9E122 /* DownloaderTests.swift */,
+				F4BD1C602B343423002BEA2A /* DownloaderOperationTests.swift */,
+				F4BD1C632B343FD6002BEA2A /* DownloaderTaskTests.swift */,
 				F4EE79472B1EFE780061DB13 /* MessageTests.swift */,
 				F4EE79492B1F06A80061DB13 /* JSONTest.swift */,
 				F4BD1C3F2B2C47C2002BEA2A /* TaskTests.swift */,
@@ -349,6 +367,17 @@
 			path = Vip;
 			sourceTree = "<group>";
 		};
+		F4BD1C422B302EF0002BEA2A /* Download */ = {
+			isa = PBXGroup;
+			children = (
+				F4BD1C532B3150B9002BEA2A /* AliyunpanDownloadChunk.swift */,
+				F4BD1C562B317DE1002BEA2A /* DownloadChunkOperation.swift */,
+				F4BD1C452B303A6B002BEA2A /* AliyunpanDownloadTask.swift */,
+				F4BD1C472B304757002BEA2A /* AliyunpanDownloader.swift */,
+			);
+			path = Download;
+			sourceTree = "<group>";
+		};
 		F4C6F21C2B060C4B003A06B3 = {
 			isa = PBXGroup;
 			children = (
@@ -370,9 +399,12 @@
 		F4E9F9662B148ABA00DC8DBF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F4BD1C5E2B32BFD9002BEA2A /* ThreadSafe.swift */,
 				F4E9F9672B148ABA00DC8DBF /* Crypto.swift */,
 				F4E9F9682B148ABA00DC8DBF /* URL+AliyunpanSDK.swift */,
 				F4BD1C352B2AD8E1002BEA2A /* Task+AliyunpanSDK.swift */,
+				F4BD1C492B304B3A002BEA2A /* Weak.swift */,
+				F4BD1C4D2B3136B1002BEA2A /* AsyncOperation.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -519,14 +551,16 @@
 				F49821532B188A6D006559CC /* CreateFile.swift in Sources */,
 				F47FADE12B14767D00EC0D8D /* AliyunpanAppJumper.swift in Sources */,
 				F49821482B188A6D006559CC /* GetUsersScopes.swift in Sources */,
+				F4BD1C5F2B32BFD9002BEA2A /* ThreadSafe.swift in Sources */,
+				F4BD1C482B304757002BEA2A /* AliyunpanDownloader.swift in Sources */,
 				F47FADF52B14767D00EC0D8D /* AliyunpanClient.swift in Sources */,
 				F47FADE32B14767D00EC0D8D /* AliyunpanServerCredentials.swift in Sources */,
 				F49821452B188A6D006559CC /* GetDriveInfo.swift in Sources */,
 				F4E9F9692B148ABA00DC8DBF /* Crypto.swift in Sources */,
 				F49821472B188A6D006559CC /* GetSpaceInfo.swift in Sources */,
+				F4BD1C542B3150B9002BEA2A /* AliyunpanDownloadChunk.swift in Sources */,
 				F498214D2B188A6D006559CC /* DeleteFile.swift in Sources */,
 				F49821552B188A6D006559CC /* CompleteUpload.swift in Sources */,
-				F4F3D4BE2B1D7D82000E465E /* AliyunpanDownloader.swift in Sources */,
 				F49821572B188A6D006559CC /* SearchFile.swift in Sources */,
 				F49821502B188A6D006559CC /* GetStarredList.swift in Sources */,
 				F4BD1C382B2BF075002BEA2A /* GetAuthorizeQRCodeStatus.swift in Sources */,
@@ -537,9 +571,11 @@
 				F49821402B188A6D006559CC /* GetVideoPreviewPlayMeta.swift in Sources */,
 				F49821442B188A6D006559CC /* GetVipInfo.swift in Sources */,
 				F49821492B188A6D006559CC /* GetAccessToken.swift in Sources */,
+				F4BD1C572B317DE1002BEA2A /* DownloadChunkOperation.swift in Sources */,
 				F47FADF22B14767D00EC0D8D /* AliyunpanScope.swift in Sources */,
 				F4E9F96C2B148AEE00DC8DBF /* AliyunpanMessage.swift in Sources */,
 				F47FADDF2B14767D00EC0D8D /* AliyunpanPKCECredentials.swift in Sources */,
+				F4BD1C4E2B3136B1002BEA2A /* AsyncOperation.swift in Sources */,
 				F47FADE72B14767D00EC0D8D /* HTTPRequest.swift in Sources */,
 				F498214E2B188A6D006559CC /* TrashFileToRecyclebin.swift in Sources */,
 				F47FADEB2B14767D00EC0D8D /* AliyunpanError.swift in Sources */,
@@ -548,10 +584,12 @@
 				F498215A2B188A6D006559CC /* GetAsyncTask.swift in Sources */,
 				F49821542B188A6D006559CC /* GetUploadURL.swift in Sources */,
 				F47FADF42B14767D00EC0D8D /* AliyunpanFile.swift in Sources */,
+				F4BD1C4C2B304F3F002BEA2A /* AliyunpanDownloadTask.swift in Sources */,
 				F4BD1C342B2AAB84002BEA2A /* GetAuthorizeQRCode.swift in Sources */,
 				F498215E2B188A6D006559CC /* GetVipFeatureTrial.swift in Sources */,
 				F498215C2B188A6D006559CC /* GetVipFeatureList.swift in Sources */,
 				F49821412B188A6D006559CC /* GetVideoPreviewPlayInfo.swift in Sources */,
+				F4BD1C4A2B304B3A002BEA2A /* Weak.swift in Sources */,
 				F49821512B188A6D006559CC /* GetFile.swift in Sources */,
 				F4BD1C362B2AD8E1002BEA2A /* Task+AliyunpanSDK.swift in Sources */,
 				F4BD1B642B29A11B002BEA2A /* Platform.swift in Sources */,
@@ -575,13 +613,15 @@
 			files = (
 				F49745FF2B1F100C0043A4D7 /* AliyunpanClientTests.swift in Sources */,
 				F47FADFE2B14779600EC0D8D /* AliyunpanSDKTests.swift in Sources */,
+				F4BD1C652B34403F002BEA2A /* DownloaderTaskTests.swift in Sources */,
 				F4BD1C412B2C47E9002BEA2A /* TaskTests.swift in Sources */,
 				F4EE79482B1EFE780061DB13 /* MessageTests.swift in Sources */,
+				F4BD1C622B34366E002BEA2A /* DownloaderOperationTests.swift in Sources */,
 				F47FADFD2B14779200EC0D8D /* CryptoTests.swift in Sources */,
 				F4EE794A2B1F06A80061DB13 /* JSONTest.swift in Sources */,
+				F4BD1C552B3151AE002BEA2A /* DownloaderTests.swift in Sources */,
 				F47FADFF2B14779900EC0D8D /* HTTPRequestTests.swift in Sources */,
 				F4B3F7332B29859100D9E122 /* CredentialTests.swift in Sources */,
-				F4B3F7152B202CB500D9E122 /* DownloaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -761,7 +801,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,3";
 			};
 			name = Debug;
 		};
@@ -808,7 +848,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,3";
 			};
 			name = Release;
 		};
@@ -834,7 +874,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
-				TVOS_DEPLOYMENT_TARGET = 11.0;
+				TVOS_DEPLOYMENT_TARGET = 13.0;
 				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Debug;
@@ -861,7 +901,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
-				TVOS_DEPLOYMENT_TARGET = 11.0;
+				TVOS_DEPLOYMENT_TARGET = 13.0;
 				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;

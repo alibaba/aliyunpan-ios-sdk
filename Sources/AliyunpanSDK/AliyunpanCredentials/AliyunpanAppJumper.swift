@@ -19,7 +19,7 @@ class AliyunpanAppJumper {
     
     func jump(to url: URL) async throws -> String {
         guard Platform.canOpenURL(url) else {
-            throw AliyunpanAuthorizeError.notInstalledApp
+            throw AliyunpanError.AuthorizeError.notInstalledApp
         }
         
         let message = try AliyunpanMessage(url)
@@ -43,7 +43,7 @@ class AliyunpanAppJumper {
                         continuation.resume(with: .success(authCode))
                     } else {
                         continuation.resume(with: .failure(
-                            AliyunpanAuthorizeError.authorizeFailed(
+                            AliyunpanError.AuthorizeError.authorizeFailed(
                                 error: authMessage.error,
                                 errorMsg: authMessage.errorMsg)))
                     }

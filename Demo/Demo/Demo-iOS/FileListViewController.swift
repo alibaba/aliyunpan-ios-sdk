@@ -10,9 +10,18 @@ import AliyunpanSDK
 import AVKit
 
 class FileListViewController: UIViewController {
-    private var client: AliyunpanClient {
-        return (UIApplication.shared.delegate as! AppDelegate).client
-    }
+    private lazy var networkSpeedLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.monospacedSystemFont(ofSize: 12, weight: .regular)
+        return label
+    }()
+    
+    private lazy var client: AliyunpanClient = {
+        let client = (UIApplication.shared.delegate as! AppDelegate).client
+        client.downloader.addDelegate(self)
+        client.downloader.enableNetworkSpeedMonitor()
+        return client
+    }()
         
     private lazy var dataSource: UICollectionViewDiffableDataSource<Int, DisplayItem> = {
         let cellRegistration = UICollectionView.CellRegistration<FileCell, DisplayItem> { [weak self] cell, indexPath, item in
@@ -56,17 +65,6 @@ class FileListViewController: UIViewController {
     
     private var displayItems: [DisplayItem] = []
     
-    private var downloaderMap: [AliyunpanFile: AliyunpanDownloader] = [:]
-    private var downloadSpeedMap: [AliyunpanFile: Int64] = [:] {
-        didSet {
-            let totalSpeed = downloadSpeedMap.values.reduce(0, +)
-            let label = UILabel()
-            label.text = "\(String(format: "%.2f", Double(totalSpeed) / 1_000_000))MB/s"
-            label.font = UIFont.monospacedSystemFont(ofSize: 12, weight: .regular)
-            self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: label)
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
                     
@@ -77,17 +75,6 @@ class FileListViewController: UIViewController {
         snapshot.appendSections([0])
         snapshot.appendItems(displayItems)
         dataSource.apply(snapshot)
-    }
-    
-    private func updateDownloadResult(_ result: AliyunpanDownloadResult, for item: DisplayItem) {
-        guard let index = displayItems.firstIndex(where: { $0.file == item.file }) else {
-            return
-        }
-        displayItems[index] = DisplayItem(file: item.file, downloadResult: result)
-        var snapshot = NSDiffableDataSourceSnapshot<Int, DisplayItem>()
-        snapshot.appendSections([0])
-        snapshot.appendItems(displayItems)
-        dataSource.apply(snapshot, animatingDifferences: false)
     }
     
     /// 播放音频
@@ -179,26 +166,38 @@ extension FileListViewController: UICollectionViewDelegate {
 }
 
 extension FileListViewController: FileCellDelegate {
-    func getDownloader(for item: DisplayItem) -> AliyunpanDownloader? {
-        if let downloader = downloaderMap[item.file] {
-            return downloader
-        }
+    func fileCell(_ cell: FileCell, willDownload item: DisplayItem) {
         guard let url = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first else {
-            return nil
+            return
         }
-        let file = item.file
-        let filename = file.name.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? ""
-        let destination = url.appendingPathComponent(filename)
-        let downloader = client.downloader(file, to: destination)
-        downloader.networkSpeedMonitor = { [weak self] bytes in
-            self?.downloadSpeedMap[item.file] = bytes
+        
+        if let task = client.downloader.tasks.first(where: { $0.file.isSameFile(item.file) }) {
+            // 恢复下载
+            client.downloader.resume(task)
+        } else {
+            let file = item.file
+            let filename = file.name.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? ""
+            let destination = url.appendingPathComponent(filename)
+            client.downloader.download(file: file, to: destination)
         }
-        downloaderMap[item.file] = downloader
-        return downloader
+    }
+    
+    func fileCell(_ cell: FileCell, willPause item: DisplayItem) {
+        guard let task = client.downloader.tasks.first(where: { $0.file.isSameFile(item.file) }) else {
+            return
+        }
+        client.downloader.pause(task)
+    }
+    
+    func fileCell(_ cell: FileCell, willResume item: DisplayItem) {
+        guard let task = client.downloader.tasks.first(where: { $0.file.isSameFile(item.file) }) else {
+            return
+        }
+        client.downloader.resume(task)
     }
     
     func fileCell(_ cell: FileCell, willOpen item: DisplayItem) {
-        guard let url = item.downloadResult?.url else {
+        guard case .finished(let url) = item.downloadState else {
             return
         }
         if item.file.category == .video {
@@ -209,14 +208,28 @@ extension FileListViewController: FileCellDelegate {
             viewController.presentPreview(animated: true)
         }
     }
-    
-    func fileCell(_ cell: FileCell, didUpdateDownloadResult result: AliyunpanDownloadResult, for item: DisplayItem) {
-        updateDownloadResult(result, for: item)
-    }
 }
 
 extension FileListViewController: UIDocumentInteractionControllerDelegate {
     func documentInteractionControllerViewControllerForPreview(_ controller: UIDocumentInteractionController) -> UIViewController {
         return self
+    }
+}
+
+extension FileListViewController: AliyunpanDownloadDelegate {
+    func downloader(_ downloader: AliyunpanDownloader, didUpdatedNetworkSpeed networkSpeed: Int64) {
+        networkSpeedLabel.text = "\(String(format: "%.2f", Double(networkSpeed) / 1_000_000))MB/s"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: networkSpeedLabel)
+    }
+    
+    func downloader(_ downloader: AliyunpanDownloader, didUpdateTaskState state: AliyunpanDownloadTask.State, for task: AliyunpanDownloadTask) {
+        guard let index = displayItems.firstIndex(where: { $0.file.isSameFile(task.file) }) else {
+            return
+        }
+        displayItems[index] = DisplayItem(file: task.file, downloadState: state)
+        var snapshot = NSDiffableDataSourceSnapshot<Int, DisplayItem>()
+        snapshot.appendSections([0])
+        snapshot.appendItems(displayItems)
+        dataSource.apply(snapshot, animatingDifferences: false)
     }
 }

@@ -66,6 +66,11 @@ extension AliyunpanFile {
     public var isFolder: Bool {
         type == .folder
     }
+    
+    /// 是否同一份文件，仅判断 drive_id、file_id 是否相同
+    public func isSameFile(_ other: AliyunpanFile) -> Bool {
+        return drive_id == other.drive_id && file_id == other.file_id
+    }
 }
 
 extension AliyunpanFile {
