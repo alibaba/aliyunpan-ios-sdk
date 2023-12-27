@@ -14,8 +14,6 @@
     <a href="https://github.com/alibaba/aliyunpan-ios-sdk/issues/new?labels=bug">反馈 Bug</a>
     ·
     <a href="https://github.com/alibaba/aliyunpan-ios-sdk/issues/new?labels=feature">提交需求</a>
-    ·
-    <a href="https://github.com/alibaba/aliyunpan-ios-sdk/tree/main/README.md">English</a>
   </p>
 </div>
 
@@ -67,9 +65,7 @@ client.send(
 }
 ```
 
-## 高级使用
-
-SDK 封装了基础网盘能力
+## 高级功能
 
 ### 下载
 ```swift
@@ -98,7 +94,7 @@ downloadr.addDelegate(DELEGATE)
 ```
 
 #### 示例
-[FileListViewController](Demo/Demo-iOS/FileListViewController.swift)
+[FileListViewController](Demo/Demo/Demo-iOS/FileListViewController.swift)
 
 ## 安装方式
 
@@ -111,7 +107,7 @@ downloadr.addDelegate(DELEGATE)
 
 ```ruby
 target 'MyApp' do
-  pod 'AliyunpanSDK', '~> 0.1.0'
+  pod 'AliyunpanSDK', '~> 0.1'
 end
 ```
 
