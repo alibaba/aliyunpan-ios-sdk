@@ -29,13 +29,12 @@
 
 你可以使用 SDK 提供的任意授权方式创建 Client
 #### [Credentials](https://alibaba.github.io/aliyunpan-ios-sdk/Enums/AliyunpanCredentials.html)
-- .pkce
-无需服务端，需要安装阿里云盘
-- .server(AliyunpanBizServer)
-需要有服务端，需要已安装阿里云盘客户端
-- .qrCode(AliyunpanQRCodeContainer)
-二维码授权，无需服务端，无需安装阿里云盘
-   
+
+| 授权方式 | 描述 | **不需要** Server | **不需要**阿里云盘客户端 |
+| :----: | :----: | :----: | :----: |
+| pkce | pkce 授权 | ✅ | ❌ |
+| server | 业务后端授权 | ❌ | ❌ |
+| qrCode | 二维码授权 | ✅ | ✅ |   
 
 ```swift
 let client: AliyunpanClient = AliyunpanClient(
