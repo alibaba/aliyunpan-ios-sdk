@@ -54,6 +54,7 @@ public class Aliyunpan {
     }
     
     /// 是否已安装阿里云盘
+    @MainActor
     public static var isInstalled: Bool {
         guard let url = URL(string: "smartdrive://") else {
             return false
@@ -77,4 +78,4 @@ public class Aliyunpan {
     }
 }
 
-let version = "0.1.0"
+let version = "0.1.8"

@@ -1,0 +1,106 @@
+default_platform(:ios)
+
+platform :ios do
+  lane :tests do
+    test(destination: "platform=macOS")
+    test(destination: "platform=iOS Simulator,name=iPhone 14")
+    test(destination: "platform=tvOS Simulator,name=Apple TV")
+  end
+
+  lane :test do |options|
+    scan(
+      scheme: "AliyunpanSDK", 
+      clean: true,
+      destination: options[:destination]
+    )
+  end
+
+  desc "Release new version"
+  lane :release do |options|
+    target_version = options[:version]
+    raise "The version is missed. Use `fastlane release version:{version_number}`.`" if target_version.nil?
+
+    ensure_git_branch
+    ensure_git_status_clean
+
+    increment_version_number(version_number: target_version)
+    version_bump_podspec(path: "AliyunpanSDK.podspec", version_number: target_version)
+    
+    Actions.sh("sed -i '' 's/let version = \"[^\"]*\"/let version = \"#{target_version}\"/g' ../Sources/AliyunpanSDK/AliyunpanSDK.swift")
+    
+    # git commit all
+    message = "Bump version to #{target_version}"
+    Action.sh "git add -A"
+    Actions.sh "git commit -am \"#{message}\""
+
+    # git tag
+    Actions.sh("git tag -s v#{target_version} -m ''")
+
+    push_to_git_remote
+
+    release_log = changelog_from_git_commits(
+      pretty: "- %s @(%an) ",
+    )
+
+    xcframework(version: target_version)
+    set_github_release(
+      repository_name: "alibaba/aliyunpan-ios-sdk",
+      api_token: ENV['GITHUB_TOKEN'],
+      name: target_version,
+      tag_name: "v#{target_version}",
+      description: release_log,
+      upload_assets: ["build/AliyunpanSDK-#{target_version}.zip"]
+    )
+
+    pod_push
+  end
+
+  lane :xcframework do |options|
+    target_version = "AliyunpanSDK-#{options[:version]}"
+
+    FileUtils.rm_rf '../build'
+    
+    frameworks = {}
+    
+    ["macosx",
+     "iphoneos", 
+     "iphonesimulator", 
+     "appletvos", 
+     "appletvsimulator", 
+    #  "watchos", 
+    #  "watchsimulator",
+    #  "xros",
+    #  "xrsimulator"
+    ].each do |sdk|
+      archive_path = "build/AliyunpanSDK-#{sdk}.xcarchive"
+      xcodebuild(
+        archive: true,
+        archive_path: archive_path,
+        scheme: "AliyunpanSDK",
+        sdk: sdk,
+        build_settings: {
+          "BUILD_LIBRARY_FOR_DISTRIBUTION" => "YES",
+          "SKIP_INSTALL" => "NO"
+        }
+      )
+
+      dSYM_path = "#{Dir.pwd}/../#{archive_path}/dSYMs/AliyunpanSDK.framework.dSYM"
+      frameworks["#{archive_path}/Products/Library/Frameworks/AliyunpanSDK.framework"] = { dsyms: dSYM_path }
+    end
+
+    create_xcframework(
+      frameworks_with_dsyms: frameworks, 
+      output: "build/#{target_version}/AliyunpanSDK.xcframework"
+    )
+
+    zip(
+      path: "build/#{target_version}",
+      output_path: "build/#{target_version}.zip",
+      symlinks: true
+    )
+  end
+
+  lane :doc do |options|
+    jazzy
+  end
+end

@@ -12,39 +12,24 @@ concurrency:
 
 jobs:
   build:
-    name: ${{ matrix.name }}
     runs-on: macos-13
     timeout-minutes: 10
     strategy:
       fail-fast: false
       matrix:
-        include:
-          - destination: "\"platform=macOS\""
-            name: "macOS"
-            xcode: "14.3"
-          - destination: "\"platform=iOS Simulator,name=iPhone 14\""
-            name: "iOS"
-            xcode: "14.3"
-          - destination: "generic/platform=tvOS"
-            name: "tvOS"
-            xcode: "14.3"
-            skipTest: true
+        destination: [
+          'macOS', 
+          'iOS Simulator,name=iPhone 14', 
+          'tvOS Simulator,name=Apple TV'
+        ]
     steps:
       - uses: actions/checkout@v4
-      - name: Install xcpretty
-        run: gem install xcpretty
-      - name: Select Xcode
-        run: sudo xcode-select --switch /Applications/Xcode_${{ matrix.xcode }}.app
-        shell: bash
-      - name: Get xcodebuild build command
-        uses: haya14busa/action-cond@v1
-        id: getBuildCommand
+      - uses: ruby/setup-ruby@v1
         with:
-          cond: ${{ matrix.skipTest == true }}
-          if_true: 'build'
-          if_false: 'build-for-testing'
-      - name: Build ${{ matrix.name }}
-        run: set -o pipefail && xcodebuild clean ${{ steps.getBuildCommand.outputs.value }} -project AliyunpanSDK.xcodeproj -scheme AliyunpanSDK -destination ${{ matrix.destination }} | xcpretty
-      - name: Test ${{ matrix.name }}
-        run: set -o pipefail && xcodebuild test-without-building -project AliyunpanSDK.xcodeproj -scheme AliyunpanSDK -destination ${{ matrix.destination }} | xcpretty
-        if: ${{ !matrix.skipTest }}
+          ruby-version: 2.7.4
+          bundler-cache: true
+      - name: Test
+        env:
+          DESTINATION: platform=${{ matrix.destination }}
+        run: bundle exec fastlane test
+
