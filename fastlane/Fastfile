@@ -38,7 +38,10 @@ platform :ios do
     # git tag
     Actions.sh("git tag v#{target_version}")
 
-    push_to_git_remote
+    push_to_git_remote(
+      tags: false
+    )
+    Actions.sh("git push origin v#{target_version}")
 
     release_log = changelog_from_git_commits(
       pretty: "- %s @(%an) ",
