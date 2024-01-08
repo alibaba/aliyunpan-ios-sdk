@@ -3,9 +3,9 @@ name: AliyunpanSDK Release
 on:
   workflow_dispatch:
     version:
-        description: 'release version'
-        required: true
-        type: string
+      description: 'release version'
+      required: true
+      type: string
 
 permissions:
   contents: read
