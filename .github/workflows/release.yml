@@ -9,7 +9,7 @@ on:
         type: string
   
 jobs:
-  run:
+  Run:
     runs-on: macos-13
     steps:
       - uses: actions/checkout@v4
@@ -22,4 +22,5 @@ jobs:
         env:
           VERSION: ${{ inputs.version }}
           FL_GITHUB_RELEASE_API_BEARER: ${{ secrets.GITHUB_TOKEN }}
+          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
 
