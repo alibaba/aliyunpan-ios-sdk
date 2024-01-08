@@ -73,7 +73,7 @@ public class AliyunpanDownloadTask: NSObject, Identifiable {
     public let file: AliyunpanFile
     let destination: URL
     
-    private let chunkSize = 4_000_000
+    private let chunkSize: Int64
     private let downloadURLActor = DownloadURLActor()
     private let fileManager = FileManager.default
     
@@ -88,12 +88,17 @@ public class AliyunpanDownloadTask: NSObject, Identifiable {
     private(set) var urlSession: URLSession?
     
     private var writedSize: Int64 = 0
+    
+    @ThreadSafe
     var unfinishedChunks: [AliyunpanDownloadChunk] = []
 
     init(file: AliyunpanFile, destination: URL, delegate: AliyunpanDownloadTaskDelegate?) {
         self.file = file
         self.destination = destination
         self.delegate = delegate
+        // 根据文件大小动态设置分片大小，来降低内存占用
+        // 最小为4M
+        self.chunkSize = max(4_000_000, (file.size ?? 0) / 1000)
         super.init()
         delegate?.downloadTask(self, didUpdateState: state)
     }
@@ -176,7 +181,7 @@ extension AliyunpanDownloadTask {
     }
     
     var chunks: [AliyunpanDownloadChunk] {
-        stride(from: 0, to: totalSize, by: chunkSize).map {
+        stride(from: 0, to: totalSize, by: Int64.Stride(chunkSize)).map {
             AliyunpanDownloadChunk(start: $0, end: min($0 + Int64(chunkSize), totalSize))
         }
     }

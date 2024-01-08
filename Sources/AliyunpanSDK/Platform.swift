@@ -18,7 +18,7 @@ import TVUIKit
 #endif
 
 class Platform {
-    
+    @MainActor
     static func canOpenURL(_ url: URL) -> Bool {
 #if canImport(UIKit) || canImport(TVUIKit)
         return UIApplication.shared.canOpenURL(url)
@@ -29,6 +29,7 @@ class Platform {
 #endif
     }
     
+    @MainActor
     static func open(_ url: URL) async {
 #if canImport(UIKit) || canImport(TVUIKit)
         await UIApplication.shared.open(url)
