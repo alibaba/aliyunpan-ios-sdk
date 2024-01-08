@@ -18,7 +18,7 @@ class AliyunpanAppJumper {
     }
     
     func jump(to url: URL) async throws -> String {
-        guard Platform.canOpenURL(url) else {
+        guard await Platform.canOpenURL(url) else {
             throw AliyunpanError.AuthorizeError.notInstalledApp
         }
         
