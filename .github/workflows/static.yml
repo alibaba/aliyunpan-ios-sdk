@@ -22,14 +22,12 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: macOS-latest
     steps:
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 2.7.4
-          bundler-cache: true
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Install Jazzy
+        run: gem install jazzy
       - name: Generate Document
-        run: bundle exec fastlane doc
+        run: jazzy
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
