@@ -18,14 +18,17 @@ platform :ios do
   desc "Release new version"
   lane :release do |options|
     target_version = options[:version]
-    raise "The version is missed. Use `fastlane release version:{version_number}`.`" if target_version.nil?
-
     ensure_git_branch(
       branch: 'main'
     )
     ensure_git_status_clean
 
-    increment_version_number(version_number: target_version)
+    if target_version.nil?
+      increment_version_number(version_number: target_version)
+    else
+      increment_version_number
+    end
+    target_version = get_version_number
     version_bump_podspec(path: "AliyunpanSDK.podspec", version_number: target_version)
     
     Actions.sh("sed -i '' 's/let version = \"[^\"]*\"/let version = \"#{target_version}\"/g' ../Sources/AliyunpanSDK/AliyunpanSDK.swift")
