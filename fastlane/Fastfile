@@ -56,8 +56,6 @@ platform :ios do
       description: release_log,
       upload_assets: ["build/AliyunpanSDK-#{target_version}.zip"]
     )
-
-    pod_push
   end
 
   lane :xcframework do |options|
