@@ -134,5 +134,7 @@ xcuserdata
 # *.xcodeproj
 .swiftpm
 
+.bundle
+vendor
 # End of https://www.toptal.com/developers/gitignore/api/cocoapods,swift,swiftpm,macos
 n
