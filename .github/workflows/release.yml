@@ -1,0 +1,25 @@
+name: AliyunpanSDK Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "version"
+        required: true
+        type: string
+  
+jobs:
+  run:
+    runs-on: macos-13
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7.4
+          bundler-cache: true
+      - name: release
+        run: bundle exec fastlane release $VERSION
+        env:
+          VERSION: ${{ inputs.version }}
+          FL_GITHUB_RELEASE_API_BEARER: ${{ secrets.GITHUB_TOKEN }}
+
