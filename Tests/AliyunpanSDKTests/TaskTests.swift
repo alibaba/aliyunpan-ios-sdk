@@ -12,25 +12,25 @@ import XCTest
 class TaskTests: XCTestCase {
     func testTimeout() async throws {
         do {
-            let _ = try await withTimeout(seconds: 2) {
-                try await Task.sleep(nanoseconds: UInt64(3 * 1_000_000_000))
+            let _ = try await withTimeout(seconds: 0.05) {
+                try await Task.sleep(seconds: 0.1)
                 return 1
             }
         } catch {
             XCTAssertTrue(error is CancellationError)
         }
         
-        let value1 = try await withTimeout(seconds: 2) {
+        let value1 = try await withTimeout(seconds: 0.05) {
             Task {
-                try await Task.sleep(nanoseconds: UInt64(2 * 1_000_000_000))
+                try await Task.sleep(seconds: 0.05)
                 return 1
             }
         }.value
         XCTAssertEqual(1, value1)
         
-        let value2 = try await withTimeout(seconds: 2) {
+        let value2 = try await withTimeout(seconds: 0.05) {
             Task {
-                try await Task.sleep(nanoseconds: UInt64(1 * 1_000_000_000))
+                try await Task.sleep(seconds: 0.025)
                 return 1
             }
         }.value

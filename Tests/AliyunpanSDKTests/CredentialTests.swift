@@ -27,5 +27,6 @@ class CredentialTests: XCTestCase {
         XCTAssertTrue(AliyunpanCredentials.pkce.implement is AliyunpanPKCECredentials)
         XCTAssertTrue(AliyunpanCredentials.server(TestBizServer()).implement is AliyunpanServerCredentials)
         XCTAssertTrue(AliyunpanCredentials.qrCode(TestQRCodeContainer()).implement is AliyunpanQRCodeCredentials)
+        XCTAssertTrue(AliyunpanCredentials.token(.init(access_token: "accessToken")).implement is AliyunpanTokenCredentials)
     }
 }

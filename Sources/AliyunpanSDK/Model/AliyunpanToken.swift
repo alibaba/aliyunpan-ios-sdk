@@ -21,6 +21,17 @@ public struct AliyunpanToken: Codable {
     public var isExpired: Bool {
         Date().timeIntervalSince1970 > expires_in
     }
+    
+    public init(
+        token_type: String = "Bearer",
+        access_token: String,
+        refresh_token: String? = nil,
+        expires_in: TimeInterval = .greatestFiniteMagnitude) {
+        self.token_type = token_type
+        self.access_token = access_token
+        self.refresh_token = refresh_token
+        self.expires_in = expires_in
+    }
 }
 
 extension AliyunpanToken: Hashable, Equatable {
