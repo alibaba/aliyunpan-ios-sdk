@@ -34,7 +34,8 @@
 | :----: | :----: | :----: | :----: |
 | pkce | pkce 授权 | ✅ | ❌ |
 | server | 业务后端授权 | ❌ | ❌ |
-| qrCode | 二维码授权 | ✅ | ✅ |   
+| qrCode | 二维码授权 | ✅ | ✅ |
+| token | 注入 token 授权 | ✅ | ✅ | 
 
 ```swift
 let client: AliyunpanClient = AliyunpanClient(

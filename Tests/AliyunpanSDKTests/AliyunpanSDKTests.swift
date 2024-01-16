@@ -22,7 +22,7 @@ class AliyunpanSDKTests: XCTestCase {
         
         let url1 = URL(string: "smartdrive123456://authorize?state=abc&code=anycode")!
         XCTAssertTrue(Aliyunpan.handleOpenURL(url1))
-        let url2 = URL(string: "123456://authorize?state=abc&code=anycode")!
+        let url2 = URL(string: "taobao://authorize?state=abc&code=anycode")!
         XCTAssertFalse(Aliyunpan.handleOpenURL(url2))
     }
 }

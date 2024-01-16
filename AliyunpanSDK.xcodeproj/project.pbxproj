@@ -60,6 +60,7 @@
 		F498215C2B188A6D006559CC /* GetVipFeatureList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F498213D2B188A6D006559CC /* GetVipFeatureList.swift */; };
 		F498215E2B188A6D006559CC /* GetVipFeatureTrial.swift in Sources */ = {isa = PBXBuildFile; fileRef = F498213F2B188A6D006559CC /* GetVipFeatureTrial.swift */; };
 		F49821602B188C4C006559CC /* AliyunpanSpaceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F498215F2B188C4C006559CC /* AliyunpanSpaceInfo.swift */; };
+		F4A37F1C2B562081009AC6AA /* AliyunpanTokenCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A37F1B2B562081009AC6AA /* AliyunpanTokenCredentials.swift */; };
 		F4B3F7332B29859100D9E122 /* CredentialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3F7322B29859100D9E122 /* CredentialTests.swift */; };
 		F4BD1B642B29A11B002BEA2A /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD1B632B29A11B002BEA2A /* Platform.swift */; };
 		F4BD1C322B2AAB07002BEA2A /* AliyunpanQRCodeCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD1C312B2AAB07002BEA2A /* AliyunpanQRCodeCredentials.swift */; };
@@ -151,6 +152,7 @@
 		F498213D2B188A6D006559CC /* GetVipFeatureList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetVipFeatureList.swift; sourceTree = "<group>"; };
 		F498213F2B188A6D006559CC /* GetVipFeatureTrial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetVipFeatureTrial.swift; sourceTree = "<group>"; };
 		F498215F2B188C4C006559CC /* AliyunpanSpaceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliyunpanSpaceInfo.swift; sourceTree = "<group>"; };
+		F4A37F1B2B562081009AC6AA /* AliyunpanTokenCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliyunpanTokenCredentials.swift; sourceTree = "<group>"; };
 		F4B3F7142B202CB500D9E122 /* DownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloaderTests.swift; sourceTree = "<group>"; };
 		F4B3F7322B29859100D9E122 /* CredentialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialTests.swift; sourceTree = "<group>"; };
 		F4BD1B632B29A11B002BEA2A /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				F47FADBD2B14767D00EC0D8D /* AliyunpanServerCredentials.swift */,
 				F47FADB92B14767D00EC0D8D /* AliyunpanPKCECredentials.swift */,
 				F4BD1C312B2AAB07002BEA2A /* AliyunpanQRCodeCredentials.swift */,
+				F4A37F1B2B562081009AC6AA /* AliyunpanTokenCredentials.swift */,
 			);
 			path = AliyunpanCredentials;
 			sourceTree = "<group>";
@@ -468,7 +471,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					F4C6F2252B060C4B003A06B3 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -567,6 +570,7 @@
 				F49821462B188A6D006559CC /* GetUsersInfo.swift in Sources */,
 				F49821422B188A6D006559CC /* UpdateVideoRecord.swift in Sources */,
 				F49821582B188A6D006559CC /* GetFileList.swift in Sources */,
+				F4A37F1C2B562081009AC6AA /* AliyunpanTokenCredentials.swift in Sources */,
 				F47FADDE2B14767D00EC0D8D /* AliyunpanSDK.swift in Sources */,
 				F49821402B188A6D006559CC /* GetVideoPreviewPlayMeta.swift in Sources */,
 				F49821442B188A6D006559CC /* GetVipInfo.swift in Sources */,
@@ -670,6 +674,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -735,6 +740,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -766,6 +772,7 @@
 				CLANG_ENABLE_CODE_COVERAGE = YES;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -812,6 +819,7 @@
 				CLANG_ENABLE_CODE_COVERAGE = YES;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -860,6 +868,7 @@
 				CLANG_UNDEFINED_BEHAVIOR_SANITIZER_NULLABILITY = YES;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GENERATE_INFOPLIST_FILE = NO;
@@ -888,6 +897,7 @@
 				CLANG_UNDEFINED_BEHAVIOR_SANITIZER_NULLABILITY = YES;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GENERATE_INFOPLIST_FILE = NO;

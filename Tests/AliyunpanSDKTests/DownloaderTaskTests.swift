@@ -91,7 +91,7 @@ class DownloaderActorTests: XCTestCase, AliyunpanDownloadTaskDelegate {
         
         XCTAssertEqual(getDownloadURLCount, 1)
         
-        try await Task.sleep(seconds: 1)
+        try await Task.sleep(seconds: 0.06)
         
         _ = try await actor.getDownloadURL(with: file, by: self)
         _ = try await actor.getDownloadURL(with: file, by: self)
@@ -115,13 +115,13 @@ class DownloaderActorTests: XCTestCase, AliyunpanDownloadTaskDelegate {
     }
     
     func getFileDownloadUrl(driveId: String, fileId: String) async throws -> AliyunpanScope.File.GetFileDownloadUrl.Response {
-        try await Task.sleep(seconds: 0.5)
+        try await Task.sleep(seconds: 0.05)
         
         getDownloadURLCount += 1
         
         return AliyunpanScope.File.GetFileDownloadUrl.Response(
             url: URL(string: "https://alipan.com")!,
-            expiration: Date().addingTimeInterval(1),
+            expiration: Date().addingTimeInterval(0.05),
             method: "GET")
     }
     

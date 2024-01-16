@@ -19,6 +19,8 @@ public enum AliyunpanCredentials {
     case server(AliyunpanBizServer)
     /// 二维码授权，无需服务端，无需安装阿里云盘客户端
     case qrCode(AliyunpanQRCodeContainer)
+    /// 手动注入 token
+    case token(AliyunpanToken)
     
     var implement: AliyunpanCredentialsProtocol {
         switch self {
@@ -28,6 +30,8 @@ public enum AliyunpanCredentials {
             return AliyunpanServerCredentials(server)
         case .qrCode(let container):
             return AliyunpanQRCodeCredentials(container)
+        case .token(let token):
+            return AliyunpanTokenCredentials(token)
         }
     }
 }
