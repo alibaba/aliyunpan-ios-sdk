@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "AliyunpanSDK",
-    platforms: [.iOS(.v13)],
+    platforms: [.iOS(.v13), .macOS(.v10_15), .tvOS(.v13)],
     products: [
         .library(
             name: "AliyunpanSDK",
