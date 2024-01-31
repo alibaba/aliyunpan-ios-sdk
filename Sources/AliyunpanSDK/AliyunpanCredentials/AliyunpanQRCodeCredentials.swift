@@ -8,7 +8,7 @@
 import Foundation
 
 /// 二维码授权容器协议
-public protocol AliyunpanQRCodeContainer: AnyObject {
+public protocol AliyunpanQRCodeContainer {
     /// 展示二维码
     @MainActor func showAliyunpanAuthorizeQRCode(with url: URL)
     
