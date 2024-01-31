@@ -46,10 +46,12 @@ platform :ios do
     )
     Actions.sh("git push origin v#{target_version}")
 
+    most_recent_tags = sh("git tag --sort=-version:refname | head -2").split("\n")
     release_log = changelog_from_git_commits(
-      pretty: "- %s @(%an) ",
+      between: most_recent_tags,
+      pretty: "- %s @(%an) "
     )
-
+    
     xcframework(version: target_version)
     set_github_release(
       repository_name: "alibaba/aliyunpan-ios-sdk",
