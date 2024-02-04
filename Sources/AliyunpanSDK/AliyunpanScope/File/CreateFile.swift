@@ -91,7 +91,7 @@ extension AliyunpanFileScope {
             public let exist: Bool?
             /// 是否秒传
             public let rapid_upload: Bool?
-            public let part_info_list: [AliyunpanFile.PartInfo]
+            public let part_info_list: [AliyunpanFile.PartInfo]?
             /// 创建文件夹返回空
             public var upload_id: String?
         }

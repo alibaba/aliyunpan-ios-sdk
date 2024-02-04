@@ -15,4 +15,5 @@ enum Example: String, CaseIterable {
     case getVipFeatureList = "获取付费墙"
     case fetchFileList = "获取文件列表"
     case uploadFileToRoot = "上传文件到根目录"
+    case createFolderOnRoot = "在根目录创建文件夹"
 }

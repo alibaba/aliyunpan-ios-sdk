@@ -44,6 +44,11 @@ class ExamplesViewController: NSViewController, NSTableViewDataSource, NSTableVi
         }
         // 当选中的行发生变化时被调用
         let selectedRow = tableView.selectedRow
+        
+        guard selectedRow >= 0, selectedRow < examples.count else {
+            return
+        }
+        
         let item = examples[selectedRow]
         switch item {
         case .getUserInfo:
@@ -103,6 +108,27 @@ class ExamplesViewController: NSViewController, NSTableViewDataSource, NSTableVi
             }
         case .uploadFileToRoot:
             break
+        case .createFolderOnRoot:
+            Task {
+                do {
+                    let driveInfo = try await client.send(AliyunpanScope.User.GetDriveInfo())
+                    
+                    let driveId = driveInfo.default_drive_id
+                    
+                    let response = try await client.send(
+                        AliyunpanScope.File.CreateFile(
+                            .init(
+                                drive_id: driveId,
+                                parent_file_id: "root",
+                                name: "TestFolder",
+                                type: .folder,
+                                check_name_mode: .auto_rename)))
+                    
+                    print(response)
+                } catch {
+                    print(error)
+                }
+            }
         }
     }
     
