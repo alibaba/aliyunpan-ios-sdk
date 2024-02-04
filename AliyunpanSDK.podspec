@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "AliyunpanSDK"
-  spec.version      = "0.1.17"
+  spec.version      = "0.1.18"
   spec.summary      = "Aliyunpan OpenSDK-iOS"
 
   spec.description  = <<-DESC
