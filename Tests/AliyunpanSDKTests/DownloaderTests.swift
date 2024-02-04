@@ -28,7 +28,6 @@ class DownloaderTests: XCTestCase {
     
     let destination = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first!
 
-    
     func testChunk() {
         let chunk1 = AliyunpanDownloadChunk(rangeString: "bytes=0-999", fileSize: file.size ?? 0)
         XCTAssertEqual(chunk1?.start, 0)

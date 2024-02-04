@@ -19,7 +19,7 @@ public func withTimeout<R>(
     seconds: TimeInterval,
     operation: @escaping @Sendable () async throws -> R
 ) async throws -> R {
-    return try await withThrowingTaskGroup(of: R.self) { group in
+    try await withThrowingTaskGroup(of: R.self) { group in
         defer {
             group.cancelAll()
         }

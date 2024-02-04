@@ -9,7 +9,7 @@ import Cocoa
 import AliyunpanSDK
 
 class ExamplesViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
-    @IBOutlet weak var tableView: NSTableView!
+    @IBOutlet var tableView: NSTableView!
     
     let examples = Example.allCases
     
@@ -25,7 +25,7 @@ class ExamplesViewController: NSViewController, NSTableViewDataSource, NSTableVi
     }
     
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return examples.count
+        examples.count
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
@@ -108,9 +108,8 @@ class ExamplesViewController: NSViewController, NSTableViewDataSource, NSTableVi
     
     @MainActor
     private func showFileDetailViewController(files: [AliyunpanFile]) {
-        guard let splitViewController = self.parent as? NSSplitViewController,
-              let viewController = self.storyboard?.instantiateController(withIdentifier: "DetailViewController") as? DetailViewController
-                else { return }
+        guard let splitViewController = parent as? NSSplitViewController,
+              let viewController = storyboard?.instantiateController(withIdentifier: "DetailViewController") as? DetailViewController else { return }
 
         viewController.files = files
         let item = NSSplitViewItem(viewController: viewController)
@@ -141,7 +140,7 @@ class DetailViewController: NSViewController, NSTableViewDataSource, NSTableView
     
     var parentDetailViewController: DetailViewController?
     
-    @IBOutlet weak var tableView: NSTableView!
+    @IBOutlet var tableView: NSTableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -151,7 +150,7 @@ class DetailViewController: NSViewController, NSTableViewDataSource, NSTableView
     }
     
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return files.count
+        files.count
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
@@ -190,6 +189,5 @@ class DetailViewController: NSViewController, NSTableViewDataSource, NSTableView
 class MainSplitViewController: NSSplitViewController {    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 }

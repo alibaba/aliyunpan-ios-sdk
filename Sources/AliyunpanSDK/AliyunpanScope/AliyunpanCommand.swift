@@ -18,13 +18,13 @@ public protocol AliyunpanCommand {
     var requestData: Data? { get }
 }
 
-public extension AliyunpanCommand where Request == Void {
-    var request: Request? { nil }
-    var requestData: Data? { nil }
+extension AliyunpanCommand where Request == Void {
+    public var request: Request? { nil }
+    public var requestData: Data? { nil }
 }
 
-public extension AliyunpanCommand where Request: Encodable {
-    var requestData: Data? {
+extension AliyunpanCommand where Request: Encodable {
+    public var requestData: Data? {
         if let request {
             return try? JSONParameterEncoder().encode(request)
         } else {

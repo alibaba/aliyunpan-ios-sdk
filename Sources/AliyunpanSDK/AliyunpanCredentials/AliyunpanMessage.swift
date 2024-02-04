@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  AliyunpanMessage.swift
 //  
 //
 //  Created by zhaixian on 2023/11/27.
@@ -17,9 +17,9 @@ class AliyunpanMessage {
             throw AliyunpanError.AuthorizeError.invalidAuthorizeURL
         }
         let queryItems = url.queryItems
-        self.originalURL = url
-        self.action = url.host ?? ""
-        self.state = queryItems.first(where: { $0.name == "state" })?.value ?? "Unknown"
+        originalURL = url
+        action = url.host ?? ""
+        state = queryItems.first(where: { $0.name == "state" })?.value ?? "Unknown"
     }
     
     var id: String {
@@ -34,9 +34,9 @@ class AliyunpanAuthorizeMessage: AliyunpanMessage {
     
     override init(_ url: URL) throws {
         let queryItems = url.queryItems
-        self.authCode = queryItems.first(where: { $0.name == "code" })?.value
-        self.error = queryItems.first(where: { $0.name == "error" })?.value
-        self.errorMsg = queryItems.first(where: { $0.name == "errorMsg" })?.value
+        authCode = queryItems.first(where: { $0.name == "code" })?.value
+        error = queryItems.first(where: { $0.name == "error" })?.value
+        errorMsg = queryItems.first(where: { $0.name == "errorMsg" })?.value
         try super.init(url)
     }
 }

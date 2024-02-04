@@ -10,7 +10,7 @@ import AliyunpanSDK
 
 class ViewController: UIViewController {
     private var client: AliyunpanClient {
-        return (UIApplication.shared.delegate as! AppDelegate).client
+        (UIApplication.shared.delegate as! AppDelegate).client
     }
     
     private let activityIndicatorView: UIActivityIndicatorView = {
@@ -28,12 +28,12 @@ class ViewController: UIViewController {
         }
         
         return UICollectionViewDiffableDataSource(collectionView: collectionView) { collectionView, indexPath, itemIdentifier in
-            return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
+            collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
         }
     }()
     
     private lazy var collectionView: UICollectionView = {
-        var config = UICollectionLayoutListConfiguration.init(appearance: .grouped)
+        var config = UICollectionLayoutListConfiguration(appearance: .grouped)
         let layout = UICollectionViewCompositionalLayout.list(using: config)
         let collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
         collectionView.delegate = self

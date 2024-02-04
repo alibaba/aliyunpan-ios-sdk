@@ -92,9 +92,7 @@ class DownloaderOperationTests: XCTestCase {
 }
 
 extension DownloaderOperationTests: DownloadChunkOperationDelegate {
-    func chunkOperationDidWriteData(_ bytesWritten: Int64) {
-        
-    }
+    func chunkOperationDidWriteData(_ bytesWritten: Int64) {}
     
     func chunkOperation(_ operation: AliyunpanSDK.DownloadChunkOperation, didUpdatedState state: AliyunpanSDK.AsyncOperation.State) {
         completionHandle?(operation, state)

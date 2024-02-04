@@ -30,7 +30,7 @@ extension AliyunpanInternalScope {
             public let status: AliyunpanAuthorizeQRCodeStatus
             public let authCode: String?
         }
-        
+
         typealias Request = Void
 
         let sid: String

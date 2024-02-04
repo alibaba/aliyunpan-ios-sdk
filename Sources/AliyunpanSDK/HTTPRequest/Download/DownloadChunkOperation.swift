@@ -39,7 +39,7 @@ class DownloadChunkOperation: AsyncThrowOperation<URL, Error> {
     
     private var stateProvider: StateProvider?
     private var sessionTask: URLSessionTask?
-    private var task: Task<(), Never>?
+    private var task: Task<Void, Never>?
     
     private lazy var urlSession: URLSession? =
         URLSession(
@@ -166,13 +166,11 @@ extension DownloadChunkOperation {
 extension DownloadChunkOperation: URLSessionDownloadDelegate {
     func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
         if let error {
-            
             chunkOperationDidCompleteWithError(error)
         } else if let response = task.response as? HTTPURLResponse,
            response.statusCode == 403,
            // https://help.aliyun.com/zh/oss/support/0002-00000069
            response.value(forHTTPHeaderField: "x-oss-ec") == "0002-00000069" {
-            
             chunkOperationDidCompleteWithError(
                 AliyunpanError.DownloadError.downloadURLExpired)
         }

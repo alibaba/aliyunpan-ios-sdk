@@ -23,8 +23,8 @@ class JSONTests: XCTestCase {
         XCTAssertEqual(token.token_type, "Bearer")
         XCTAssertEqual(token.access_token, "access_token1")
         XCTAssertEqual(token.refresh_token, "refresh_token1")
-        XCTAssertEqual(token.expires_in, 1701760970)
-        XCTAssertEqual(token.isExpired, Date().timeIntervalSince1970 > 1701760970)
+        XCTAssertEqual(token.expires_in, 1_701_760_970)
+        XCTAssertEqual(token.isExpired, Date().timeIntervalSince1970 > 1_701_760_970)
     }
     
     func testFile() throws {
@@ -81,9 +81,9 @@ class JSONTests: XCTestCase {
         XCTAssertEqual(file.category, .audio)
         XCTAssertEqual(file.file_extension, "mp3")
         XCTAssertEqual(file.type, .file)
-        XCTAssertEqual(file.size, 561701)
-        XCTAssertEqual(file.created_at?.timeIntervalSince1970, 1687946420.022)
-        XCTAssertEqual(file.updated_at?.timeIntervalSince1970, 1687953620.022)
+        XCTAssertEqual(file.size, 561_701)
+        XCTAssertEqual(file.created_at?.timeIntervalSince1970, 1_687_946_420.022)
+        XCTAssertEqual(file.updated_at?.timeIntervalSince1970, 1_687_953_620.022)
         
         let description = """
 [AliyunpanFile]
@@ -115,8 +115,8 @@ class JSONTests: XCTestCase {
         }
         
         let bar = Foo(
-            created_at: Date(timeIntervalSince1970: 1687946420.022),
-            updated_at: Date(timeIntervalSince1970: 1687953620.022))
+            created_at: Date(timeIntervalSince1970: 1_687_946_420.022),
+            updated_at: Date(timeIntervalSince1970: 1_687_953_620.022))
         
         let data = try JSONParameterEncoder().encode(bar)
         let json = try JSONSerialization.jsonObject(with: data) as! [String: String]

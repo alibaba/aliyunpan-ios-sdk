@@ -7,16 +7,16 @@
 import Foundation
 
 extension AliyunpanVIPScope {
-	/// 开始试用付费功能
-	public class GetVipFeatureList: AliyunpanCommand {
-		public var httpMethod: HTTPMethod { .get }
-		public var uri: String {
-			"/business/v1.0/vip/feature/list"
-		}
+    /// 开始试用付费功能
+    public class GetVipFeatureList: AliyunpanCommand {
+        public var httpMethod: HTTPMethod { .get }
+        public var uri: String {
+            "/business/v1.0/vip/feature/list"
+        }
 
-		public typealias Request = Void
+        public typealias Request = Void
 
-		public struct Response: Codable {
+        public struct Response: Codable {
             public struct FeatureItem: Codable {
                 /// 付费功能标记
                 public let code: String
@@ -32,10 +32,11 @@ extension AliyunpanVIPScope {
                 /// 开始试用的时间戳
                 public let trialStartTime: TimeInterval
             }
-			/// 付费功能数组
-			public let result: [FeatureItem]
-		}
-        
+
+            /// 付费功能数组
+            public let result: [FeatureItem]
+        }
+
         public init() {}
-	}
+    }
 }

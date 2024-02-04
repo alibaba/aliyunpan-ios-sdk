@@ -24,7 +24,7 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        (NSApplication.shared.delegate as! AppDelegate).client = self.client
+        (NSApplication.shared.delegate as! AppDelegate).client = client
         
         authorizeButton.title = "Authorize"
         authorizeButton.bezelStyle = .roundRect
@@ -73,6 +73,7 @@ class ViewController: NSViewController {
         view.window?.contentViewController = splitViewController
     }
 }
+
 extension ViewController: AliyunpanQRCodeContainer {
     func authorizeQRCodeStatusUpdated(_ status: AliyunpanSDK.AliyunpanAuthorizeQRCodeStatus) {
         print(status.rawValue)

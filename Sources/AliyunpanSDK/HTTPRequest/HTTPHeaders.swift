@@ -36,7 +36,7 @@ public struct HTTPHeader: Comparable, CustomStringConvertible {
     }
     
     public var description: String {
-        return "\(name): \(value)"
+        "\(name): \(value)"
     }
 }
 
@@ -136,8 +136,8 @@ public struct HTTPHeaders {
     }
     
     public init(_ dictionary: [String: String]) {
-        let headers = dictionary.compactMap { (name, value) in
-            return HTTPHeader(name: name, value: value)
+        let headers = dictionary.compactMap { name, value in
+            HTTPHeader(name: name, value: value)
         }
         self = HTTPHeaders(headers)
     }
