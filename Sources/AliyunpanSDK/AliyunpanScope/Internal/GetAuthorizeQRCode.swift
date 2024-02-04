@@ -22,7 +22,7 @@ extension AliyunpanInternalScope {
             public let scopes: [String]
             public let code_challenge: String?
             public let code_challenge_method: String?
-            
+
             public init(client_id: String, scopes: [String], code_challenge: String?, code_challenge_method: String?) {
                 self.client_id = client_id
                 self.scopes = scopes

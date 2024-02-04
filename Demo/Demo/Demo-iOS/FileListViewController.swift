@@ -24,7 +24,7 @@ class FileListViewController: UIViewController {
     }()
         
     private lazy var dataSource: UICollectionViewDiffableDataSource<Int, DisplayItem> = {
-        let cellRegistration = UICollectionView.CellRegistration<FileCell, DisplayItem> { [weak self] cell, indexPath, item in
+        let cellRegistration = UICollectionView.CellRegistration<FileCell, DisplayItem> { [weak self] cell, _, item in
             guard let self else {
                 return
             }
@@ -43,12 +43,12 @@ class FileListViewController: UIViewController {
         }
         
         return UICollectionViewDiffableDataSource(collectionView: collectionView) { collectionView, indexPath, itemIdentifier in
-            return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
+            collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
         }
     }()
     
     private lazy var collectionView: UICollectionView = {
-        let layout = UICollectionViewCompositionalLayout.list(using: UICollectionLayoutListConfiguration.init(appearance: .grouped))
+        let layout = UICollectionViewCompositionalLayout.list(using: UICollectionLayoutListConfiguration(appearance: .grouped))
         let collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
         collectionView.delegate = self
         return collectionView
@@ -56,7 +56,7 @@ class FileListViewController: UIViewController {
     
     var files: [AliyunpanFile] {
         get {
-            displayItems.map { $0.file }
+            displayItems.map(\.file)
         }
         set {
             displayItems = newValue.map { DisplayItem($0) }
@@ -135,7 +135,7 @@ extension FileListViewController: UICollectionViewDelegate {
                     /// 获取画质最高的已转码播放链接
                     let playURL = playInfo.video_preview_play_info.live_transcoding_task_list
                         .filter { $0.status == .finished }
-                        .compactMap { $0.url }
+                        .compactMap(\.url)
                         .last
 
                     if let playURL {
@@ -212,7 +212,7 @@ extension FileListViewController: FileCellDelegate {
 
 extension FileListViewController: UIDocumentInteractionControllerDelegate {
     func documentInteractionControllerViewControllerForPreview(_ controller: UIDocumentInteractionController) -> UIViewController {
-        return self
+        self
     }
 }
 

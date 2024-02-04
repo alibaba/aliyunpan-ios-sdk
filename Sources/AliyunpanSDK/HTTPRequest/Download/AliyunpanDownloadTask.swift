@@ -35,7 +35,7 @@ actor DownloadURLActor {
     func getDownloadURL(
         with file: AliyunpanFile,
         by delegate: AliyunpanDownloadTaskDelegate) async throws -> URL {
-        if let url = self.url, let expiration = self.expiration, expiration > Date() {
+        if let url, let expiration, expiration > Date() {
             return url
         }
         if let refreshTask {
@@ -52,9 +52,7 @@ actor DownloadURLActor {
 }
 
 public class AliyunpanDownloadTask: NSObject, Identifiable {
-    public lazy var id: String = {
-        "\(file.drive_id)_\(file.file_id)_\(Int.random(in: 0...1000))"
-    }()
+    public lazy var id: String = "\(file.drive_id)_\(file.file_id)_\(Int.random(in: 0...1000))"
 
     /// 下载状态
     public enum State {
@@ -98,7 +96,7 @@ public class AliyunpanDownloadTask: NSObject, Identifiable {
         self.delegate = delegate
         // 根据文件大小动态设置分片大小，来降低内存占用
         // 最小为4M
-        self.chunkSize = max(4_000_000, (file.size ?? 0) / 1000)
+        chunkSize = max(4_000_000, (file.size ?? 0) / 1000)
         super.init()
         delegate?.downloadTask(self, didUpdateState: state)
     }
@@ -159,7 +157,7 @@ public class AliyunpanDownloadTask: NSObject, Identifiable {
 
         fileManager.createFile(atPath: destination.path, contents: nil)
         let fileHandle = try FileHandle(forWritingTo: destination)
-        try chunks.forEach { chunk in
+        for chunk in chunks {
             let chunkFileURL = getChunkFilePath(with: chunk)
             let data = try Data(contentsOf: chunkFileURL)
             fileHandle.write(data)
@@ -200,7 +198,7 @@ extension AliyunpanDownloadTask {
     
     /// 获取已写入大小
     private func getWritedSize() -> Int64 {
-        return chunks.compactMap { chunk in
+        chunks.compactMap { chunk in
             let path = getChunkFilePath(with: chunk).path
             guard fileManager.fileExists(atPath: path) else {
                 return nil

@@ -29,6 +29,6 @@ struct ThreadSafe<Element> {
     var projectValue: Element
     
     init(wrappedValue: Element) {
-        self.projectValue = wrappedValue
+        projectValue = wrappedValue
     }
 }

@@ -16,4 +16,3 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Aliyunpan.setLogLevel(.info)
     }
 }
-

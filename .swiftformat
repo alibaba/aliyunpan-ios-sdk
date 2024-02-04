@@ -1,0 +1,24 @@
+# file options
+
+--symlinks ignore
+--swiftversion 5.7
+
+# format options
+
+--patternlet inline
+--decimalgrouping 3,5
+--operatorfunc spaced
+--nospaceoperators ..<, ...
+--someAny false
+--extensionacl on-declarations
+--ifdef outdent
+--commas inline
+--stripunusedargs closure-only
+--elseposition same-line
+--guardelse same-line
+--indentstrings false
+--anonymousforeach ignore
+
+# rules
+--enable isEmpty
+--disable sortImports,wrapMultilineStatementBraces,wrapArguments,enumNamespaces,indent,trailingSpace,conditionalAssignment

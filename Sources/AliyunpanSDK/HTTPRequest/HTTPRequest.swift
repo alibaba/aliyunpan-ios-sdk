@@ -7,9 +7,9 @@
 
 import Foundation
 
-fileprivate extension Dictionary where Key == String {
-    func jsonToQueryItems() -> [URLQueryItem] {
-        return keys.sorted(by: <).compactMap { key -> [URLQueryItem]? in
+extension Dictionary where Key == String {
+    fileprivate func jsonToQueryItems() -> [URLQueryItem] {
+        keys.sorted(by: <).compactMap { key -> [URLQueryItem]? in
             guard let value = self[key] else {
                 return nil
             }

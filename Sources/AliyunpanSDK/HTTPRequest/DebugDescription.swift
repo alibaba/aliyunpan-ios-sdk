@@ -46,7 +46,7 @@ class DebugDescription {
     }
     
     static func description(for data: Data?,
-                            maximumLength: Int = 10000) -> String {
+                            maximumLength: Int = 10_000) -> String {
         guard let data, !data.isEmpty else {
             return "[Body]: None"
         }

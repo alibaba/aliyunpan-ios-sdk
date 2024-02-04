@@ -62,7 +62,7 @@ public class AliyunpanClient {
         self.config = config
         
         if let tokenData = UserDefaults.standard.data(forKey: tokenStorageKey) {
-            self.token = try? JSONParameterDecoder().decode(AliyunpanToken.self, from: tokenData)
+            token = try? JSONParameterDecoder().decode(AliyunpanToken.self, from: tokenData)
         }
     }
     

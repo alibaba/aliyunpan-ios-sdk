@@ -12,7 +12,7 @@ import XCTest
 
 class TestBizServer: AliyunpanBizServer {
     func requestToken(appId: String, authCode: String) async throws -> AliyunpanToken {
-        return .init(token_type: "", access_token: "", refresh_token: nil, expires_in: 0)
+        .init(token_type: "", access_token: "", refresh_token: nil, expires_in: 0)
     }
 }
 

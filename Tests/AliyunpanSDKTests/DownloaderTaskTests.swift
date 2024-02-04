@@ -52,7 +52,7 @@ class DownloaderTaskTests: XCTestCase, AliyunpanDownloadTaskDelegate {
     }
     
     func getFileDownloadUrl(driveId: String, fileId: String) async throws -> AliyunpanScope.File.GetFileDownloadUrl.Response {
-        try await Task.sleep(seconds:1)
+        try await Task.sleep(seconds: 1)
         return AliyunpanScope.File.GetFileDownloadUrl.Response(
             url: URL(string: "https://alipan.com")!,
             expiration: Date().addingTimeInterval(100),
@@ -63,13 +63,9 @@ class DownloaderTaskTests: XCTestCase, AliyunpanDownloadTaskDelegate {
         operationQueue
     }
     
-    func downloadTask(_ task: AliyunpanDownloadTask, didUpdateState state: AliyunpanDownloadTask.State) {
-        
-    }
+    func downloadTask(_ task: AliyunpanDownloadTask, didUpdateState state: AliyunpanDownloadTask.State) {}
     
-    func downloadTask(task: AliyunpanDownloadTask, didWriteData bytesWritten: Int64) {
-        
-    }
+    func downloadTask(task: AliyunpanDownloadTask, didWriteData bytesWritten: Int64) {}
 }
 
 class DownloaderActorTests: XCTestCase, AliyunpanDownloadTaskDelegate {
@@ -129,12 +125,7 @@ class DownloaderActorTests: XCTestCase, AliyunpanDownloadTaskDelegate {
         OperationQueue()
     }
     
-    func downloadTask(_ task: AliyunpanDownloadTask, didUpdateState state: AliyunpanDownloadTask.State) {
-        
-    }
+    func downloadTask(_ task: AliyunpanDownloadTask, didUpdateState state: AliyunpanDownloadTask.State) {}
     
-    func downloadTask(task: AliyunpanDownloadTask, didWriteData bytesWritten: Int64) {
-        
-    }
+    func downloadTask(task: AliyunpanDownloadTask, didWriteData bytesWritten: Int64) {}
 }
-

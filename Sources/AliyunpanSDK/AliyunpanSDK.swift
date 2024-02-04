@@ -64,7 +64,7 @@ public class Aliyunpan {
     
     private(set) static var logLevel: AliyunpanLogLevel = .warn
     public static func setLogLevel(_ level: AliyunpanLogLevel) {
-        self.logLevel = level
+        logLevel = level
     }
     
     public private(set) static var env: Environment = .product
@@ -74,7 +74,7 @@ public class Aliyunpan {
     
     @discardableResult
     public static func handleOpenURL(_ url: URL) -> Bool {
-        return AliyunpanAppJumper.handle(url: url)
+        AliyunpanAppJumper.handle(url: url)
     }
 }
 

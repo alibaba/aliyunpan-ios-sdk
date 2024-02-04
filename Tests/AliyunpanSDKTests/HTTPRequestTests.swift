@@ -8,11 +8,10 @@
 import XCTest
 @testable import AliyunpanSDK
 
-extension Array where Element == URLQueryItem {
+extension [URLQueryItem] {
     subscript(key: String) -> String? {
         first(where: { $0.name == key })?.value
     }
-
 }
 
 class HTTPRequestTests: XCTestCase {
@@ -65,7 +64,6 @@ class HTTPRequestTests: XCTestCase {
         let urlRequest = try request.asURLRequest()
         XCTAssertEqual(urlRequest.httpMethod?.lowercased(), "post")
         
-
         let json = try JSONSerialization.jsonObject(with: urlRequest.httpBody!) as! [String: Any]
         XCTAssertEqual(json["drive_id"] as! String, "drive_id1")
         XCTAssertEqual(json["parent_file_id"] as! String, "parent_file_id1")

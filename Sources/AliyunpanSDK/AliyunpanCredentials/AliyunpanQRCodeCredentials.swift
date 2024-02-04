@@ -29,7 +29,7 @@ class AliyunpanQRCodeCredentials: AliyunpanCredentialsProtocol {
     }
     
     private func pollingWaitAuthorize(sid: String, timeout: TimeInterval) -> AsyncThrowingStream<(status: AliyunpanAuthorizeQRCodeStatus, authCode: String?), Error> {
-        return AsyncThrowingStream { continuation in
+        AsyncThrowingStream { continuation in
             Task {
                 do {
                     try await withTimeout(seconds: timeout) {
@@ -63,7 +63,6 @@ class AliyunpanQRCodeCredentials: AliyunpanCredentialsProtocol {
                 }
             }
         }
-        
     }
     
     func authorize(appId: String, scope: String) async throws -> AliyunpanToken {
