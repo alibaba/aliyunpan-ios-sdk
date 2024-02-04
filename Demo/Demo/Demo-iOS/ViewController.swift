@@ -57,6 +57,7 @@ class ViewController: UIViewController {
         snapshot.appendSections(["File"])
         snapshot.appendItems([.fetchFileList])
         snapshot.appendItems([.uploadFileToRoot])
+        snapshot.appendItems([.createFolderOnRoot])
         dataSource.apply(snapshot)
     }
     
@@ -84,7 +85,7 @@ class ViewController: UIViewController {
                             name: url.lastPathComponent,
                             check_name_mode: .auto_rename)))
                 
-                if let uploadURL = response.part_info_list.first?.upload_url {
+                if let uploadURL = response.part_info_list?.first?.upload_url {
                     var urlRequest = URLRequest(url: uploadURL)
                     urlRequest.httpMethod = "put"
                     urlRequest.allHTTPHeaderFields = [
@@ -195,6 +196,31 @@ extension ViewController: UICollectionViewDelegate {
             let documentPickerController = UIDocumentPickerViewController(forOpeningContentTypes: [.item])
             documentPickerController.delegate = self
             present(documentPickerController, animated: true)
+        case .createFolderOnRoot:
+            Task {
+                do {
+                    activityIndicatorView.startAnimating()
+                    
+                    let driveInfo = try await self.client.send(AliyunpanScope.User.GetDriveInfo())
+                    
+                    let driveId = driveInfo.default_drive_id
+                    
+                    let response = try await self.client.send(
+                        AliyunpanScope.File.CreateFile(
+                            .init(
+                                drive_id: driveId,
+                                parent_file_id: "root",
+                                name: "TestFolder",
+                                type: .folder,
+                                check_name_mode: .auto_rename)))
+                    
+                    print(response)
+                    
+                    activityIndicatorView.stopAnimating()
+                } catch {
+                    print(error)
+                }
+            }
         }
     }
 }
