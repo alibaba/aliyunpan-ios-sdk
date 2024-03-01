@@ -12,3 +12,8 @@ target 'Demo-TVOS' do
     use_frameworks!
     pod 'AliyunpanSDK', :path => "../"
 end
+
+target 'Demo-visionOS' do
+    use_frameworks!
+    pod 'AliyunpanSDK', :path => "../"
+end

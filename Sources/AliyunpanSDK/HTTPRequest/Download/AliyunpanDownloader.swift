@@ -141,9 +141,11 @@ extension AliyunpanDownloader: AliyunpanDownloadTaskDelegate {
         guard let client else {
             throw AliyunpanError.DownloadError.invalidClient
         }
-        return try await client.send(
-            AliyunpanScope.File.GetFileDownloadUrl(
-                .init(drive_id: driveId, file_id: fileId)))
+        return try await client
+            .authorize()
+            .send(
+                AliyunpanScope.File.GetFileDownloadUrl(
+                    .init(drive_id: driveId, file_id: fileId)))
     }
     
     func getOperationQueue() -> OperationQueue {

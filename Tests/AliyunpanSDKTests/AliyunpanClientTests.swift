@@ -10,9 +10,9 @@ import XCTest
 
 class AliyunpanClientTests: XCTestCase {
     @MainActor func testToken() {
-        let client1 = AliyunpanClient(.init(appId: "app", scope: "scope", identifier: "user1", credentials: .pkce))
-        let client2 = AliyunpanClient(.init(appId: "app", scope: "scope", identifier: "user2", credentials: .pkce))
-        let client3 = AliyunpanClient(.init(appId: "app", scope: "scope", credentials: .pkce))
+        let client1 = AliyunpanClient(.init(appId: "app", scope: "scope", identifier: "user1"))
+        let client2 = AliyunpanClient(.init(appId: "app", scope: "scope", identifier: "user2"))
+        let client3 = AliyunpanClient(appId: "app", scope: "scope")
 
         let now = Date()
         let token = AliyunpanToken(
