@@ -10,12 +10,6 @@ import AliyunpanSDK
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    let client = AliyunpanClient(
-        .init(
-            appId: "YOUR_APP_ID", // 替换成你的 AppID
-            scope: "user:base,file:all:read,file:all:write",
-            credentials: .pkce))
-    
     func applicationDidFinishLaunching(_ application: UIApplication) {
         Aliyunpan.setLogLevel(.info)
     }

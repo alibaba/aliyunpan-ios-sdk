@@ -15,6 +15,7 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = "13.0"
   spec.tvos.deployment_target = "13.0"
   spec.osx.deployment_target = "10.15"
+  spec.visionos.deployment_target = "1.0"
   
   spec.source       = { :git => "https://github.com/alibaba/aliyunpan-ios-sdk.git", :tag => "v#{spec.version}" }
 

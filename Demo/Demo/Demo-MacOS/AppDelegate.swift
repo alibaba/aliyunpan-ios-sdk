@@ -9,9 +9,7 @@ import Cocoa
 import AliyunpanSDK
 
 @main
-class AppDelegate: NSObject, NSApplicationDelegate {
-    var client: AliyunpanClient?
-    
+class AppDelegate: NSObject, NSApplicationDelegate {    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         Aliyunpan.setLogLevel(.info)
     }

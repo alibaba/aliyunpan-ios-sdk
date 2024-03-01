@@ -12,8 +12,6 @@ public struct AliyunpanClientConfig {
     public let appId: String
     /// 申请权限
     public let scope: String
-    /// 鉴权方式
-    public let credentials: AliyunpanCredentials
     /// 业务方自定义 id，可实现账号互绑
     public var identifier: String?
     
@@ -21,12 +19,10 @@ public struct AliyunpanClientConfig {
     ///   - appId: 应用 ID
     ///   - scope: 申请权限
     ///   - identifier: 业务方自定义 id
-    ///   - credentials: 鉴权方式
-    public init(appId: String, scope: String, identifier: String? = nil, credentials: AliyunpanCredentials) {
+    public init(appId: String, scope: String, identifier: String? = nil) {
         self.appId = appId
         self.scope = scope
         self.identifier = identifier
-        self.credentials = credentials
     }
 }
 
@@ -66,20 +62,27 @@ public class AliyunpanClient {
         }
     }
     
+    public convenience init(appId: String, scope: String, identifier: String? = nil) {
+        self.init(.init(appId: appId, scope: scope, identifier: identifier))
+    }
+    
     /// 强制清除 token 持久化
     @MainActor public func cleanToken() {
         token = nil
     }
     
     /// 授权
-    /// 如本地持久化有效会取持久化，否则会开始授权
-    /// send 方法中会自动调用，通常无需主动调用该方法
+    /// 如本地持久化未过期会取持久化，否则会开始授权
+    /// - Parameter credentials: 授权方式
+    /// - Returns: token
     @discardableResult
-    public func authorize() async throws -> AliyunpanToken {
+    public func authorize(
+        credentials: AliyunpanCredentials = .pkce
+    ) async throws -> AliyunpanToken {
         if let token = await token, !token.isExpired {
             return token
         }
-        let token = try await config.credentials.implement.authorize(
+        let token = try await credentials.implement.authorize(
             appId: config.appId,
             scope: config.scope
         )
@@ -88,7 +91,9 @@ public class AliyunpanClient {
         }
         return token
     }
-    
+}
+
+extension AliyunpanToken {
     /// 发送请求
     ///
     /// - throws:
@@ -97,24 +102,10 @@ public class AliyunpanClient {
     ///     `AliyunpanServerError`: 服务端错误
     ///     `AliyunpanNetworkSystemError`: 网络系统错误
     public func send<T: AliyunpanCommand>(_ command: T) async throws -> T.Response where T.Response: Decodable {
-        let accessToken = try await authorize().access_token
-        do {
-            let result = try await HTTPRequest(command: command)
-                .headers([.authorization(bearerToken: accessToken)])
-                .response()
-            return result
-        } catch {
-            /// 授权过期重试
-            if let error = error as? AliyunpanError.ServerError,
-               error.isAccessTokenInvalidOrExpired {
-                await MainActor.run { [weak self] in
-                    self?.token = nil
-                }
-                return try await send(command)
-            } else {
-                throw error
-            }
-        }
+        let result = try await HTTPRequest(command: command)
+            .headers([.authorization(bearerToken: access_token)])
+            .response()
+        return result
     }
     
     /// 发送请求
