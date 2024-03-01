@@ -2,7 +2,7 @@
   <h3 align="center">AliyunpanSDK</h3>
   <p align="center">
     <a href="https://cocoapods.org/pods/AliyunpanSDK"><img src="https://img.shields.io/cocoapods/v/AliyunpanSDK?color=%23526efa"/></a>
-    <a><img src="https://img.shields.io/badge/Platforms-macOS_iOS_tvOS-Green"/></a>
+    <a><img src="https://img.shields.io/badge/Platforms-macOS_iOS_tvOS_visionOS-Green"/></a>
   </p>
 
   <p align="center">
