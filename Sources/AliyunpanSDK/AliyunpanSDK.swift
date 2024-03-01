@@ -78,4 +78,4 @@ public class Aliyunpan {
     }
 }
 
-let version = "0.1.18"
+let version = "0.1.19"
