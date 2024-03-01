@@ -17,7 +17,6 @@ platform :ios do
   
   lane :bumpVersion do |options|
     target_version = options[:version]
-    print(target_version)
 
     if target_version.nil?
       increment_version_number
@@ -37,40 +36,37 @@ platform :ios do
 
   desc "Release new version"
   lane :release do |options|
-    # ensure_git_status_clean
+    ensure_git_status_clean
     
-    # ensure_git_branch(
-    #   branch: 'main'
-    # )
+    ensure_git_branch(
+      branch: 'main'
+    )
     
     target_version = options[:version]
     
     # git tag
     Actions.sh("git tag v#{target_version}")
 
-    # push_to_git_remote(
-    #   tags: false
-    # )
-    # Actions.sh("git push origin v#{target_version}")
-
     sh('git fetch --tags')
     
     most_recent_tags = sh("git tag --sort=-version:refname | head -2").split("\n").reverse()
     release_log = sh("git log --pretty=format:'- %s' #{most_recent_tags[0]}...#{most_recent_tags[1]}")
     
-    # xcframework(version: target_version)
-    # set_github_release(
-    #   repository_name: "alibaba/aliyunpan-ios-sdk",
-    #   api_token: ENV['GITHUB_TOKEN'],
-    #   name: target_version,
-    #   tag_name: "v#{target_version}",
-    #   description: release_log,
-    #   upload_assets: ["build/AliyunpanSDK-#{target_version}.zip"]
-    # )
+    Actions.sh("git push origin v#{target_version}")
+    
+    xcframework(version: target_version)
+    set_github_release(
+      repository_name: "alibaba/aliyunpan-ios-sdk",
+      api_token: ENV['GITHUB_TOKEN'],
+      name: target_version,
+      tag_name: "v#{target_version}",
+      description: release_log,
+      upload_assets: ["build/AliyunpanSDK-#{target_version}.zip"]
+    )
 
-    # pod_push(
-    #   allow_warnings: true
-    # )
+    pod_push(
+      allow_warnings: true
+    )
   end
 
   lane :xcframework do |options|
