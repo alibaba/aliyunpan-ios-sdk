@@ -13,10 +13,6 @@ class ExamplesViewController: NSViewController, NSTableViewDataSource, NSTableVi
     
     let examples = Example.allCases
     
-    var client: AliyunpanClient? {
-        (NSApplication.shared.delegate as! AppDelegate).client
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,9 +35,6 @@ class ExamplesViewController: NSViewController, NSTableViewDataSource, NSTableVi
     }
     
     func tableViewSelectionDidChange(_ notification: Notification) {
-        guard let client else {
-            return
-        }
         // 当选中的行发生变化时被调用
         let selectedRow = tableView.selectedRow
         
@@ -54,7 +47,7 @@ class ExamplesViewController: NSViewController, NSTableViewDataSource, NSTableVi
         case .getUserInfo:
             Task {
                 do {
-                    let vipInfo = try await client.send(AliyunpanScope.User.GetUsersInfo())
+                    let vipInfo = try await client.authorize().send(AliyunpanScope.User.GetUsersInfo())
                     showAlert(message: String(describing: vipInfo))
                 } catch {
                     showAlert(message: String(describing: error))
@@ -63,7 +56,7 @@ class ExamplesViewController: NSViewController, NSTableViewDataSource, NSTableVi
         case .getDriveInfo:
             Task {
                 do {
-                    let vipInfo = try await client.send(AliyunpanScope.User.GetDriveInfo())
+                    let vipInfo = try await client.authorize().send(AliyunpanScope.User.GetDriveInfo())
                     showAlert(message: String(describing: vipInfo))
                 } catch {
                     showAlert(message: String(describing: error))
@@ -72,7 +65,7 @@ class ExamplesViewController: NSViewController, NSTableViewDataSource, NSTableVi
         case .getSpaceInfo:
             Task {
                 do {
-                    let vipInfo = try await client.send(AliyunpanScope.User.GetSpaceInfo())
+                    let vipInfo = try await client.authorize().send(AliyunpanScope.User.GetSpaceInfo())
                     showAlert(message: String(describing: vipInfo))
                 } catch {
                     showAlert(message: String(describing: error))
@@ -81,7 +74,7 @@ class ExamplesViewController: NSViewController, NSTableViewDataSource, NSTableVi
         case .getVIPInfo:
             Task {
                 do {
-                    let vipInfo = try await client.send(AliyunpanScope.User.GetVipInfo())
+                    let vipInfo = try await client.authorize().send(AliyunpanScope.User.GetVipInfo())
                     showAlert(message: String(describing: vipInfo))
                 } catch {
                     showAlert(message: String(describing: error))
@@ -90,7 +83,7 @@ class ExamplesViewController: NSViewController, NSTableViewDataSource, NSTableVi
         case .getVipFeatureList:
             Task {
                 do {
-                    let featureList = try await client.send(AliyunpanScope.VIP.GetVipFeatureList())
+                    let featureList = try await client.authorize().send(AliyunpanScope.VIP.GetVipFeatureList())
                     showAlert(message: String(describing: featureList))
                 } catch {
                     showAlert(message: String(describing: error))
@@ -98,11 +91,11 @@ class ExamplesViewController: NSViewController, NSTableViewDataSource, NSTableVi
             }
         case .fetchFileList:
             Task {
-                let driveInfo = try await client.send(AliyunpanScope.User.GetDriveInfo())
+                let driveInfo = try await client.authorize().send(AliyunpanScope.User.GetDriveInfo())
                 
                 let driveId = driveInfo.default_drive_id
                 
-                let fileList = try await client.send(AliyunpanScope.File.GetFileList(.init(drive_id: driveId, parent_file_id: "root"))).items
+                let fileList = try await client.authorize().send(AliyunpanScope.File.GetFileList(.init(drive_id: driveId, parent_file_id: "root"))).items
                 
                 showFileDetailViewController(files: fileList)
             }
@@ -111,11 +104,11 @@ class ExamplesViewController: NSViewController, NSTableViewDataSource, NSTableVi
         case .createFolderOnRoot:
             Task {
                 do {
-                    let driveInfo = try await client.send(AliyunpanScope.User.GetDriveInfo())
+                    let driveInfo = try await client.authorize().send(AliyunpanScope.User.GetDriveInfo())
                     
                     let driveId = driveInfo.default_drive_id
                     
-                    let response = try await client.send(
+                    let response = try await client.authorize().send(
                         AliyunpanScope.File.CreateFile(
                             .init(
                                 drive_id: driveId,
@@ -158,10 +151,6 @@ class ExamplesViewController: NSViewController, NSTableViewDataSource, NSTableVi
 }
 
 class DetailViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
-    var client: AliyunpanClient? {
-        (NSApplication.shared.delegate as! AppDelegate).client
-    }
-    
     var files: [AliyunpanFile] = []
     
     var parentDetailViewController: DetailViewController?

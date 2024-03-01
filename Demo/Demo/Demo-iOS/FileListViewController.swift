@@ -15,13 +15,6 @@ class FileListViewController: UIViewController {
         label.font = UIFont.monospacedSystemFont(ofSize: 12, weight: .regular)
         return label
     }()
-    
-    private lazy var client: AliyunpanClient = {
-        let client = (UIApplication.shared.delegate as! AppDelegate).client
-        client.downloader.addDelegate(self)
-        client.downloader.enableNetworkSpeedMonitor()
-        return client
-    }()
         
     private lazy var dataSource: UICollectionViewDiffableDataSource<Int, DisplayItem> = {
         let cellRegistration = UICollectionView.CellRegistration<FileCell, DisplayItem> { [weak self] cell, _, item in
@@ -75,6 +68,9 @@ class FileListViewController: UIViewController {
         snapshot.appendSections([0])
         snapshot.appendItems(displayItems)
         dataSource.apply(snapshot)
+        
+        client.downloader.addDelegate(self)
+        client.downloader.enableNetworkSpeedMonitor()
     }
     
     /// 播放音频
@@ -99,7 +95,9 @@ class FileListViewController: UIViewController {
     @MainActor
     private func navigateToFolder(_ folder: AliyunpanFile) {
         Task {
-            let files = try await client.send(AliyunpanScope.File.GetFileList(
+            let files = try await client
+                .authorize()
+                .send(AliyunpanScope.File.GetFileList(
                 .init(drive_id: folder.drive_id, parent_file_id: folder.file_id)))
                 .items
             
@@ -126,11 +124,13 @@ extension FileListViewController: UICollectionViewDelegate {
         case .video:
             Task {
                 do {
-                    let playInfo = try await self.client.send(
-                        AliyunpanScope.Video.GetVideoPreviewPlayInfo(
-                            .init(
-                                drive_id: file.drive_id,
-                                file_id: file.file_id)))
+                    let playInfo = try await client
+                        .authorize()
+                        .send(
+                            AliyunpanScope.Video.GetVideoPreviewPlayInfo(
+                                .init(
+                                    drive_id: file.drive_id,
+                                    file_id: file.file_id)))
 
                     /// 获取画质最高的已转码播放链接
                     let playURL = playInfo.video_preview_play_info.live_transcoding_task_list
@@ -149,11 +149,13 @@ extension FileListViewController: UICollectionViewDelegate {
             Task {
                 do {
                     /// 目前音频需要使用 download url 播放
-                    let playURL = try await self.client.send(
-                        AliyunpanScope.File.GetFileDownloadUrl(
-                            .init(
-                                drive_id: file.drive_id,
-                                file_id: file.file_id))).url
+                    let playURL = try await client
+                        .authorize()
+                        .send(
+                            AliyunpanScope.File.GetFileDownloadUrl(
+                                .init(
+                                    drive_id: file.drive_id,
+                                    file_id: file.file_id))).url
                     playMedia(playURL)
                 } catch {
                     print(error)

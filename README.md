@@ -26,8 +26,17 @@
 ## 快速开始
 
 ### 1. 创建 Client
+```swift
+let client: AliyunpanClient = AliyunpanClient(
+    .init(
+        appId: "YOUR_APP_ID",
+        scope: "YOUR_SCOPE", // e.g. user:base,file:all:read
+    )
+)
+```
 
-你可以使用 SDK 提供的任意授权方式创建 Client
+### 2. 授权
+你可以使用 SDK 提供的多种授权方式授权
 #### [Credentials](https://alibaba.github.io/aliyunpan-ios-sdk/Enums/AliyunpanCredentials.html)
 
 | 授权方式 | 描述 | **不需要** Server | **不需要**阿里云盘客户端 |
@@ -38,31 +47,32 @@
 | token | 注入 token 授权 | ✅ | ✅ | 
 
 ```swift
-let client: AliyunpanClient = AliyunpanClient(
-    .init(
-        appId: "YOUR_APP_ID",
-        scope: "YOUR_SCOPE", // e.g. user:base,file:all:read
-        credentials: YOUR_CREDENTIALS))
-``` 
+client.authorize(credentials: credentials)
+```
 
-### 2. 发送命令
+### 3. 发送命令
 
 使用 SDK，你可以轻松使用所有已提供的 OpenAPI 和它们的请求体、返回体模型
 
 ```swift
 // Concurrency
-try await client.send(
-    AliyunpanScope.User.GetUsersInfo()) // -> GetUsersInfo.Response
+try await client
+    .authorize() // 默认 pkce
+    .send(AliyunpanScope.User.GetUsersInfo()) // -> GetUsersInfo.Response
 
-try await client.send(
-    AliyunpanScope.File.GetFileList(
-        .init(drive_id: driveId, parent_file_id: "root")))) // -> GetFileList.Response
+try await client
+    .authorize()
+    .send(
+        AliyunpanScope.File.GetFileList(
+            .init(drive_id: driveId, parent_file_id: "root")))) // -> GetFileList.Response
         
 // Closure
-client.send(
-    AliyunpanScope.User.GetUsersInfo()) { result in
-    /// do something
-}
+client
+  .authorize()
+  .send(
+      AliyunpanScope.User.GetUsersInfo()) { result in
+      /// do something
+  }
 ```
 
 ## 高级功能
@@ -119,6 +129,9 @@ end
 ## 文档
 
 [👉 文档](https://alibaba.github.io/aliyunpan-ios-sdk/)
+
+## TODO
+- Alamofire、URLSession 拓展
 
 ## License
 

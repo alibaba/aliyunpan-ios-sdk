@@ -30,7 +30,7 @@ extension AliyunpanVIPScope {
                 /// 允许试用的时间，单位分钟。
                 public let trialDuration: Int
                 /// 开始试用的时间戳
-                public let trialStartTime: TimeInterval
+                public let trialStartTime: TimeInterval?
             }
 
             /// 付费功能数组

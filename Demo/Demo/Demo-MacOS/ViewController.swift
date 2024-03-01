@@ -8,24 +8,12 @@
 import Cocoa
 import AliyunpanSDK
 
-class ViewController: NSViewController {
-    private lazy var client: AliyunpanClient = {
-        let client = AliyunpanClient(
-            .init(
-                appId: "YOUR_APP_ID", // 替换成你的 AppID
-                scope: "user:base,file:all:read,file:all:write",
-                credentials: .qrCode(self)))
-        return client
-    }()
-    
+class ViewController: NSViewController {    
     private var authorizeButton = NSButton()
     private var imageView = NSImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        (NSApplication.shared.delegate as! AppDelegate).client = client
-        
         authorizeButton.title = "Authorize"
         authorizeButton.bezelStyle = .roundRect
         view.addSubview(authorizeButton)
@@ -60,7 +48,8 @@ class ViewController: NSViewController {
     @objc private func showQRCode() {
         Task {
             do {
-                try await client.authorize()
+                try await client.authorize(
+                    credentials: .qrCode(self))
             } catch {
                 print(error)
             }

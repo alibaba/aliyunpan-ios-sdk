@@ -9,10 +9,6 @@ import UIKit
 import AliyunpanSDK
 
 class ViewController: UIViewController {
-    private var client: AliyunpanClient {
-        (UIApplication.shared.delegate as! AppDelegate).client
-    }
-    
     private let activityIndicatorView: UIActivityIndicatorView = {
         let activityIndicatorView = UIActivityIndicatorView(style: .medium)
         activityIndicatorView.hidesWhenStopped = true
@@ -73,17 +69,21 @@ class ViewController: UIViewController {
         /// https://www.yuque.com/aliyundrive/zpfszx/ezlzok#C8JdZ
         Task {
             do {
-                let driveInfo = try await self.client.send(AliyunpanScope.User.GetDriveInfo())
+                let driveInfo = try await client
+                    .authorize()
+                    .send(AliyunpanScope.User.GetDriveInfo())
                 
                 let driveId = driveInfo.default_drive_id
                 
-                let response = try await self.client.send(
-                    AliyunpanScope.File.CreateFile(
-                        .init(
-                            drive_id: driveId,
-                            parent_file_id: "root",
-                            name: url.lastPathComponent,
-                            check_name_mode: .auto_rename)))
+                let response = try await client
+                    .authorize()
+                    .send(
+                        AliyunpanScope.File.CreateFile(
+                            .init(
+                                drive_id: driveId,
+                                parent_file_id: "root",
+                                name: url.lastPathComponent,
+                                check_name_mode: .auto_rename)))
                 
                 if let uploadURL = response.part_info_list?.first?.upload_url {
                     var urlRequest = URLRequest(url: uploadURL)
@@ -93,12 +93,14 @@ class ViewController: UIViewController {
                     ]
                     _ = try await URLSession.shared.upload(for: urlRequest, fromFile: url)
                     
-                    let file = try await self.client.send(
-                        AliyunpanScope.File.CompleteUpload(
-                            .init(
-                                drive_id: driveId,
-                                file_id: response.file_id,
-                                upload_id: response.upload_id ?? "")))
+                    let file = try await client
+                        .authorize()
+                        .send(
+                            AliyunpanScope.File.CompleteUpload(
+                                .init(
+                                    drive_id: driveId,
+                                    file_id: response.file_id,
+                                    upload_id: response.upload_id ?? "")))
                     
                     showAlert(message: file.description)
                 }
@@ -120,7 +122,9 @@ extension ViewController: UICollectionViewDelegate {
             Task {
                 do {
                     activityIndicatorView.startAnimating()
-                    let vipInfo = try await client.send(AliyunpanScope.User.GetUsersInfo())
+                    let vipInfo = try await client
+                        .authorize()
+                        .send(AliyunpanScope.User.GetUsersInfo())
                     showAlert(message: String(describing: vipInfo))
                     activityIndicatorView.stopAnimating()
                 } catch {
@@ -131,7 +135,9 @@ extension ViewController: UICollectionViewDelegate {
             Task {
                 do {
                     activityIndicatorView.startAnimating()
-                    let vipInfo = try await client.send(AliyunpanScope.User.GetDriveInfo())
+                    let vipInfo = try await client
+                        .authorize()
+                        .send(AliyunpanScope.User.GetDriveInfo())
                     showAlert(message: String(describing: vipInfo))
                     activityIndicatorView.stopAnimating()
                 } catch {
@@ -142,7 +148,9 @@ extension ViewController: UICollectionViewDelegate {
             Task {
                 do {
                     activityIndicatorView.startAnimating()
-                    let vipInfo = try await client.send(AliyunpanScope.User.GetSpaceInfo())
+                    let vipInfo = try await client
+                        .authorize()
+                        .send(AliyunpanScope.User.GetSpaceInfo())
                     showAlert(message: String(describing: vipInfo))
                     activityIndicatorView.stopAnimating()
                 } catch {
@@ -153,7 +161,9 @@ extension ViewController: UICollectionViewDelegate {
             Task {
                 do {
                     activityIndicatorView.startAnimating()
-                    let vipInfo = try await client.send(AliyunpanScope.User.GetVipInfo())
+                    let vipInfo = try await client
+                        .authorize()
+                        .send(AliyunpanScope.User.GetVipInfo())
                     showAlert(message: String(describing: vipInfo))
                     activityIndicatorView.stopAnimating()
                 } catch {
@@ -164,7 +174,9 @@ extension ViewController: UICollectionViewDelegate {
             Task {
                 do {
                     activityIndicatorView.startAnimating()
-                    let featureList = try await client.send(AliyunpanScope.VIP.GetVipFeatureList())
+                    let featureList = try await client
+                        .authorize()
+                        .send(AliyunpanScope.VIP.GetVipFeatureList())
                     showAlert(message: String(describing: featureList))
                     activityIndicatorView.stopAnimating()
                 } catch {
@@ -175,11 +187,15 @@ extension ViewController: UICollectionViewDelegate {
             Task {
                 do {
                     activityIndicatorView.startAnimating()
-                    let driveInfo = try await client.send(AliyunpanScope.User.GetDriveInfo())
+                    let driveInfo = try await client
+                        .authorize()
+                        .send(AliyunpanScope.User.GetDriveInfo())
                     
                     let driveId = driveInfo.default_drive_id
                     
-                    let fileList = try await client.send(AliyunpanScope.File.GetFileList(.init(drive_id: driveId, parent_file_id: "root")))
+                    let fileList = try await client
+                        .authorize()
+                        .send(AliyunpanScope.File.GetFileList(.init(drive_id: driveId, parent_file_id: "root")))
                     
                     let vc = FileListViewController()
                     vc.files = fileList.items
@@ -201,18 +217,22 @@ extension ViewController: UICollectionViewDelegate {
                 do {
                     activityIndicatorView.startAnimating()
                     
-                    let driveInfo = try await self.client.send(AliyunpanScope.User.GetDriveInfo())
+                    let driveInfo = try await client
+                        .authorize()
+                        .send(AliyunpanScope.User.GetDriveInfo())
                     
                     let driveId = driveInfo.default_drive_id
                     
-                    let response = try await self.client.send(
-                        AliyunpanScope.File.CreateFile(
-                            .init(
-                                drive_id: driveId,
-                                parent_file_id: "root",
-                                name: "TestFolder",
-                                type: .folder,
-                                check_name_mode: .auto_rename)))
+                    let response = try await client
+                        .authorize()
+                        .send(
+                            AliyunpanScope.File.CreateFile(
+                                .init(
+                                    drive_id: driveId,
+                                    parent_file_id: "root",
+                                    name: "TestFolder",
+                                    type: .folder,
+                                    check_name_mode: .auto_rename)))
                     
                     print(response)
                     
