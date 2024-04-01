@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F447857B2BBAAB6200FE8247 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F447857A2BBAAB6200FE8247 /* README.md */; };
+		F447857D2BBAB9AE00FE8247 /* TestFile1.txt in Resources */ = {isa = PBXBuildFile; fileRef = F447857C2BBAB9AE00FE8247 /* TestFile1.txt */; };
 		F47FADDE2B14767D00EC0D8D /* AliyunpanSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47FADB72B14767D00EC0D8D /* AliyunpanSDK.swift */; };
 		F47FADDF2B14767D00EC0D8D /* AliyunpanPKCECredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47FADB92B14767D00EC0D8D /* AliyunpanPKCECredentials.swift */; };
 		F47FADE12B14767D00EC0D8D /* AliyunpanAppJumper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47FADBB2B14767D00EC0D8D /* AliyunpanAppJumper.swift */; };
@@ -100,7 +100,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F447857A2BBAAB6200FE8247 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		F447857C2BBAB9AE00FE8247 /* TestFile1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TestFile1.txt; path = Tests/TestFile1.txt; sourceTree = SOURCE_ROOT; };
 		F47FADB72B14767D00EC0D8D /* AliyunpanSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliyunpanSDK.swift; sourceTree = "<group>"; };
 		F47FADB92B14767D00EC0D8D /* AliyunpanPKCECredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliyunpanPKCECredentials.swift; sourceTree = "<group>"; };
 		F47FADBB2B14767D00EC0D8D /* AliyunpanAppJumper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliyunpanAppJumper.swift; sourceTree = "<group>"; };
@@ -296,7 +296,7 @@
 		F47FADDA2B14767D00EC0D8D /* AliyunpanSDKTests */ = {
 			isa = PBXGroup;
 			children = (
-				F447857A2BBAAB6200FE8247 /* README.md */,
+				F447857C2BBAB9AE00FE8247 /* TestFile1.txt */,
 				F47FADDC2B14767D00EC0D8D /* AliyunpanSDKTests.swift */,
 				F49745FE2B1F100C0043A4D7 /* AliyunpanClientTests.swift */,
 				F4B3F7322B29859100D9E122 /* CredentialTests.swift */,
@@ -529,7 +529,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F447857B2BBAAB6200FE8247 /* README.md in Resources */,
+				F447857D2BBAB9AE00FE8247 /* TestFile1.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
