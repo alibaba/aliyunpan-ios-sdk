@@ -23,6 +23,8 @@ extension AliyunpanFileScope {
             public let name: String
             /// file | folder
             public let type: AliyunpanFile.FileType
+            /// 文件类型
+            public let content_type: String?
             /// 重名策略
             public let check_name_mode: AliyunpanFile.CheckNameMode
             /// 最大分片数量 10000
@@ -51,6 +53,7 @@ extension AliyunpanFileScope {
                 parent_file_id: String,
                 name: String,
                 type: AliyunpanFile.FileType = .file,
+                content_type: String? = nil,
                 check_name_mode: AliyunpanFile.CheckNameMode,
                 part_info_list: [AliyunpanFile.PartInfo]? = nil,
                 streams_info: AliyunpanFile.StreamsInfo? = nil,
@@ -66,6 +69,7 @@ extension AliyunpanFileScope {
                 self.parent_file_id = parent_file_id
                 self.name = name
                 self.type = type
+                self.content_type = content_type
                 self.check_name_mode = check_name_mode
                 self.part_info_list = part_info_list
                 self.streams_info = streams_info

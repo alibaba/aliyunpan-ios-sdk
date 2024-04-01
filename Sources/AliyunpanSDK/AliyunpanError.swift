@@ -18,6 +18,8 @@ public struct AliyunpanError {
         case authorizeFailed(error: String?, errorMsg: String?)
         /// 验证码授权超时
         case qrCodeAuthorizeTimeout
+        /// 未授权或授权已过期
+        case accessTokenInvalid
     }
 
     /// 网络层错误
@@ -59,9 +61,11 @@ public struct AliyunpanError {
             case forbiddenDriveLocked = "ForbiddenDriveLocked"
             /// 非法访问drive
             case forbiddenDriveNotValid = "ForbiddenDriveNotValid"
+            /// 快传预检匹配成功
+            case preHashMatched = "PreHashMatched"
         }
         
-        public let code: Code?
+        public let code: Code
         public let message: String?
         public let requestId: String?
         
@@ -80,6 +84,14 @@ public struct AliyunpanError {
         case userCancelled
         /// 缺少 client
         case invalidClient
+    }
+    
+    /// 上传错误
+    public enum UploadError: Error {
+        /// 缺少 client
+        case invalidClient
+        /// 快传预检查失败
+        case preHashNotMatched
     }
 
     /// 系统级网络层错误
