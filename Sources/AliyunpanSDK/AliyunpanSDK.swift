@@ -7,35 +7,6 @@
 
 import Foundation
 
-public enum AliyunpanLogLevel: Int {
-    case debug
-    case info
-    case warn
-    case error
-    
-    var msg: String {
-        switch self {
-        case .debug:
-            return "DEBUG"
-        case .info:
-            return "INFO"
-        case .warn:
-            return "⚠️"
-        case .error:
-            return "❌"
-        }
-    }
-}
-
-class Logger {
-    static func log(_ level: AliyunpanLogLevel, msg: String) {
-        guard level.rawValue >= Aliyunpan.logLevel.rawValue else {
-            return
-        }
-        print("[AliyunpanSDK][\(level.msg)]\(msg)")
-    }
-}
-
 public class Aliyunpan {
     public enum Environment {
         /// 预发
@@ -68,9 +39,12 @@ public class Aliyunpan {
     }
     
     public private(set) static var env: Environment = .product
+
+    #if DEBUG
     public static func setEnvironment(_ env: Environment) {
         self.env = env
     }
+    #endif
     
     @discardableResult
     public static func handleOpenURL(_ url: URL) -> Bool {

@@ -54,6 +54,13 @@ public class AliyunpanClient {
         return downloader
     }()
     
+    /// 上传器
+    public lazy var uploader: AliyunpanUploader = {
+        let uploader = AliyunpanUploader()
+        uploader.client = self
+        return uploader
+    }()
+    
     public init(_ config: AliyunpanClientConfig) {
         self.config = config
         
@@ -90,6 +97,40 @@ public class AliyunpanClient {
             self?.token = token
         }
         return token
+    }
+    
+    /// 发送请求
+    ///
+    /// - throws:
+    ///     `DecodingError`: JSON 解析错误
+    ///     `AliyunpanAuthorizeError`: 授权错误
+    ///     `AliyunpanServerError`: 服务端错误
+    ///     `AliyunpanNetworkSystemError`: 网络系统错误
+    public func send<T: AliyunpanCommand>(_ command: T) async throws -> T.Response where T.Response: Decodable {
+        guard let token = await token else {
+            throw AliyunpanError.AuthorizeError.accessTokenInvalid
+        }
+        return try await token.send(command)
+    }
+    
+    /// 发送请求
+    ///
+    /// - throws:
+    ///     `DecodingError`: JSON 解析错误
+    ///     `AliyunpanAuthorizeError`: 授权错误
+    ///     `AliyunpanServerError`: 服务端错误
+    ///     `AliyunpanNetworkSystemError`: 网络系统错误
+    public func send<T: AliyunpanCommand>(
+        _ command: T,
+        completionHandle: @escaping (Result<T.Response, Error>) -> Void) where T.Response: Decodable {
+        Task {
+            do {
+                let response = try await send(command)
+                completionHandle(.success(response))
+            } catch {
+                completionHandle(.failure(error))
+            }
+        }
     }
 }
 

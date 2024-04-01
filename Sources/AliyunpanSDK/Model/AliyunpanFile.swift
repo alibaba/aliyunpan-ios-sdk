@@ -186,7 +186,7 @@ extension AliyunpanFile {
         public var etag: String?
         public var upload_url: URL?
 
-        public init(part_number: Int, part_size: Int64, etag: String? = nil, upload_url: URL? = nil) {
+        public init(part_number: Int, part_size: Int64? = nil, etag: String? = nil, upload_url: URL? = nil) {
             self.part_number = part_number
             self.part_size = part_size
             self.etag = etag

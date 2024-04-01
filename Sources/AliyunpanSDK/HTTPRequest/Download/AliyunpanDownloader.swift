@@ -10,7 +10,7 @@ import Foundation
 public typealias DownloadTasks = [AliyunpanDownloadTask]
 
 extension DownloadTasks {
-    mutating func finish(_ task: Element) {
+    mutating func cancel(_ task: Element) {
         removeAll(where: {
             $0.id == task.id
         })
@@ -71,17 +71,12 @@ public class AliyunpanDownloader: NSObject {
     }()
     
     private var lastWritedSize: Int64 = 0
-    
     private var currentWritedSize: Int64 = 0
 
     weak var client: AliyunpanClient?
     
     deinit {
         networkSpeedTimer.invalidate()
-    }
-    
-    override init() {
-        super.init()
     }
 }
 
@@ -132,7 +127,7 @@ extension AliyunpanDownloader {
     public func cancel(_ task: AliyunpanDownloadTask) {
         Logger.log(.info, msg: "[Downloader] cancel \(task.file.name)")
         task.cancel()
-        tasks.finish(task)
+        tasks.cancel(task)
     }
 }
 
@@ -142,7 +137,6 @@ extension AliyunpanDownloader: AliyunpanDownloadTaskDelegate {
             throw AliyunpanError.DownloadError.invalidClient
         }
         return try await client
-            .authorize()
             .send(
                 AliyunpanScope.File.GetFileDownloadUrl(
                     .init(drive_id: driveId, file_id: fileId)))

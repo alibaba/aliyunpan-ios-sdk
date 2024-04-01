@@ -64,9 +64,6 @@ class ViewController: UIViewController {
     }
     
     private func uploadFile(withURL url: URL) {
-        /// 单片，小于 5G
-        /// 大于 5G 请分片上传
-        /// https://www.yuque.com/aliyundrive/zpfszx/ezlzok#C8JdZ
         Task {
             do {
                 let driveInfo = try await client
@@ -75,35 +72,15 @@ class ViewController: UIViewController {
                 
                 let driveId = driveInfo.default_drive_id
                 
-                let response = try await client
-                    .authorize()
-                    .send(
-                        AliyunpanScope.File.CreateFile(
-                            .init(
-                                drive_id: driveId,
-                                parent_file_id: "root",
-                                name: url.lastPathComponent,
-                                check_name_mode: .auto_rename)))
+                let file = try await client.uploader
+                    .upload(
+                        fileURL: url,
+                        fileName: "test_\(Date().timeIntervalSince1970).pdf",
+                        driveId: driveId,
+                        folderId: "root",
+                        useProof: true)
                 
-                if let uploadURL = response.part_info_list?.first?.upload_url {
-                    var urlRequest = URLRequest(url: uploadURL)
-                    urlRequest.httpMethod = "put"
-                    urlRequest.allHTTPHeaderFields = [
-                        "Content-Type": "" // 不能传 Cotent-Type，否则会失败
-                    ]
-                    _ = try await URLSession.shared.upload(for: urlRequest, fromFile: url)
-                    
-                    let file = try await client
-                        .authorize()
-                        .send(
-                            AliyunpanScope.File.CompleteUpload(
-                                .init(
-                                    drive_id: driveId,
-                                    file_id: response.file_id,
-                                    upload_id: response.upload_id ?? "")))
-                    
-                    showAlert(message: file.description)
-                }
+                showAlert(message: file.description)
             } catch {
                 print(error)
             }

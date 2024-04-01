@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F447857B2BBAAB6200FE8247 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F447857A2BBAAB6200FE8247 /* README.md */; };
 		F47FADDE2B14767D00EC0D8D /* AliyunpanSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47FADB72B14767D00EC0D8D /* AliyunpanSDK.swift */; };
 		F47FADDF2B14767D00EC0D8D /* AliyunpanPKCECredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47FADB92B14767D00EC0D8D /* AliyunpanPKCECredentials.swift */; };
 		F47FADE12B14767D00EC0D8D /* AliyunpanAppJumper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47FADBB2B14767D00EC0D8D /* AliyunpanAppJumper.swift */; };
@@ -60,6 +61,7 @@
 		F498215C2B188A6D006559CC /* GetVipFeatureList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F498213D2B188A6D006559CC /* GetVipFeatureList.swift */; };
 		F498215E2B188A6D006559CC /* GetVipFeatureTrial.swift in Sources */ = {isa = PBXBuildFile; fileRef = F498213F2B188A6D006559CC /* GetVipFeatureTrial.swift */; };
 		F49821602B188C4C006559CC /* AliyunpanSpaceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F498215F2B188C4C006559CC /* AliyunpanSpaceInfo.swift */; };
+		F4A0FF742BA2F95800E83A46 /* AliyunpanLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A0FF732BA2F95800E83A46 /* AliyunpanLogger.swift */; };
 		F4A37F1C2B562081009AC6AA /* AliyunpanTokenCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A37F1B2B562081009AC6AA /* AliyunpanTokenCredentials.swift */; };
 		F4B3F7332B29859100D9E122 /* CredentialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3F7322B29859100D9E122 /* CredentialTests.swift */; };
 		F4BD1B642B29A11B002BEA2A /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD1B632B29A11B002BEA2A /* Platform.swift */; };
@@ -79,6 +81,7 @@
 		F4BD1C622B34366E002BEA2A /* DownloaderOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD1C602B343423002BEA2A /* DownloaderOperationTests.swift */; };
 		F4BD1C652B34403F002BEA2A /* DownloaderTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD1C632B343FD6002BEA2A /* DownloaderTaskTests.swift */; };
 		F4C6F2312B060C4B003A06B3 /* AliyunpanSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C6F2262B060C4B003A06B3 /* AliyunpanSDK.framework */; };
+		F4DDB1CE2BB17E4C0005DA0C /* AliyunpanUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DDB1CD2BB17E4C0005DA0C /* AliyunpanUploader.swift */; };
 		F4E9F9692B148ABA00DC8DBF /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E9F9672B148ABA00DC8DBF /* Crypto.swift */; };
 		F4E9F96A2B148ABA00DC8DBF /* URL+AliyunpanSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E9F9682B148ABA00DC8DBF /* URL+AliyunpanSDK.swift */; };
 		F4E9F96C2B148AEE00DC8DBF /* AliyunpanMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E9F96B2B148AEE00DC8DBF /* AliyunpanMessage.swift */; };
@@ -97,6 +100,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F447857A2BBAAB6200FE8247 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		F47FADB72B14767D00EC0D8D /* AliyunpanSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliyunpanSDK.swift; sourceTree = "<group>"; };
 		F47FADB92B14767D00EC0D8D /* AliyunpanPKCECredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliyunpanPKCECredentials.swift; sourceTree = "<group>"; };
 		F47FADBB2B14767D00EC0D8D /* AliyunpanAppJumper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliyunpanAppJumper.swift; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 		F498213D2B188A6D006559CC /* GetVipFeatureList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetVipFeatureList.swift; sourceTree = "<group>"; };
 		F498213F2B188A6D006559CC /* GetVipFeatureTrial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetVipFeatureTrial.swift; sourceTree = "<group>"; };
 		F498215F2B188C4C006559CC /* AliyunpanSpaceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliyunpanSpaceInfo.swift; sourceTree = "<group>"; };
+		F4A0FF732BA2F95800E83A46 /* AliyunpanLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliyunpanLogger.swift; sourceTree = "<group>"; };
 		F4A37F1B2B562081009AC6AA /* AliyunpanTokenCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliyunpanTokenCredentials.swift; sourceTree = "<group>"; };
 		F4B3F7142B202CB500D9E122 /* DownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloaderTests.swift; sourceTree = "<group>"; };
 		F4B3F7322B29859100D9E122 /* CredentialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialTests.swift; sourceTree = "<group>"; };
@@ -172,6 +177,7 @@
 		F4BD1C632B343FD6002BEA2A /* DownloaderTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloaderTaskTests.swift; sourceTree = "<group>"; };
 		F4C6F2262B060C4B003A06B3 /* AliyunpanSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AliyunpanSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C6F2302B060C4B003A06B3 /* AliyunpanSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AliyunpanSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4DDB1CD2BB17E4C0005DA0C /* AliyunpanUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliyunpanUploader.swift; sourceTree = "<group>"; };
 		F4E9F9672B148ABA00DC8DBF /* Crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
 		F4E9F9682B148ABA00DC8DBF /* URL+AliyunpanSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+AliyunpanSDK.swift"; sourceTree = "<group>"; };
 		F4E9F96B2B148AEE00DC8DBF /* AliyunpanMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliyunpanMessage.swift; sourceTree = "<group>"; };
@@ -217,8 +223,9 @@
 				F47FADC62B14767D00EC0D8D /* AliyunpanError.swift */,
 				F47FADD62B14767D00EC0D8D /* AliyunpanClient.swift */,
 				F47FADB72B14767D00EC0D8D /* AliyunpanSDK.swift */,
-				F47FADBE2B14767D00EC0D8D /* AliyunpanSDK.h */,
+				F4A0FF732BA2F95800E83A46 /* AliyunpanLogger.swift */,
 				F4BD1B632B29A11B002BEA2A /* Platform.swift */,
+				F47FADBE2B14767D00EC0D8D /* AliyunpanSDK.h */,
 				F47FADD72B14767D00EC0D8D /* Info.plist */,
 			);
 			path = AliyunpanSDK;
@@ -241,6 +248,7 @@
 		F47FADC02B14767D00EC0D8D /* HTTPRequest */ = {
 			isa = PBXGroup;
 			children = (
+				F4A0FF722BA2F85700E83A46 /* Upload */,
 				F4BD1C422B302EF0002BEA2A /* Download */,
 				F49821192B1742B6006559CC /* DebugDescription.swift */,
 				F47FADC12B14767D00EC0D8D /* URLConvertible.swift */,
@@ -288,6 +296,7 @@
 		F47FADDA2B14767D00EC0D8D /* AliyunpanSDKTests */ = {
 			isa = PBXGroup;
 			children = (
+				F447857A2BBAAB6200FE8247 /* README.md */,
 				F47FADDC2B14767D00EC0D8D /* AliyunpanSDKTests.swift */,
 				F49745FE2B1F100C0043A4D7 /* AliyunpanClientTests.swift */,
 				F4B3F7322B29859100D9E122 /* CredentialTests.swift */,
@@ -368,6 +377,14 @@
 				F498213F2B188A6D006559CC /* GetVipFeatureTrial.swift */,
 			);
 			path = Vip;
+			sourceTree = "<group>";
+		};
+		F4A0FF722BA2F85700E83A46 /* Upload */ = {
+			isa = PBXGroup;
+			children = (
+				F4DDB1CD2BB17E4C0005DA0C /* AliyunpanUploader.swift */,
+			);
+			path = Upload;
 			sourceTree = "<group>";
 		};
 		F4BD1C422B302EF0002BEA2A /* Download */ = {
@@ -512,6 +529,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F447857B2BBAAB6200FE8247 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +601,7 @@
 				F47FADE72B14767D00EC0D8D /* HTTPRequest.swift in Sources */,
 				F498214E2B188A6D006559CC /* TrashFileToRecyclebin.swift in Sources */,
 				F47FADEB2B14767D00EC0D8D /* AliyunpanError.swift in Sources */,
+				F4A0FF742BA2F95800E83A46 /* AliyunpanLogger.swift in Sources */,
 				F47FADE82B14767D00EC0D8D /* HTTPMethod.swift in Sources */,
 				F498214B2B188A6D006559CC /* GetFileByPath.swift in Sources */,
 				F498215A2B188A6D006559CC /* GetAsyncTask.swift in Sources */,
@@ -598,6 +617,7 @@
 				F4BD1C362B2AD8E1002BEA2A /* Task+AliyunpanSDK.swift in Sources */,
 				F4BD1B642B29A11B002BEA2A /* Platform.swift in Sources */,
 				F49821432B188A6D006559CC /* GetVideoRecentList.swift in Sources */,
+				F4DDB1CE2BB17E4C0005DA0C /* AliyunpanUploader.swift in Sources */,
 				F498214C2B188A6D006559CC /* MoveFile.swift in Sources */,
 				F47FADE62B14767D00EC0D8D /* URLConvertible.swift in Sources */,
 				F4E9F96A2B148ABA00DC8DBF /* URL+AliyunpanSDK.swift in Sources */,

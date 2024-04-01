@@ -19,6 +19,8 @@ extension AliyunpanError.AuthorizeError: Equatable {
             return "authorizeFailed_\(error ?? "")_\(errorMsg ?? "")"
         case .qrCodeAuthorizeTimeout:
             return "qrCodeAuthorizeTimeout"
+        case .accessTokenInvalid:
+            return "accessTokenInvalid"
         }
     }
     

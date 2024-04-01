@@ -56,26 +56,40 @@ client.authorize(credentials: credentials)
 
 ```swift
 // Concurrency
-try await client
-    .authorize() // 默认 pkce
-    .send(AliyunpanScope.User.GetUsersInfo()) // -> GetUsersInfo.Response
+try await client.send(
+  AliyunpanScope.User.GetUsersInfo()) // -> GetUsersInfo.Response
 
-try await client
-    .authorize()
-    .send(
-        AliyunpanScope.File.GetFileList(
-            .init(drive_id: driveId, parent_file_id: "root")))) // -> GetFileList.Response
+try await client.send(
+  AliyunpanScope.File.GetFileList(
+    .init(drive_id: driveId, parent_file_id: "root")))) // -> GetFileList.Response
         
 // Closure
-client
-  .authorize()
-  .send(
-      AliyunpanScope.User.GetUsersInfo()) { result in
-      /// do something
-  }
+client.send(
+  AliyunpanScope.User.GetUsersInfo()) { result in
+  /// do something
+}
 ```
 
 ## 高级功能
+
+### 上传
+```swift
+let uploader = client.uploader
+
+// 上传
+let task = Task {
+  let file = try? await uploader.upload(
+    fileURL: url,
+    fileName: fileName,
+    driveId: driveId,
+    folderId: folderId,
+    useProof: true // 是否开启快传
+  )
+}
+
+// 取消
+task.cancel()
+```
 
 ### 下载
 ```swift
