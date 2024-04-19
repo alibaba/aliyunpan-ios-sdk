@@ -18,6 +18,7 @@ class DownloaderTests: XCTestCase {
         file_extension: nil,
         content_hash: nil,
         type: .file,
+        mime_type: nil,
         thumbnail: nil,
         url: nil,
         created_at: nil,

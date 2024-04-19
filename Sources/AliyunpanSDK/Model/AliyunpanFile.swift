@@ -20,6 +20,7 @@ public struct AliyunpanFile: Codable {
     public let content_hash: String?
     public var category: FileCategory?
     public let type: FileType?
+    public let mime_type: String?
     /// 缩略图
     public let thumbnail: URL?
     /// 图片预览图地址、小于 5MB 文件的下载地址。超过5MB 请使用 /getDownloadUrl
