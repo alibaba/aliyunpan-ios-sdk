@@ -75,13 +75,22 @@ class FileListViewController: UIViewController {
     
     /// 播放音频
     @MainActor
-    private func playMedia(_ url: URL) {
+    private func playMedia(_ url: URL, mimeType: String?) {
         let headers = [
             "Authorization": "Bearer \(client.accessToken ?? "")"
         ]
-        let asset = AVURLAsset(url: url, options: [
-            "AVURLAssetHTTPHeaderFieldsKey": headers
-        ])
+        let asset: AVURLAsset
+        if #available(iOS 17.0, *), let mimeType {
+            asset = AVURLAsset(url: url, options: [
+                "AVURLAssetHTTPHeaderFieldsKey": headers,
+                AVURLAssetOverrideMIMETypeKey: mimeType
+            ])
+        } else {
+            asset = AVURLAsset(url: url, options: [
+                "AVURLAssetHTTPHeaderFieldsKey": headers
+            ])
+        }
+        
         let playerItem = AVPlayerItem(asset: asset)
         let player = AVPlayer(playerItem: playerItem)
         let playerViewController = AVPlayerViewController()
@@ -139,7 +148,7 @@ extension FileListViewController: UICollectionViewDelegate {
                         .last
 
                     if let playURL {
-                        playMedia(playURL)
+                        playMedia(playURL, mimeType: file.mime_type)
                     }
                 } catch {
                     print(error)
@@ -156,7 +165,7 @@ extension FileListViewController: UICollectionViewDelegate {
                                 .init(
                                     drive_id: file.drive_id,
                                     file_id: file.file_id))).url
-                    playMedia(playURL)
+                    playMedia(playURL, mimeType: file.mime_type)
                 } catch {
                     print(error)
                 }
@@ -203,7 +212,7 @@ extension FileListViewController: FileCellDelegate {
             return
         }
         if item.file.category == .video {
-            playMedia(url)
+            playMedia(url, mimeType: item.file.mime_type)
         } else {
             let viewController = UIDocumentInteractionController(url: url)
             viewController.delegate = self
