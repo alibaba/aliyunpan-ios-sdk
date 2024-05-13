@@ -42,6 +42,7 @@ let client: AliyunpanClient = AliyunpanClient(
 | 授权方式 | 描述 | **不需要** Server | **不需要**阿里云盘客户端 |
 | :----: | :----: | :----: | :----: |
 | pkce | pkce 授权 | ✅ | ✅ |
+| sso | sso pkce 授权 | ✅ | ✅ |
 | server | 业务后端授权 | ❌ | ✅ |
 | qrCode | 二维码授权 | ✅ | ✅ |
 | token | 注入 token 授权 | ✅ | ✅ | 

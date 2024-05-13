@@ -21,6 +21,8 @@ extension AliyunpanError.AuthorizeError: Equatable {
             return "qrCodeAuthorizeTimeout"
         case .accessTokenInvalid:
             return "accessTokenInvalid"
+        case .invalidCode:
+            return "invalidCode"
         }
     }
     
@@ -35,15 +37,23 @@ class MessageTests: XCTestCase {
         
         let url1 = URL(string: "smartdrive://authorize?state=\(state)")!
         let message1 = try AliyunpanMessage(url1)
-        XCTAssertEqual(message1.action, "authorize")
         XCTAssertEqual(message1.state, "\(state)")
         XCTAssertEqual(message1.originalURL, url1)
-        XCTAssertEqual(message1.id, "authorize_\(state)")
         
         let url2 = URL(string: "abcd://authorize?state=\(state)")!
         XCTAssertThrowsError(try AliyunpanMessage(url2)) { error in
             XCTAssertEqual(error as! AliyunpanError.AuthorizeError, AliyunpanError.AuthorizeError.invalidAuthorizeURL)
         }
+        
+        let url3 = URL(string: "https://stg.alipan.com/applink/authorize?state=\(state)")!
+        let message3 = try AliyunpanMessage(url3)
+        XCTAssertEqual(message3.state, "\(state)")
+        XCTAssertEqual(message3.originalURL, url3)
+        
+        let url4 = URL(string: "https://www.alipan.com/applink/authorize?state=\(state)")!
+        let message4 = try AliyunpanMessage(url4)
+        XCTAssertEqual(message4.state, "\(state)")
+        XCTAssertEqual(message4.originalURL, url4)
     }
     
     func testAliyunpanAuthMessage() throws {
@@ -52,11 +62,9 @@ class MessageTests: XCTestCase {
         
         let url1 = URL(string: "smartdrive123456://authorize?state=\(state)&code=\(code)")!
         let message1 = try AliyunpanAuthorizeMessage(url1)
-        XCTAssertEqual(message1.action, "authorize")
         XCTAssertEqual(message1.state, "\(state)")
         XCTAssertEqual(message1.authCode, code)
         XCTAssertEqual(message1.originalURL, url1)
-        XCTAssertEqual(message1.id, "authorize_\(state)")
         
         let url2 = URL(string: "abcd://authorize?state=\(state)&code=\(code)")!
         XCTAssertThrowsError(try AliyunpanAuthorizeMessage(url2)) { error in

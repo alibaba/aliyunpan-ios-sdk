@@ -105,7 +105,7 @@ class AliyunpanAuthenticator: NSObject {
 }
 
 extension AliyunpanAuthenticator: ASWebAuthenticationPresentationContextProviding {
-    @MainActor 
+    @MainActor
     func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
         Platform.mainPresentationAnchor
     }

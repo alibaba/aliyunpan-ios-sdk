@@ -74,12 +74,8 @@ public class AliyunpanClient {
     }
     
     /// 强制清除 token 持久化
-    public func cleanToken() {
-        Task {
-            await MainActor.run {
-                token = nil
-            }
-        }
+    @MainActor public func cleanToken() {
+        token = nil
     }
     
     /// 授权
