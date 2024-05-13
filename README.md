@@ -41,8 +41,8 @@ let client: AliyunpanClient = AliyunpanClient(
 
 | 授权方式 | 描述 | **不需要** Server | **不需要**阿里云盘客户端 |
 | :----: | :----: | :----: | :----: |
-| pkce | pkce 授权 | ✅ | ❌ |
-| server | 业务后端授权 | ❌ | ❌ |
+| pkce | pkce 授权 | ✅ | ✅ |
+| server | 业务后端授权 | ❌ | ✅ |
 | qrCode | 二维码授权 | ✅ | ✅ |
 | token | 注入 token 授权 | ✅ | ✅ | 
 
@@ -131,7 +131,7 @@ downloadr.addDelegate(DELEGATE)
 
 ```ruby
 target 'MyApp' do
-  pod 'AliyunpanSDK', '~> 0.1'
+  pod 'AliyunpanSDK', '~> 0.2'
 end
 ```
 
