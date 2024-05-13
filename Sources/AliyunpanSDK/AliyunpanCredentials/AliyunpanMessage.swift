@@ -9,21 +9,12 @@ import Foundation
 
 class AliyunpanMessage {
     let state: String
-    let action: String
     let originalURL: URL
     
     init(_ url: URL) throws {
-        guard url.scheme?.lowercased().starts(with: "smartdrive") == true else {
-            throw AliyunpanError.AuthorizeError.invalidAuthorizeURL
-        }
         let queryItems = url.queryItems
         originalURL = url
-        action = url.host ?? ""
         state = queryItems.first(where: { $0.name == "state" })?.value ?? "Unknown"
-    }
-    
-    var id: String {
-        "\(action)_\(state)"
     }
 }
 
@@ -33,6 +24,9 @@ class AliyunpanAuthorizeMessage: AliyunpanMessage {
     let errorMsg: String?
     
     override init(_ url: URL) throws {
+        guard url.scheme?.starts(with: "smartdrive") == true else {
+            throw AliyunpanError.AuthorizeError.invalidAuthorizeURL
+        }
         let queryItems = url.queryItems
         authCode = queryItems.first(where: { $0.name == "code" })?.value
         error = queryItems.first(where: { $0.name == "error" })?.value

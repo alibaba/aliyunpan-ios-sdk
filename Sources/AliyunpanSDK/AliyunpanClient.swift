@@ -74,8 +74,12 @@ public class AliyunpanClient {
     }
     
     /// 强制清除 token 持久化
-    @MainActor public func cleanToken() {
-        token = nil
+    public func cleanToken() {
+        Task {
+            await MainActor.run {
+                token = nil
+            }
+        }
     }
     
     /// 授权
@@ -93,8 +97,8 @@ public class AliyunpanClient {
             appId: config.appId,
             scope: config.scope
         )
-        await MainActor.run { [weak self] in
-            self?.token = token
+        await MainActor.run {
+            self.token = token
         }
         return token
     }

@@ -20,6 +20,8 @@ public struct AliyunpanError {
         case qrCodeAuthorizeTimeout
         /// 未授权或授权已过期
         case accessTokenInvalid
+        /// 授权 code 错误
+        case invalidCode
     }
 
     /// 网络层错误

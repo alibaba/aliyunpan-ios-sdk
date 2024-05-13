@@ -48,7 +48,7 @@ public class Aliyunpan {
     
     @discardableResult
     public static func handleOpenURL(_ url: URL) -> Bool {
-        AliyunpanAppJumper.handle(url: url)
+        AliyunpanAuthenticator.handle(url: url)
     }
 }
 

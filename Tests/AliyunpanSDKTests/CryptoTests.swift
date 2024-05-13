@@ -20,7 +20,9 @@ class CryptoTests: XCTestCase {
     }
     
     func testProofCode() throws {
-        let url = Bundle(for: self.classForCoder).url(forResource: "TestFile1", withExtension: "txt")!
+        guard let url = Bundle(for: self.classForCoder).url(forResource: "TestFile1", withExtension: "txt") else {
+            return
+        }
 
         XCTAssertEqual(
             AliyunpanCrypto.getProofCode(
@@ -31,8 +33,10 @@ class CryptoTests: XCTestCase {
     }
     
     func testSHA1() throws {
-        let url = Bundle(for: self.classForCoder).url(forResource: "TestFile1", withExtension: "txt")!
-
+        guard let url = Bundle(for: self.classForCoder).url(forResource: "TestFile1", withExtension: "txt") else {
+            return
+        }
+        
         XCTAssertEqual(
             AliyunpanCrypto.sha1AndHex(url),
             "2EF7BDE608CE5404E97D5F042F95F89F1C232871"

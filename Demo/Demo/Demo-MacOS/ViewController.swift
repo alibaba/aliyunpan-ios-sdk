@@ -9,22 +9,35 @@ import Cocoa
 import AliyunpanSDK
 
 class ViewController: NSViewController {    
-    private var authorizeButton = NSButton()
+    private var buttonContainer = NSStackView()
+    private var pkceButton = NSButton()
+    private var qrCodeButton = NSButton()
+
     private var imageView = NSImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        authorizeButton.title = "Authorize"
-        authorizeButton.bezelStyle = .roundRect
-        view.addSubview(authorizeButton)
-        authorizeButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        buttonContainer.orientation = .vertical
+        view.addSubview(buttonContainer)
+        buttonContainer.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            authorizeButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            authorizeButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            authorizeButton.widthAnchor.constraint(equalToConstant: 200),
-            authorizeButton.heightAnchor.constraint(equalToConstant: 60)
+            buttonContainer.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            buttonContainer.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            buttonContainer.widthAnchor.constraint(equalToConstant: 200),
+            buttonContainer.heightAnchor.constraint(equalToConstant: 60)
         ])
-        authorizeButton.action = #selector(showQRCode)
+        
+        pkceButton.title = "Authorize（PKCE）"
+        pkceButton.bezelStyle = .roundRect
+        pkceButton.action = #selector(pkceAuthorize)
+        
+        qrCodeButton.title = "Authorize（QR Code）"
+        qrCodeButton.bezelStyle = .roundRect
+        qrCodeButton.action = #selector(showQRCode)
+        
+        buttonContainer.addArrangedSubview(pkceButton)
+        buttonContainer.addArrangedSubview(qrCodeButton)
         
         view.addSubview(imageView)
         imageView.isHidden = true
@@ -42,6 +55,18 @@ class ViewController: NSViewController {
         if client.accessToken != nil {
             // 已授权过
             navigateToExamples()
+        }
+    }
+    
+    @objc private func pkceAuthorize() {
+        Task {
+            do {
+                try await client.authorize(
+                    credentials: .pkce)
+                navigateToExamples()
+            } catch {
+                print(error)
+            }
         }
     }
     
@@ -72,7 +97,7 @@ extension ViewController: AliyunpanQRCodeContainer {
     }
     
     func showAliyunpanAuthorizeQRCode(with url: URL) {
-        authorizeButton.isHidden = true
+        buttonContainer.isHidden = true
         imageView.isHidden = false
         Task {
             let (data, _) = try await URLSession.shared.data(from: url)

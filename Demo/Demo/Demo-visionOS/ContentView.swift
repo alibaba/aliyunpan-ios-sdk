@@ -11,36 +11,25 @@ import RealityKitContent
 import AliyunpanSDK
 
 struct AuthorizeView: View {
-    @State var image = UIImage()
     @State var status: AliyunpanAuthorizeQRCodeStatus?
     @State var userInfo: AliyunpanScope.User.GetUsersInfo.Response?
-
-    var isAuthorizing: Bool {
-        status != nil && status != .scanSuccess
-    }
     
     var isAuthorized: Bool {
         userInfo != nil
     }
     
-    var showAuthorizeButton: Bool {
-        guard !isAuthorized else {
-            return false
-        }
-        return !isAuthorizing
-    }
-    
     var body: some View {
-        Image(uiImage: image)
-            .padding(.bottom, 50)
-        
-        if showAuthorizeButton {
+        if !isAuthorized {
             Button("Authorize") {
                 Task {
-                    let userInfo = try await client.authorize(
-                        credentials: .qrCode(self))
-                    .send(AliyunpanScope.User.GetUsersInfo())
-                    self.userInfo = userInfo
+                    do {
+                        let userInfo = try await client.authorize(
+                            credentials: .pkce)
+                        .send(AliyunpanScope.User.GetUsersInfo())
+                        self.userInfo = userInfo
+                    } catch {
+                        print(error)
+                    }
                 }
             }
             .font(.extraLargeTitle)
@@ -51,21 +40,6 @@ struct AuthorizeView: View {
             Text(userInfo?.id ?? "")
                 .font(.largeTitle)
         }
-    }
-}
-
-extension AuthorizeView: AliyunpanQRCodeContainer {
-    func showAliyunpanAuthorizeQRCode(with url: URL) {
-        Task {
-            let (data, _) = try await URLSession.shared.data(from: url)
-            if let image = UIImage(data: data) {
-                self.image = image
-            }
-        }
-    }
-    
-    func authorizeQRCodeStatusUpdated(_ status: AliyunpanSDK.AliyunpanAuthorizeQRCodeStatus) {
-        self.status = status
     }
 }
 

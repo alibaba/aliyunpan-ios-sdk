@@ -10,7 +10,7 @@
 		F447857D2BBAB9AE00FE8247 /* TestFile1.txt in Resources */ = {isa = PBXBuildFile; fileRef = F447857C2BBAB9AE00FE8247 /* TestFile1.txt */; };
 		F47FADDE2B14767D00EC0D8D /* AliyunpanSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47FADB72B14767D00EC0D8D /* AliyunpanSDK.swift */; };
 		F47FADDF2B14767D00EC0D8D /* AliyunpanPKCECredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47FADB92B14767D00EC0D8D /* AliyunpanPKCECredentials.swift */; };
-		F47FADE12B14767D00EC0D8D /* AliyunpanAppJumper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47FADBB2B14767D00EC0D8D /* AliyunpanAppJumper.swift */; };
+		F47FADE12B14767D00EC0D8D /* AliyunpanAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47FADBB2B14767D00EC0D8D /* AliyunpanAuthenticator.swift */; };
 		F47FADE22B14767D00EC0D8D /* AliyunpanCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47FADBC2B14767D00EC0D8D /* AliyunpanCredentials.swift */; };
 		F47FADE32B14767D00EC0D8D /* AliyunpanServerCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47FADBD2B14767D00EC0D8D /* AliyunpanServerCredentials.swift */; };
 		F47FADE42B14767D00EC0D8D /* AliyunpanSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = F47FADBE2B14767D00EC0D8D /* AliyunpanSDK.h */; };
@@ -103,7 +103,7 @@
 		F447857C2BBAB9AE00FE8247 /* TestFile1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TestFile1.txt; path = Tests/TestFile1.txt; sourceTree = SOURCE_ROOT; };
 		F47FADB72B14767D00EC0D8D /* AliyunpanSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliyunpanSDK.swift; sourceTree = "<group>"; };
 		F47FADB92B14767D00EC0D8D /* AliyunpanPKCECredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliyunpanPKCECredentials.swift; sourceTree = "<group>"; };
-		F47FADBB2B14767D00EC0D8D /* AliyunpanAppJumper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliyunpanAppJumper.swift; sourceTree = "<group>"; };
+		F47FADBB2B14767D00EC0D8D /* AliyunpanAuthenticator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliyunpanAuthenticator.swift; sourceTree = "<group>"; };
 		F47FADBC2B14767D00EC0D8D /* AliyunpanCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliyunpanCredentials.swift; sourceTree = "<group>"; };
 		F47FADBD2B14767D00EC0D8D /* AliyunpanServerCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliyunpanServerCredentials.swift; sourceTree = "<group>"; };
 		F47FADBE2B14767D00EC0D8D /* AliyunpanSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliyunpanSDK.h; sourceTree = "<group>"; };
@@ -235,7 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				F4E9F96B2B148AEE00DC8DBF /* AliyunpanMessage.swift */,
-				F47FADBB2B14767D00EC0D8D /* AliyunpanAppJumper.swift */,
+				F47FADBB2B14767D00EC0D8D /* AliyunpanAuthenticator.swift */,
 				F47FADBC2B14767D00EC0D8D /* AliyunpanCredentials.swift */,
 				F47FADBD2B14767D00EC0D8D /* AliyunpanServerCredentials.swift */,
 				F47FADB92B14767D00EC0D8D /* AliyunpanPKCECredentials.swift */,
@@ -570,7 +570,7 @@
 				F47FADE22B14767D00EC0D8D /* AliyunpanCredentials.swift in Sources */,
 				F47FADF32B14767D00EC0D8D /* AliyunpanToken.swift in Sources */,
 				F49821532B188A6D006559CC /* CreateFile.swift in Sources */,
-				F47FADE12B14767D00EC0D8D /* AliyunpanAppJumper.swift in Sources */,
+				F47FADE12B14767D00EC0D8D /* AliyunpanAuthenticator.swift in Sources */,
 				F49821482B188A6D006559CC /* GetUsersScopes.swift in Sources */,
 				F4BD1C5F2B32BFD9002BEA2A /* ThreadSafe.swift in Sources */,
 				F4BD1C482B304757002BEA2A /* AliyunpanDownloader.swift in Sources */,
