@@ -8,14 +8,17 @@
 import Foundation
 
 class AliyunpanPKCECredentials: AliyunpanCredentialsProtocol {
-    private let jumper = AliyunpanAppJumper()
-
     let codeVerifier: String
     let codeChallenge: String
     
-    init() {
+    let forceSSO: Bool
+    
+    /// - Parameter forceSSO: 强制 SSO
+    init(forceSSO: Bool) {
         codeVerifier = "\(Int.random(in: 43...128))"
         codeChallenge = AliyunpanCrypto.sha256AndBase64(codeVerifier)
+        
+        self.forceSSO = forceSSO
     }
     
     func authorize(appId: String, scope: String) async throws -> AliyunpanToken {
@@ -28,10 +31,19 @@ class AliyunpanPKCECredentials: AliyunpanCredentialsProtocol {
                         scope: scope,
                         response_type: "code",
                         code_challenge: codeChallenge,
-                        code_challenge_method: "S256")))
+                        code_challenge_method: "S256",
+                        auto_login: "true")))
             .response()
             .redirectUri
-        let authCode = try await jumper.jump(to: redirectUri)
+        
+        let authenticator = AliyunpanAuthenticator()
+        
+        let authCode: String
+        if forceSSO {
+            authCode = try await authenticator.authorize(withSSO: redirectUri)
+        } else {
+            authCode = try await authenticator.authorize(redirectUri)
+        }
         var token = try await HTTPRequest(command: AliyunpanScope.Internal.GetAccessToken(
                 .init(
                     client_id: appId,
@@ -40,6 +52,7 @@ class AliyunpanPKCECredentials: AliyunpanCredentialsProtocol {
                     code_verifier: codeVerifier)))
             .response()
         token.expires_in += Date().timeIntervalSince1970
+        
         return token
     }
 }

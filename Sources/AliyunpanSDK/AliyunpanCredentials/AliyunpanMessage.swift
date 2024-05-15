@@ -9,21 +9,17 @@ import Foundation
 
 class AliyunpanMessage {
     let state: String
-    let action: String
     let originalURL: URL
     
     init(_ url: URL) throws {
-        guard url.scheme?.lowercased().starts(with: "smartdrive") == true else {
+        let isSmartDriveScheme = url.scheme?.lowercased().starts(with: "smartdrive") == true
+        let isSmartDriveUniversalLink = url.host?.hasSuffix(".alipan.com") == true
+        guard isSmartDriveScheme || isSmartDriveUniversalLink else {
             throw AliyunpanError.AuthorizeError.invalidAuthorizeURL
         }
         let queryItems = url.queryItems
         originalURL = url
-        action = url.host ?? ""
         state = queryItems.first(where: { $0.name == "state" })?.value ?? "Unknown"
-    }
-    
-    var id: String {
-        "\(action)_\(state)"
     }
 }
 

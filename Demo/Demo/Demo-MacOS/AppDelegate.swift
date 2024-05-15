@@ -11,6 +11,9 @@ import AliyunpanSDK
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        Aliyunpan.setLogLevel(.info)
+        Aliyunpan.setEnvironment(environment)
+        Aliyunpan.setLogLevel(logLevel)
+        
+        client.cleanToken()
     }
 }

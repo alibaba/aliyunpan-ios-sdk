@@ -1,5 +1,5 @@
 PODS:
-  - AliyunpanSDK (0.2.0)
+  - AliyunpanSDK (0.2.1)
 
 DEPENDENCIES:
   - AliyunpanSDK (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AliyunpanSDK: 9677ed52f2519f512e91bf3097438c35772535e3
+  AliyunpanSDK: 8611714269b39ec8e2c41427f9b77a08fd85fc9b
 
 PODFILE CHECKSUM: 40334940ba0e4f081833162ea871b81051e79c17
 

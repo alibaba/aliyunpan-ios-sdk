@@ -30,9 +30,11 @@ extension AliyunpanInternalScope {
             public let state: String?
             /// h5下true强制用户登录，默认false
             public let relogin: Bool?
-            public let source: String
-
-            public init(client_id: String, redirect_uri: String, scope: String, response_type: String, code_challenge: String? = nil, code_challenge_method: String? = nil, state: String? = nil, relogin: Bool? = nil, bundle_id: String = Bundle.main.bundleId, source: String = "app") {
+            public let source: String?
+            /// true 表示已授权后，后续无需用户主动点击授权。默认 false
+            public let auto_login: String
+            
+            public init(client_id: String, redirect_uri: String, scope: String, response_type: String, code_challenge: String? = nil, code_challenge_method: String? = nil, state: String? = nil, relogin: Bool? = nil, bundle_id: String = Bundle.main.bundleId, source: String? = "appLink", auto_login: String = "false") {
                 self.client_id = client_id
                 self.redirect_uri = redirect_uri
                 self.scope = scope
@@ -43,6 +45,7 @@ extension AliyunpanInternalScope {
                 self.relogin = relogin
                 self.bundle_id = bundle_id
                 self.source = source
+                self.auto_login = auto_login
             }
         }
 

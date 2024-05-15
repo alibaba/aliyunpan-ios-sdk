@@ -17,7 +17,9 @@ import AppKit
 import TVUIKit
 #endif
 
-class Platform {
+import AuthenticationServices
+
+class Platform: NSObject {
     @MainActor
     static func canOpenURL(_ url: URL) -> Bool {
 #if canImport(UIKit) || canImport(TVUIKit)
@@ -25,7 +27,7 @@ class Platform {
 #endif
         
 #if canImport(AppKit) && !targetEnvironment(macCatalyst)
-        return NSWorkspace.shared.open(url)
+        return NSWorkspace.shared.urlForApplication(toOpen: url) != nil
 #endif
     }
     
@@ -37,6 +39,20 @@ class Platform {
         
 #if canImport(AppKit) && !targetEnvironment(macCatalyst)
         NSWorkspace.shared.open(url)
+#endif
+    }
+    
+    @MainActor
+    static var mainPresentationAnchor: ASPresentationAnchor {
+#if canImport(UIKit) || canImport(TVUIKit)
+        return UIApplication.shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .filter { $0.activationState == .foregroundActive }
+            .first?.windows.first ?? ASPresentationAnchor()
+#endif
+        
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
+        return NSApplication.shared.mainWindow ?? ASPresentationAnchor()
 #endif
     }
 }
