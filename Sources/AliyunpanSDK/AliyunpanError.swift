@@ -22,6 +22,8 @@ public struct AliyunpanError {
         case accessTokenInvalid
         /// 授权 code 错误
         case invalidCode
+        /// 当前平台不支持
+        case invalidPlatform
     }
 
     /// 网络层错误

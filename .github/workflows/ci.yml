@@ -31,5 +31,5 @@ jobs:
       - name: Test
         env:
           DESTINATION: platform=${{ matrix.destination }}
-        run: bundle exec fastlane test
+        run: bundle exec fastlane test_ci
 

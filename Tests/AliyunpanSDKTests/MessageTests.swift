@@ -9,25 +9,8 @@ import XCTest
 @testable import AliyunpanSDK
 
 extension AliyunpanError.AuthorizeError: Equatable {
-    var stringValue: String {
-        switch self {
-        case .invalidAuthorizeURL:
-            return "invalidAuthorizeURL"
-        case .notInstalledApp:
-            return "notInstalledApp"
-        case .authorizeFailed(let error, let errorMsg):
-            return "authorizeFailed_\(error ?? "")_\(errorMsg ?? "")"
-        case .qrCodeAuthorizeTimeout:
-            return "qrCodeAuthorizeTimeout"
-        case .accessTokenInvalid:
-            return "accessTokenInvalid"
-        case .invalidCode:
-            return "invalidCode"
-        }
-    }
-    
     public static func == (lhs: AliyunpanError.AuthorizeError, rhs: AliyunpanError.AuthorizeError) -> Bool {
-        lhs.stringValue == rhs.stringValue
+        lhs.localizedDescription == rhs.localizedDescription
     }
 }
 

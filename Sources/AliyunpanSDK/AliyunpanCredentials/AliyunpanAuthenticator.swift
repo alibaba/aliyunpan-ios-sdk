@@ -75,22 +75,29 @@ class AliyunpanAuthenticator: NSObject {
     
     func startAuthenticationSession(_ url: URL) async throws -> String {
         return try await withCheckedThrowingContinuation { continuation in
-            let session = ASWebAuthenticationSession(url: url, callbackURLScheme: "smartdrive") { url, error in
-                if let error {
-                    continuation.resume(with: .failure(error))
-                    return
+            if #available(iOS 13, macOS 10.15, tvOS 16.0, visionOS 1, *) {
+                let session = ASWebAuthenticationSession(url: url, callbackURLScheme: "smartdrive") { url, error in
+                    if let error {
+                        continuation.resume(with: .failure(error))
+                        return
+                    }
+                    
+                    let components = URLComponents(string: url?.absoluteString ?? "")
+                    if let code = components?.queryItems?.first(where: { $0.name == "code" })?.value {
+                        continuation.resume(with: .success(code))
+                    } else {
+                        continuation.resume(with: .failure(AliyunpanError.AuthorizeError.invalidCode))
+                    }
                 }
-                
-                let components = URLComponents(string: url?.absoluteString ?? "")
-                if let code = components?.queryItems?.first(where: { $0.name == "code" })?.value {
-                    continuation.resume(with: .success(code))
-                } else {
-                    continuation.resume(with: .failure(AliyunpanError.AuthorizeError.invalidCode))
+#if canImport(TVUIKit)
+#else
+                session.presentationContextProvider = self
+#endif
+                DispatchQueue.main.async {
+                    session.start()
                 }
-            }
-            session.presentationContextProvider = self
-            DispatchQueue.main.async {
-                session.start()
+            } else {
+                continuation.resume(with: .failure(AliyunpanError.AuthorizeError.invalidPlatform))
             }
         }
     }
@@ -104,9 +111,12 @@ class AliyunpanAuthenticator: NSObject {
     }
 }
 
+#if canImport(TVUIKit)
+#else
 extension AliyunpanAuthenticator: ASWebAuthenticationPresentationContextProviding {
     @MainActor
     func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
         Platform.mainPresentationAnchor
     }
 }
+#endif
