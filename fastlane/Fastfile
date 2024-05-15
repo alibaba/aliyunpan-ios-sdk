@@ -7,6 +7,10 @@ platform :ios do
     test(destination: "platform=tvOS Simulator,name=Apple TV")
   end
 
+  lane :test_ci do
+    test(destination: ENV["DESTINATION"])
+  end
+
   lane :test do |options|
     scan(
       scheme: "AliyunpanSDK", 
