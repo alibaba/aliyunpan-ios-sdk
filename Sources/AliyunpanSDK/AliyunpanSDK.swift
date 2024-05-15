@@ -52,4 +52,4 @@ public class Aliyunpan {
     }
 }
 
-let version = "0.2.1"
+let version = "0.3.0"
