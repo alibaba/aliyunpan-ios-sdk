@@ -30,6 +30,6 @@ jobs:
           bundler-cache: true
       - name: Test
         env:
-          DESTINATION: platform=${{ matrix.destination }}
-        run: bundle exec fastlane test destination:"$DESTINATION"
+          DESTINATION: platform="${{ matrix.destination }}"
+        run: bundle exec fastlane test destination:$DESTINATION
 
