@@ -31,8 +31,7 @@ class AliyunpanPKCECredentials: AliyunpanCredentialsProtocol {
                         scope: scope,
                         response_type: "code",
                         code_challenge: codeChallenge,
-                        code_challenge_method: "S256",
-                        auto_login: "true")))
+                        code_challenge_method: "S256")))
             .response()
             .redirectUri
         
