@@ -28,8 +28,7 @@ class AliyunpanServerCredentials: AliyunpanCredentialsProtocol {
                         client_id: appId,
                         redirect_uri: "oob",
                         scope: scope,
-                        response_type: "code",
-                        auto_login: "true")))
+                        response_type: "code")))
             .response()
             .redirectUri
         

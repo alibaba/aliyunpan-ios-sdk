@@ -31,10 +31,10 @@ extension AliyunpanInternalScope {
             /// h5下true强制用户登录，默认false
             public let relogin: Bool?
             public let source: String?
-            /// true 表示已授权后，后续无需用户主动点击授权。默认 false
-            public let auto_login: String
+            /// 已授权后，后续无需用户主动点击授权。true 开启，nil 关闭，默认 nil
+            public let auto_login: String?
             
-            public init(client_id: String, redirect_uri: String, scope: String, response_type: String, code_challenge: String? = nil, code_challenge_method: String? = nil, state: String? = nil, relogin: Bool? = nil, bundle_id: String = Bundle.main.bundleId, source: String? = "appLink", auto_login: String = "false") {
+            public init(client_id: String, redirect_uri: String, scope: String, response_type: String, code_challenge: String? = nil, code_challenge_method: String? = nil, state: String? = nil, relogin: Bool? = nil, bundle_id: String = Bundle.main.bundleId, source: String? = "appLink", auto_login: String? = nil) {
                 self.client_id = client_id
                 self.redirect_uri = redirect_uri
                 self.scope = scope
