@@ -82,6 +82,7 @@ extension AliyunpanFile {
         case zip
         case others
         case image
+        case app
     }
     
     public enum FileType: String, Codable {
