@@ -129,4 +129,54 @@ class JSONTests: XCTestCase {
             ISO8601DateFormatter().date(from: json["updated_at"]!),
             ISO8601DateFormatter().date(from: "2023-06-28T20:00:20.022+08:00"))
     }
+    
+    func testNilArg() throws {
+        let json = """
+{
+      "trashed": null,
+      "name": "music.mp3",
+      "thumbnail": null,
+      "type": "filexx",
+      "category": "audioxx",
+      "hidden": false,
+      "status": "available",
+      "description": null,
+      "meta": null,
+      "url": "https://stg111-enet.cn-shanghai.data.alicloudccp.com",
+      "size": 561701,
+      "starred": false,
+      "location": null,
+      "deleted": null,
+      "channel": null,
+      "user_tags": null,
+      "mime_type": "audio/mpeg",
+      "parent_file_id": "root",
+      "drive_id": "drive_id1",
+      "file_id": "file_id1",
+      "file_extension": "mp3",
+      "revision_id": null,
+      "content_hash": "content_hash1",
+      "content_hash_name": "sha1",
+      "encrypt_mode": "none",
+      "domain_id": "stg111",
+      "user_meta": null,
+      "content_type": null,
+      "created_at": "2023-06-28",
+      "updated_at": "2023-06-28T12:00:20.022Z",
+      "local_created_at": null,
+      "local_modified_at": null,
+      "trashed_at": null,
+      "punish_flag": 0,
+      "video_media_metadata": null,
+      "image_media_metadata": null,
+      "play_cursor": null,
+      "video_preview_metadata": null,
+      "streams_info": null
+}
+"""
+        let file = try JSONParameterDecoder().decode(AliyunpanFile.self, from: json.data(using: .utf8)!)
+        XCTAssertNil(file.created_at)
+        XCTAssertNil(file.category)
+        XCTAssertNil(file.type)
+    }
 }

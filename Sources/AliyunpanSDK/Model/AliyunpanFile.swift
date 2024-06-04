@@ -18,7 +18,7 @@ public struct AliyunpanFile: Codable {
     public let file_extension: String?
     /// 文件 hash
     public let content_hash: String?
-    public var category: FileCategory?
+    public let category: FileCategory?
     public let type: FileType?
     public let mime_type: String?
     /// 缩略图
@@ -34,7 +34,50 @@ public struct AliyunpanFile: Codable {
     /// 视频信息
     public let video_media_metadata: MediaMetadata?
     /// 视频预览信息
-    public var video_preview_metadata: AudioMetaData?
+    public let video_preview_metadata: AudioMetaData?
+    
+    init(drive_id: String, file_id: String, parent_file_id: String, name: String, size: Int64?, file_extension: String?, content_hash: String?, category: FileCategory? = nil, type: FileType?, mime_type: String?, thumbnail: URL?, url: URL?, created_at: Date?, updated_at: Date?, play_cursor: String?, image_media_metadata: MediaMetadata?, video_media_metadata: MediaMetadata?, video_preview_metadata: AudioMetaData? = nil) {
+        self.drive_id = drive_id
+        self.file_id = file_id
+        self.parent_file_id = parent_file_id
+        self.name = name
+        self.size = size
+        self.file_extension = file_extension
+        self.content_hash = content_hash
+        self.category = category
+        self.type = type
+        self.mime_type = mime_type
+        self.thumbnail = thumbnail
+        self.url = url
+        self.created_at = created_at
+        self.updated_at = updated_at
+        self.play_cursor = play_cursor
+        self.image_media_metadata = image_media_metadata
+        self.video_media_metadata = video_media_metadata
+        self.video_preview_metadata = video_preview_metadata
+    }
+    
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.drive_id = try container.decode(String.self, forKey: .drive_id)
+        self.file_id = try container.decode(String.self, forKey: .file_id)
+        self.parent_file_id = try container.decode(String.self, forKey: .parent_file_id)
+        self.name = try container.decode(String.self, forKey: .name)
+        self.size = try? container.decodeIfPresent(Int64.self, forKey: .size)
+        self.file_extension = try? container.decodeIfPresent(String.self, forKey: .file_extension)
+        self.content_hash = try? container.decodeIfPresent(String.self, forKey: .content_hash)
+        self.category = try? container.decodeIfPresent(AliyunpanFile.FileCategory.self, forKey: .category)
+        self.type = try? container.decodeIfPresent(AliyunpanFile.FileType.self, forKey: .type)
+        self.mime_type = try? container.decodeIfPresent(String.self, forKey: .mime_type)
+        self.thumbnail = try? container.decodeIfPresent(URL.self, forKey: .thumbnail)
+        self.url = try? container.decodeIfPresent(URL.self, forKey: .url)
+        self.created_at = try? container.decodeIfPresent(Date.self, forKey: .created_at)
+        self.updated_at = try? container.decodeIfPresent(Date.self, forKey: .updated_at)
+        self.play_cursor = try container.decodeIfPresent(String.self, forKey: .play_cursor)
+        self.image_media_metadata = try? container.decodeIfPresent(AliyunpanFile.MediaMetadata.self, forKey: .image_media_metadata)
+        self.video_media_metadata = try? container.decodeIfPresent(AliyunpanFile.MediaMetadata.self, forKey: .video_media_metadata)
+        self.video_preview_metadata = try? container.decodeIfPresent(AliyunpanFile.AudioMetaData.self, forKey: .video_preview_metadata)
+    }
 }
 
 extension AliyunpanFile: CustomStringConvertible {
