@@ -29,6 +29,8 @@ public struct AliyunpanFile: Codable {
     public let updated_at: Date?
     /// 播放进度
     public let play_cursor: String?
+    /// 视频时长
+    public let duration: String?
     /// 图片信息
     public let image_media_metadata: MediaMetadata?
     /// 视频信息
@@ -36,7 +38,7 @@ public struct AliyunpanFile: Codable {
     /// 视频预览信息
     public let video_preview_metadata: AudioMetaData?
     
-    init(drive_id: String, file_id: String, parent_file_id: String, name: String, size: Int64?, file_extension: String?, content_hash: String?, category: FileCategory? = nil, type: FileType?, mime_type: String?, thumbnail: URL?, url: URL?, created_at: Date?, updated_at: Date?, play_cursor: String?, image_media_metadata: MediaMetadata?, video_media_metadata: MediaMetadata?, video_preview_metadata: AudioMetaData? = nil) {
+    init(drive_id: String, file_id: String, parent_file_id: String, name: String, size: Int64?, file_extension: String?, content_hash: String?, category: FileCategory? = nil, type: FileType?, mime_type: String?, thumbnail: URL?, url: URL?, created_at: Date?, updated_at: Date?, play_cursor: String?,duration: String?, image_media_metadata: MediaMetadata?, video_media_metadata: MediaMetadata?, video_preview_metadata: AudioMetaData? = nil) {
         self.drive_id = drive_id
         self.file_id = file_id
         self.parent_file_id = parent_file_id
@@ -52,6 +54,7 @@ public struct AliyunpanFile: Codable {
         self.created_at = created_at
         self.updated_at = updated_at
         self.play_cursor = play_cursor
+        self.duration = duration
         self.image_media_metadata = image_media_metadata
         self.video_media_metadata = video_media_metadata
         self.video_preview_metadata = video_preview_metadata
@@ -74,6 +77,7 @@ public struct AliyunpanFile: Codable {
         self.created_at = try? container.decodeIfPresent(Date.self, forKey: .created_at)
         self.updated_at = try? container.decodeIfPresent(Date.self, forKey: .updated_at)
         self.play_cursor = try container.decodeIfPresent(String.self, forKey: .play_cursor)
+        self.duration = try container.decodeIfPresent(String.self, forKey: .duration)
         self.image_media_metadata = try? container.decodeIfPresent(AliyunpanFile.MediaMetadata.self, forKey: .image_media_metadata)
         self.video_media_metadata = try? container.decodeIfPresent(AliyunpanFile.MediaMetadata.self, forKey: .video_media_metadata)
         self.video_preview_metadata = try? container.decodeIfPresent(AliyunpanFile.AudioMetaData.self, forKey: .video_preview_metadata)
