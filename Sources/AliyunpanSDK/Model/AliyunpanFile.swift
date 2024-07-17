@@ -297,6 +297,7 @@ extension AliyunpanFile {
             public let status: Status
             public let url: URL?
         }
+        public let meta: Meta?
         
         /// live_transcoding
         public let category: String
