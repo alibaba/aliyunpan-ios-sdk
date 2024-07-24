@@ -293,7 +293,7 @@ extension AliyunpanFile {
         
         public struct LiveTranscodingSubtitleTask: Codable {
             /// chi | eng
-            public let language: String
+            public let language: String?
             public let status: Status
             public let url: URL?
         }
