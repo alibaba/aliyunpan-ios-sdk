@@ -27,6 +27,8 @@ public struct AliyunpanFile: Codable {
     public let url: URL?
     public let created_at: Date?
     public let updated_at: Date?
+    
+    public let local_created_at: Date?
     /// 播放进度
     public let play_cursor: String?
     /// 视频时长
@@ -38,7 +40,7 @@ public struct AliyunpanFile: Codable {
     /// 视频预览信息
     public let video_preview_metadata: AudioMetaData?
     
-    init(drive_id: String, file_id: String, parent_file_id: String, name: String, size: Int64?, file_extension: String?, content_hash: String?, category: FileCategory? = nil, type: FileType?, mime_type: String?, thumbnail: URL?, url: URL?, created_at: Date?, updated_at: Date?, play_cursor: String?,duration: String?, image_media_metadata: MediaMetadata?, video_media_metadata: MediaMetadata?, video_preview_metadata: AudioMetaData? = nil) {
+    init(drive_id: String, file_id: String, parent_file_id: String, name: String, size: Int64?, file_extension: String?, content_hash: String?, category: FileCategory? = nil, type: FileType?, mime_type: String?, thumbnail: URL?, url: URL?, created_at: Date?, updated_at: Date?, play_cursor: String?,duration: String?, image_media_metadata: MediaMetadata?, video_media_metadata: MediaMetadata?, video_preview_metadata: AudioMetaData? = nil, local_created_at: Date? = nil) {
         self.drive_id = drive_id
         self.file_id = file_id
         self.parent_file_id = parent_file_id
@@ -58,6 +60,7 @@ public struct AliyunpanFile: Codable {
         self.image_media_metadata = image_media_metadata
         self.video_media_metadata = video_media_metadata
         self.video_preview_metadata = video_preview_metadata
+        self.local_created_at = local_created_at
     }
     
     public init(from decoder: Decoder) throws {
@@ -76,6 +79,7 @@ public struct AliyunpanFile: Codable {
         self.url = try? container.decodeIfPresent(URL.self, forKey: .url)
         self.created_at = try? container.decodeIfPresent(Date.self, forKey: .created_at)
         self.updated_at = try? container.decodeIfPresent(Date.self, forKey: .updated_at)
+        self.local_created_at = try? container.decodeIfPresent(Date.self, forKey: .local_created_at)
         self.play_cursor = try container.decodeIfPresent(String.self, forKey: .play_cursor)
         self.duration = try container.decodeIfPresent(String.self, forKey: .duration)
         self.image_media_metadata = try? container.decodeIfPresent(AliyunpanFile.MediaMetadata.self, forKey: .image_media_metadata)
