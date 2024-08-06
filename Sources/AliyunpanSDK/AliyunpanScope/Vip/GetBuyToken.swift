@@ -13,13 +13,18 @@ extension AliyunpanVIPScope {
             "/business/v1/openUser/getBuyToken"
         }
 
-        public typealias Request = Void
+        public struct Request: Codable {
+            public init() {}
+        }
 
         public struct Response: Codable {
             /// 充值用户的身份标记
             public let token: String
         }
 
-        public init() {}
+        public let request: Request?
+        public init(_ request: Request) {
+            self.request = request
+        }
     }
 }
