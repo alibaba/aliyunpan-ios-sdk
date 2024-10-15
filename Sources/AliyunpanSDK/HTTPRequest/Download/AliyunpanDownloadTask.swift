@@ -180,7 +180,7 @@ extension AliyunpanDownloadTask {
     
     var chunks: [AliyunpanDownloadChunk] {
         stride(from: 0, to: totalSize, by: Int64.Stride(chunkSize)).map {
-            AliyunpanDownloadChunk(start: $0, end: min($0 + Int64(chunkSize), totalSize))
+            AliyunpanDownloadChunk(start: $0, end: min($0 + Int64(chunkSize), totalSize), index: Int($0 / chunkSize))
         }
     }
         
@@ -270,9 +270,11 @@ extension AliyunpanDownloadTask: DownloadChunkOperationDelegate {
             }
         } catch AliyunpanError.DownloadError.downloadURLExpired {
             Logger.log(.error, msg: "[Downloader][\(file.name)], \(chunkIndex)/\(chunks.count) error, downloadURLExpired")
-            
-            // 下载链接过期
-            retry(chunk: operation.chunk)
+            // 等待1s重试
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+                guard let self else { return }
+                self.retry(chunk: operation.chunk)
+            }
         } catch let error as NSError where error.domain == NSURLErrorDomain {
             Logger.log(.error, msg: "[Downloader][\(file.name)], \(chunkIndex)/\(chunks.count) error, \(error)")
             

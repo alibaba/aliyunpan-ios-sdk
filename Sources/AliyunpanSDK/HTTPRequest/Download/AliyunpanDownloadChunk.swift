@@ -7,13 +7,21 @@
 
 import Foundation
 
-public struct AliyunpanDownloadChunk: Equatable {
+public struct AliyunpanDownloadChunk: Equatable, CustomStringConvertible {
     public let start: Int64
     public let end: Int64
+    public let index: Int
     
     init(start: Int64, end: Int64) {
         self.start = start
         self.end = end
+        self.index = -1
+    }
+    
+    init(start: Int64, end: Int64, index: Int) {
+        self.start = start
+        self.end = end
+        self.index = index
     }
     
     init?(rangeString: String, fileSize: Int64) {
@@ -29,6 +37,10 @@ public struct AliyunpanDownloadChunk: Equatable {
         } else {
             end = fileSize
         }
-        self = Self(start: start, end: end)
+        self = Self(start: start, end: end, index: -1)
+    }
+    
+    public var description: String {
+        "[chunk-\(index)]: \(start)-\(end)"
     }
 }

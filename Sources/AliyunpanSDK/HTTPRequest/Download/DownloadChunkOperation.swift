@@ -167,12 +167,18 @@ extension DownloadChunkOperation: URLSessionDownloadDelegate {
     func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
         if let error {
             chunkOperationDidCompleteWithError(error)
-        } else if let response = task.response as? HTTPURLResponse,
-           response.statusCode == 403,
-           // https://help.aliyun.com/zh/oss/support/0002-00000069
-           response.value(forHTTPHeaderField: "x-oss-ec") == "0002-00000069" {
-            chunkOperationDidCompleteWithError(
-                AliyunpanError.DownloadError.downloadURLExpired)
+        } else if let response = task.response as? HTTPURLResponse {
+            if response.statusCode == 403 {
+                // https://help.aliyun.com/zh/oss/support/0002-00000069
+                chunkOperationDidCompleteWithError(
+                    AliyunpanError.DownloadError.downloadURLExpired)
+            } else if response.statusCode < 200 || response.statusCode >= 300{
+                chunkOperationDidCompleteWithError(AliyunpanError.DownloadError.serverError)
+            } else {
+                /// 200 - 300 之间的不认为是错误
+            }
+        } else {
+            chunkOperationDidCompleteWithError(AliyunpanError.DownloadError.unknownError)
         }
     }
 
@@ -183,7 +189,11 @@ extension DownloadChunkOperation: URLSessionDownloadDelegate {
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
         do {
             let data = try Data(contentsOf: location)
-            chunkOperatioDidFinishDownload(data)
+            if data.count == chunk.end - chunk.start {
+                chunkOperatioDidFinishDownload(data)
+            } else {
+                /// 大小不一致时，会触发 urlSession的 didCompleteWithError方法，这里不做处理
+            }
         } catch {
             chunkOperationDidCompleteWithError(error)
         }

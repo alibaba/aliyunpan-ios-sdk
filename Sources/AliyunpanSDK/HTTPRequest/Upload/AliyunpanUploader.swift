@@ -38,8 +38,12 @@ fileprivate extension Array where Element == AliyunpanFile.PartInfo {
 /// 上传器
 public class AliyunpanUploader: NSObject {
     weak var client: AliyunpanClient?
-    /// 每 2G 分片
-    private static let chunkSize: Int64 = 2_000_000_000
+    /// 默认每 2G 分片，最大1000片
+    private static let defaultMaxChunkCount: Int64 = 1000
+    private static let defaultChunkSize: Int64 = 2_000_000_000
+    private static func realChunkSize(fileSize: Int64) -> Int64 {
+        max(defaultChunkSize, fileSize / defaultMaxChunkCount)
+    }
 
     /// 创建上传任务，并适当分片
     private func createUploadTask(
@@ -51,7 +55,7 @@ public class AliyunpanUploader: NSObject {
         folderId: String,
         checkNameMode: AliyunpanFile.CheckNameMode
     ) async throws -> AliyunpanScope.File.CreateFile.Response {
-        let partInfoList = [AliyunpanFile.PartInfo](fileSize: fileSize, chunkSize: Self.chunkSize)
+        let partInfoList = [AliyunpanFile.PartInfo](fileSize: fileSize, chunkSize: Self.realChunkSize(fileSize: fileSize))
         
         let task = try await client.send(
             AliyunpanScope.File.CreateFile(
@@ -118,7 +122,7 @@ public class AliyunpanUploader: NSObject {
             throw AliyunpanError.AuthorizeError.accessTokenInvalid
         }
 
-        let partInfoList = [AliyunpanFile.PartInfo](fileSize: fileSize, chunkSize: Self.chunkSize)
+        let partInfoList = [AliyunpanFile.PartInfo](fileSize: fileSize, chunkSize: Self.realChunkSize(fileSize: fileSize))
         
         var isPreHashMatched = false
         // 大于 10M 的文件先预校验
@@ -232,7 +236,7 @@ public class AliyunpanUploader: NSObject {
                     "Content-Length": "\(partInfo.part_size ?? 0)",
                     "Content-Type": "" // 不能传 Cotent-Type，否则会失败
                 ]
-                let beginOffset = Int64(index) * Self.chunkSize
+                let beginOffset = Int64(index) * Self.realChunkSize(fileSize: fileSize)
                 let endOffset = beginOffset + Int64(partInfo.part_size ?? 0)
                 let data = try FileManager.default.dataChunk(at: fileURL, in: Int(beginOffset)..<Int(endOffset))
                 _ = try await session.upload(for: urlRequest, from: data)

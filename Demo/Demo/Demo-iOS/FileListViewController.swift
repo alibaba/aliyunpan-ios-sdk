@@ -178,7 +178,7 @@ extension FileListViewController: UICollectionViewDelegate {
 
 extension FileListViewController: FileCellDelegate {
     func fileCell(_ cell: FileCell, willDownload item: DisplayItem) {
-        guard let url = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first else {
+        guard let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
             return
         }
         
@@ -188,7 +188,7 @@ extension FileListViewController: FileCellDelegate {
         } else {
             let file = item.file
             let filename = file.name.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? ""
-            let destination = url.appendingPathComponent(filename)
+            let destination = url.appendingPathComponent("Download").appendingPathComponent(filename)
             client.downloader.download(file: file, to: destination)
         }
     }

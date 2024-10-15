@@ -88,6 +88,10 @@ public struct AliyunpanError {
         case userCancelled
         /// 缺少 client
         case invalidClient
+        /// 服务器错误
+        case serverError
+        /// 未知错误
+        case unknownError
     }
     
     /// 上传错误

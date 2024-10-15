@@ -75,7 +75,7 @@ class ViewController: UIViewController {
                 let file = try await client.uploader
                     .upload(
                         fileURL: url,
-                        fileName: "test_\(Date().timeIntervalSince1970).pdf",
+                        fileName: url.lastPathComponent,
                         driveId: driveId,
                         folderId: "root",
                         useProof: true)
@@ -186,7 +186,7 @@ extension ViewController: UICollectionViewDelegate {
                 }
             }
         case .uploadFileToRoot:
-            let documentPickerController = UIDocumentPickerViewController(forOpeningContentTypes: [.item])
+            let documentPickerController = UIDocumentPickerViewController(forOpeningContentTypes: [.item], asCopy: true)
             documentPickerController.delegate = self
             present(documentPickerController, animated: true)
         case .createFolderOnRoot:
