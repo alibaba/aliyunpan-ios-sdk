@@ -23,6 +23,7 @@ let file = AliyunpanFile(
     created_at: nil,
     updated_at: nil,
     play_cursor: nil,
+    duration: nil,
     image_media_metadata: nil,
     video_media_metadata: nil)
 
