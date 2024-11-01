@@ -20,7 +20,7 @@ extension AliyunpanFileScope {
             /// file_path
             public let file_path: String
 
-            init(drive_id: String, file_path: String) {
+            public init(drive_id: String, file_path: String) {
                 self.drive_id = drive_id
                 self.file_path = file_path
             }
