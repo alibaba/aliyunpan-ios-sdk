@@ -292,7 +292,10 @@ extension AliyunpanFile {
             public let keep_original_resolution: Bool?
             public let stage: String?
             public let status: Status
-            public let url: URL?
+            public var url: String?
+            public var urlValue: URL? {
+                URL(string: url ?? "")
+            }
         }
         
         public struct LiveTranscodingSubtitleTask: Codable {
